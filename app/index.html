@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es-ES" ng-app="portal" >
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+   
+    <title ng-bind="viewTitle ? viewTitle + ' - Portal Educativo TIC - Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán' : 'Portal Educativo TIC - Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán'">Portal Educativo TIC - Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán</title>
+
+    <!-- Twitter summary card metadata. Unfortunately this won't work with crawlers that don't evaluate JavaScript 
+    <meta view-head property="twitter:card" content="summary" />
+    <meta view-head property="twitter:site" content="@conectartucuman" />
+    <meta view-head property="twitter:title" content="" />
+    <meta view-head property="twitter:description" content="" />
+    <meta view-head property="twitter:image" content="" />
+    <meta view-head property="twitter:url" content="" />
+
+
+  open graph metadview-head ata. This won't work either! 
+    <meta view-head property="og:title" content="" />
+    <meta view-head property="og:site_name " content="My Favourite Albums" />
+    <meta view-head property="og:url " content="" />
+    <meta view-head property="og:description" content="" />
+    <meta view-head property="og:image" content="" />-->
+    <meta view-head name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Coloca favicon.ico y apple-touch-icon(s) en el directorio raíz -->
+<link rel="shortcut icon" type="image/png" href="http://www.tictucuman.net/favicon.png"/>
+    
+    <!-- build:css css/style.min.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/material.css" />
+    <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/ripples.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/stylesheets/animate.css">
+    <link rel="stylesheet" href="/stylesheets/buscador.css">
+    <link rel="stylesheet" href="/stylesheets/estilofix.css">
+    <link rel="stylesheet" href="/stylesheets/main-iso-ang.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/ngGallery.css">
+    <link rel="stylesheet" href="/stylesheets/scroll.css">
+    <link rel="stylesheet" href="/stylesheets/slider.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- endinject -->
+   
+    <!-- endbuild -->    
+       <!--[if lt IE 8]>
+ <p class="browsehappy">
+ Estás usando un navegador <strong>desactualizado</s
+trong>.
+ Por favor <a href="http://browsehappy.com/">actuali
+za tu navegador</a>
+ Para mejorar la experiencia..
+III. Anatomía de una aplicación AngularJS.
+3.1 HTML5Boilerplate
+ </p> 
+ <![endif]-->
+
+ <!-- Google Analytics: Cambia UA-XXXXX-X por el ID de t
+u sitio -->
+  </head>
+  <body class="fondo-seccion"> 
+  
+<!--  <nav >
+  <div class="container-fluid">
+   
+            <div class="row">
+        <div class="col-md-12">
+         <a href="https://www.facebook.com/coordinaciontictucuman" target="_blank" tooltip-placement="bottom" uib-tooltip="Facebook" class="pull-left"><span class="fa fa-facebook white"></span></a>
+          <a href="https://twitter.com/tictucuman" target="_blank" tooltip-placement="bottom"uib-tooltip="Twitter" class="pull-left"><span class="fa fa-twitter white"></span></a>
+          <a href="https://www.youtube.com/channel/UCpbI-q03K3u3fP0jB5pIVjA?sub_confirmation=1" target="_blank"  tooltip-placement="bottom" tooltip-placement="right" uib-tooltip="YouTube" class="pull-left" >
+              <span class="fa fa-youtube-play rojo-yt"></span>
+          </a>
+
+                      
+        <a href="http://tictucuman.net/personal/login.php" class="pull-right" target="_blank">Ingresar</a>
+        </div>
+    </div>
+        
+  </div>
+</nav > -->
+
+<header class="azul-pnide altura-2">
+  <div class="container" id="top"> 
+    <div class="row">
+      <div class="col-md-12 col-xs-12" ng-controller="banner">
+        <img src="images/fondo-material.png" alt="Logo coordinación Provincial TIC" class="img-responsive rwdimgmap" usemap="#Map" />
+<map name="Map">
+  <area shape="rect" coords="-2,0,229,133" href="http://tictucuman.net/">
+  <area shape="rect" coords="1070,14,1176,127" href="http://www.tucuman.gov.ar/" target="_blank">
+</map>
+      </div>
+     
+    </div>
+    <div class="col-md-12">
+      <ul class="list-inline menu-propio" ng-controller="activarMenuCtrl">
+  <li ng-class="{active: $route.current.activeMenu == '/'}"><a href="/">Inicio</a></li>
+  <li ng-class="{active: $route.current.activeMenu == 'desarrollo-profesional-tic'}"><a href="/desarrollo-profesional-tic">Desarrollo Profesional</a></li>
+  <li ng-class="{active: $route.current.activeMenu == 'noticias'}"><a href="/noticias">Noticias</a></li>
+  <li ng-class="{active: $route.current.activeMenu == 'agendas'}"><a href="/agendas">Agenda</a></li>
+  <li ng-class="{active: $route.current.activeMenu == 'lineas-de-accion'}"><a href="/lineas-de-accion">Líneas de Acción</a></li>
+</ul>
+
+<ul class="list-inline pull-right menu-propio-der">
+  <li><a href="https://www.facebook.com/coordinaciontictucuman" target="_blank" tooltip-placement="bottom" uib-tooltip="Facebook"><span class="fa fa-facebook white"></span></a></li>
+  <li><a href="https://twitter.com/tictucuman" target="_blank" tooltip-placement="bottom"uib-tooltip="Twitter"><span class="fa fa-twitter white"></span></a></li>
+  <li>
+  <a href="https://www.youtube.com/channel/UCpbI-q03K3u3fP0jB5pIVjA?sub_confirmation=1" target="_blank"  
+  tooltip-placement="bottom"  uib-tooltip="YouTube">
+  <span class="fa fa-youtube-play rojo-yt"></span></a>
+  </li>
+  <li> <a href="http://tictucuman.net/personal/login.php"  target="_blank" 
+   tooltip-placement="bottom" uib-tooltip="Directorio personal" ><span class="fa fa-user rojo-yt"></span></a></li>
+
+</ul>
+    </div>
+  </div>
+
+</header>
+
+<!-- <div ng-controller="BuscadorCtrl" ng-include="template.buscador" ></div>  -->
+
+
+<div ng-view="">
+  
+</div>
+
+<div ng-controller="RedesCtrl" ng-include="template.redes" ></div> 
+ 
+
+ <div ng-controller="PieCtrl" ng-include="template.pie" ></div>
+
+
+<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.3&appId=261334333920279";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ 
+    <!-- build:js js/vendor.min.js -->
+    <!-- bower:js -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/arrive/src/arrive.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/bootstrap-material-design/dist/js/material.js"></script>
+    <script src="lib/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="lib/angular-utils-pagination/dirPagination.js"></script>
+    <script src="lib/angular-scroll/angular-scroll.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angularjs-socialshare/dist/angular-socialshare.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/app.min.js -->
+    <!-- inject:js -->
+    <script src="/scripts/templates.js"></script>
+    <script src="/scripts/services.js"></script>
+    <script src="/scripts/ngGallery.js"></script>
+    <script src="/scripts/jquery.scrollpanel-0.5.0.min.js"></script>
+    <script src="/scripts/jquery.mousewheel-3.1.3.js"></script>
+    <script src="/scripts/filters.js"></script>
+    <script src="/scripts/directives.js"></script>
+    <script src="/scripts/controllers.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/angularjs-viewhead.js"></script>
+    <script src="/scripts/angular-rwdImageMaps.min.js"></script>
+    <script src="/scripts/angular-locale_es-ar.js"></script>
+    <script src="/scripts/angular-isotope.min.js"></script>
+    <!-- endinject --> 
+    <!-- endbuild -->   
+        <script>
+      
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-50795426-1','auto');ga('send','pageview');
+
+
+    </script>
+
+
+    
+  </body>
+</html>
+  

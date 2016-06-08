@@ -1,0 +1,37 @@
+<div class="container">
+<!-- <div class="row">
+	<slick ng-repeat="art in albumnes" dots=true infinite=false speed=300 slides-to-show=2 touch-move=false slides-to-scroll=1 class="slider one-time">
+      <div class="col-md-3" >
+       <img data-lazy="{{http://tictucuman.net/Pagina/{{art.url}}}}" ng-click="open(art.noticia)">
+      </div>
+    
+    </slick>
+</div> -->
+	<div class="row">
+	<div class="bg-naranja-material">
+        <div class="col-md-12">
+        	<div class="titulo-naranja">Galería de imágenes</div>
+        </div>
+        
+ 
+   
+  <div  class="editorial" slick>
+			<div class="col-md-3" ng-repeat="art in albumnes "  >
+			
+			
+		
+
+				<img src="http://tictucuman.net/Pagina/{{art.url}}" alt="" class="img-responsive img-thumbnail img-polaroid img-album " ng-click="open(art.noticia)" >
+				
+			
+	
+</div>
+
+</div>
+       
+		</div>
+
+	</div>
+</div>
+
+ 

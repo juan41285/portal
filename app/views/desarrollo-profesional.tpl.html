@@ -1,0 +1,179 @@
+
+<div class="container">
+<section class="well">
+	<div class="row">
+ 
+	 
+
+	    	<div class="col-md-5">
+	    <!-- 	 <div class="letra-izq">
+	    	<div class="letra-desarrollo">Desarrollo </div>
+	    	 <div class="letra-profesional">Profesional</div>
+	    	 </div>
+	    	 <div class="letra-der">
+	    	 <div class="letra-tic"> TIC</div>
+	    	 </div>
+	    	 -->
+	    	<!--  -->
+	    	<img src="images/desarrollo-titulo.png" alt="" class="img-responsive">
+	    	 </div> 
+	    	 <div class="col-md-7">
+	    		<div  ng-bind-html="pagina[0].pg_cont" class="desarrollo-intro">
+ 				 	
+ 				 	
+
+ 				 </div>
+ 				
+	    	</div>
+	    	</div>
+	    	<div class="row">
+	    	<div class="col-md-12">
+	    		<hr>
+	    	</div>
+	    	<div class="col-md-3">
+	    		<a href="#" class="btn btn-block btn-raised" ng-click="activarMenu(1)" ng-class="{'btn-material-orange': btnOferta == true}">OFERTas de Capacitación</a>
+	    	</div>
+	    	<div class="col-md-3">
+	    		<a href="#" class="btn btn-block btn-raised" ng-click="activarMenu(2)" ng-class="{'btn-material-orange': btnReglamento == true}">Reglamento</a>
+	    	</div>
+	    		<div class="col-md-3">
+	    		<a href="#" class="btn btn-block btn-raised" ng-click="activarMenu(3)" ng-class="{'btn-material-orange': btnCertificado == true}">Certificación</a>
+	    	</div>
+	    	   		<div class="col-md-3">
+	    		<a href="#" ng-click="activarMenu(4)" class="btn btn-block btn-raised" ng-class="{'btn-material-orange': btnFortalecimiento == true}">Fortalecimiento Ministerial</a>
+	    	</div>
+
+
+ 			</div>	 
+ 			</section>	 
+	    </div>
+	 
+
+<div class="container" ng-show="btnOferta" >
+   <div class="row">	
+   <div class="col-md-12">	
+   <div class="well text-center">	
+<div class="btn-group " role="group" aria-label="...">
+  <button type="button" class="btn btn-material-amber-200 btn-borde" ng-repeat="nivel in niveles"  ng-class="{'btn-material-orange': nivel.estado == true}" ng-model="nivel.estado" ng-click="checkN(nivel.id, nivel.estado)">{{nivel.text1}}
+  </button>
+  
+</div>
+</div>
+   </div>
+   </div>
+	  <div class="row" >
+	  	<div class="col-md-6"  dir-paginate="capas in capacitaciones | itemsPerPage:6">
+	<div class="well" >
+	  <div class="des-ofertas">
+	  	<a href="#" class="pull-right share-ofertas" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/capacitacion/{{capas.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+	  	<a href="#"  class="pull-right share-ofertas" socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/capacitacion/{{capas.pg_id}}" socialshare-hashtags="{{art.subtitulo}}"><span class="fa fa-twitter"></span></a>
+			<a href="capacitacion/{{capas.pg_id}}" >
+	  	<h4 ><strong >{{capas.pg_title}}</strong></h4>
+	 
+				<img src="{{capas.capa}}" alt="" class="img-ofertas ">
+				              <p>{{capas.pg_des | QuitarTagHTML | CortarTexto:true:350:' ...'}}</p> 
+		  	
+			</a>
+			</div>
+			<div class="opt-ofertas">
+			
+			
+        <a href="capacitacion/{{capas.pg_id}}" class="btn btn-sm btn-material-orange pull-right">LEER MÁS</a>
+        </div>
+</div>
+
+</div> 
+<div class="col-md-12">
+	<div class="well">
+		<dir-pagination-controls></dir-pagination-controls>
+	</div>
+</div>
+	  </div>
+      
+      
+     </div> 
+
+<!-- Certi -->
+<div class="container " id="reglamento" ng-show="btnReglamento">
+<div class="well">
+
+<div class="row" scroll-spy>
+<!--     <div class="col-md-3 sidebar">
+    <div class="sidenav">
+        <ul>
+            <li spy="intro">{{intro[0].pg_title}}</li>
+            <li spy="condiciones">{{condiciones[0].pg_title}}</li>
+            <li spy="generales">{{generales[0].pg_title}}</li>
+            <li spy="cursado">{{cursado[0].pg_title}}</li>
+            <li spy="evaluacion">{{evaluacion[0].pg_title}}</li>
+            <li spy="certificacion">{{certificacion[0].pg_title}}</li>
+            <li spy="notas">{{notas[0].pg_title}}</li>
+        </ul>
+        </div>
+    </div> -->
+    <div class="col-md-8 col-md-offset-2 content">
+        <h3 id="intro">{{intro[0].pg_title}}</h3>
+        <!-- overview goes here -->
+      
+      
+             	<div class="reglamento-cont" ng-bind-html="intro[0].pg_cont"></div>
+           
+        <h3 id="condiciones">{{condiciones[0].pg_title}}</h3>
+        <div class="reglamento-cont" ng-bind-html="condiciones[0].pg_cont"></div>
+        <!-- main content goes here -->
+        <h3 id="generales">{{generales[0].pg_title}}</h3>
+        <div class="reglamento-cont" ng-bind-html="generales[0].pg_cont"></div>
+
+        <!-- generales goes here -->
+        <h3 id="cursado">{{cursado[0].pg_title}}</h3>
+        <div class="reglamento-cont" ng-bind-html="cursado[0].pg_cont"></div>
+
+        <!-- other links go here -->
+         <h3 id="evaluacion">{{evaluacion[0].pg_title}}</h3>
+        <div class="reglamento-cont" ng-bind-html="evaluacion[0].pg_cont"></div>
+
+         <!-- other links go here -->
+         <h3 id="certificacion">{{certificacion[0].pg_title}}</h3>
+        <div class="reglamento-cont" ng-bind-html="certificacion[0].pg_cont"></div>
+          <!-- other links go here -->
+         <h3 id="notas">{{notas[0].pg_title}}</h3>
+        <div class="reglamento-cont" ng-bind-html="notas[0].pg_cont"></div>
+
+
+    </div>
+</div>
+</div>
+</div>
+<div class="container" ng-show="btnCertificado">	
+<div class="row">
+
+	<div class="col-md-12" id="certificacion">
+
+		<div class="shadow-z-3 bg-white">
+			<div class="certificados" ng-bind-html="certificados[0].pg_cont | trustAsHTML "></div> 
+		</div>
+	</div>
+</div>
+		
+	</div>
+<div class="container" ng-show="btnFortalecimiento" >
+	  <div class="row" >
+	  	<div class="col-md-6"  ng-repeat="fm in ministerial">
+	<div class="well" >
+	  
+	  
+			<a href="#"  ng-click="open(lg,fm.pg_id)">
+	  	<h4 ><strong >{{fm.pg_title}}</strong></h4>
+	 
+				<img src="{{fm.capa}}" class="img-responsive">
+				            
+		  	
+			</a>
+			
+
+</div> 
+
+	  </div>
+      
+      
+     </div> 

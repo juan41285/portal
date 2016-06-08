@@ -1,0 +1,31 @@
+
+<div class="container">
+	<div class="row">
+	
+         <div  id="isotopeContainer" isotope-container ng-cloak  class="margin-top-15 "  >
+ 
+	<div class="col-md-4"  ng-repeat="exp in capacitaciones | limitTo: 30" isotope-item>
+			<div class="articulos-cont border-noticia well" >
+			<a href="articulo/{{exp.pg_id}}">
+		
+
+				<img src="{{exp.capa}}" alt="" class="img-responsive">
+				<h4>{{exp.pg_title}}</h4>
+				<div ng-bind-html="exp.pg_des"></div>
+			
+			</a>
+			<div class="footer-noticia">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/articulo/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/articulo/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a href="articulo/{{exp.pg_id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+		
+</div>
+
+</div>  
+	
+ 
+	</div>
+</div>
+</div>
+  

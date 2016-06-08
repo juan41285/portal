@@ -1,0 +1,170 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		
+			<div class="bg-sistemas">			
+				<h2>{{desc[0].pg_title}}</h2>
+			</div>
+			<div class="shadow-z-3 bg-white des-sistemas">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+								<div ng-bind-html="desc[0].pg_cont"></div>
+								<!-- <div ng-bind-html-unsafe="desc[0].pg_cont"></div> -->
+				</div>
+			</div>
+
+
+
+<hr>
+</div>
+<div class="int-sistemas shadow-z-3">
+  <div class="row"> 
+	<div class="col-md-12">
+	 	<!-- <h3>Integrantes</h3> -->
+	</div>		
+	<!-- <div ng-repeat="referente in staff | filter:{puesto:'Referente'}" class="col-md-4  margin-bottom-30">				
+		<div class="card">
+		  <div class="card-face face-1">
+		      <div class="card-face__avatar">
+			  <img src="images/{{referente.foto}}" width="110" height="110" draggable="false"/></div>
+			  <h2 class="card-face__name">{{referente.apellido}},  {{referente.nombre}}</h2>
+   	          <span class="card-face__title">{{referente.puesto}}</span>
+			  <div class="card-face-footer">  
+		  		<span></span>
+			  </div>
+		  </div>
+		</div>
+	</div> -->
+<!-- {{staff[0].apellido}},  {{staff[0].nombre}} -->
+<div class="col-md-8">
+	<div class="row">
+<!-- 		<div ng-repeat="persona in staff | filter:{puesto:'Sistemas'}" class="col-md-6  margin-bottom-30">		
+			<div class="user-profile">			  	
+				<img class="avatar" src="images/{{persona.foto}}" alt="Ash" />
+			    <div class="username">{{persona.apellido}},  {{persona.nombre}}</div>
+			  <div class="bio">
+				{{persona.puesto}}			  	
+			  </div>
+			</div>
+		</div>
+ -->
+	<!-- {{noticias.noticia[0].subtitulo}}  -->
+<!-- 		<div ng-repeat="staff in staffs"  class="col-md-6">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-mujer.png" alt="Ash" />
+    <div class="username">{{staff.apellido}},  {{staff.nombre}}</div>
+  <div class="bio">
+  	Sistemas de gestión internos
+  </div>
+</div>
+		</div> -->
+
+<!-- 
+				<div class="col-md-6">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-mujer.png" alt="Ash" />
+    <div class="username">Irema Dip </div>
+  <div class="bio">
+  	Sistemas web
+  </div>
+</div>
+		</div>
+
+				<div class="col-md-6 margin-top-30">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-hombre.png" alt="Ash" />
+    <div class="username"> Guillermo Décima</div>
+  <div class="bio">
+  	Sistemas de gestión internos
+  	
+  </div>
+</div>
+		</div>
+
+				<div class="col-md-6 margin-top-30">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-hombre.png" alt="Ash" />
+    <div class="username"> Bazán Ricardo</div>
+  <div class="bio">
+  	Sistemas de gestión internos
+  	
+  	
+  </div>
+</div>
+		</div>
+
+
+				<div class="col-md-6 margin-top-30">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-hombre.png" alt="Ash" />
+    <div class="username"> Eduardo Arobio</div>
+  <div class="bio">
+  	Sistemas web
+  	
+  	
+  </div>
+</div>
+		</div>
+
+				<div class="col-md-6 margin-top-30">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-hombre.png" alt="Ash" />
+    <div class="username"> Sebastian Rico</div>
+  <div class="bio">
+  	Sistemas web
+  	
+  	
+  </div>
+</div>
+		</div>
+
+				<div class="col-md-6 margin-top-30">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-hombre.png" alt="Ash" />
+    <div class="username"> Juan Alderete</div>
+  <div class="bio">
+  	Sistemas web
+  	
+  	
+  </div>
+</div>
+		</div>
+
+<div class="col-md-6 margin-top-30">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-mujer.png" alt="Ash" />
+    <div class="username">Gabriela Barraza</div>
+  <div class="bio">
+  	Sistemas de gestión internos
+  </div>
+</div>
+		</div> -->
+		<!--  -->
+				
+	</div>
+</div>
+
+			</div>
+
+	  </div>
+     
+   
+     <!-- lineas -->
+			<div class="shadow-z-3 bg-white des-sistemas" ng-controller="SlideLineasCtrl">
+			<div class="row">
+       <div class="col-md-12"><div class="lineas-titulo">Lineas de acción en las que participa</div></div>
+        <div class="col-md-2" ng-repeat="imagen in slineas">
+            <div style="padding:10px" class="slide-lineas-btn">
+                <a href="{{imagen.url_carpeta}}" target="_blanñ"><img src="{{imagen.boton_linea}}" alt="" class="img-responsive img-thumbnail"></a>
+            </div>
+        </div>
+    </div>
+            </div>
+     <!-- fin lineas -->
+
+    </div>
+
+			</div>
+		</div>
+	</div>
+</div>

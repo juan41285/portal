@@ -1,0 +1,127 @@
+
+<div class="container">
+  <div class="row">
+ 
+    <div class="col-md-12">
+   
+       <!-- fomr -->
+     <section class="shadow-z-3" >
+      <div class="cv-titulo">
+        <h1>Trabajá con Nosotros  </h1>
+      </div>
+           <div class="frm-texto">
+             <strong>SUMATE</strong><br>
+<p>Desde la <strong>Coordinación Provincial TIC</strong> tenemos la convicción de que la generación de acciones que se entrelazan entre diferentes actores de la comunidad educativa son aquellas que nos hacen participes del cambio en las escuelas y en la sociedad.</p>
+<p>Diariamente, llevamos adelante la implementación de diferentes líneas de acción nacionales y jurisdiccionales, que alcanzan a las escuelas de toda la provincia, propiciando la inclusión digital educativa a través de las Tecnologías de la Información y la Comunicación <strong>(TIC)</strong> en los procesos de enseñanza y aprendizaje.</p><p>
+Si pensás que tenés espíritu innovador, te invitamos a conformar este equipo interdisciplinar que se caracteriza por su compromiso, genuino trabajo en equipo y por la convicción de que todos podemos aprender de todos.</p>
+           </div>
+         <div class="row" >
+        
+          
+       <!-- ok -->
+      <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 " ng-show="cvOk">
+       <div class="cv-mensaje">
+       <h2 class="cv-ok">Gracias por participar!</h2>
+           <h2>Sus datos fueron enviados correctamente. <br> <small>Los mismos serán agregados en nuestra base de datos para futuras convocatorias</small> </h2>
+         
+       </div>
+       </div>
+       <!-- Duplicaod -->
+        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 " ng-show="cvDoble">
+       <div class="cv-mensaje">
+       <h2 class="cv-doble">Correo Duplicado</h2>
+           <h2>Usted ya se encuentra registrado en nuestra base de dato. <br> <small>no es necesario ingresar nuevamente sus datos.</small> </h2>
+         
+       </div>
+       
+</div>
+              <!-- error -->
+        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 " ng-show="cvError">
+       <div class="cv-mensaje">
+       <h2 class="cv-error">Error</h2>
+           <h2>Hubo un problema y los datos no fueron enviados. <br> <small>reinicie el navegador e intente nuevamente.</small> </h2>
+
+           <h5 class="alert alert-danger">Recuerde que solo estan permitidos archivos en formato DOC y PDF que no superen los 5 MegaBytes de tamaño</h5>
+         
+       </div>
+      </div>
+      <!--  -->
+
+    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 " ng-show="cvForm">
+    	<div class="frm-cv">
+    		<!-- 0 -->
+    		<form class="form-horizontal" ng-submit="CargarCv()" >
+           <!--  <legend>Si estás interesado/a en formar parte de la Coordinación Provincial TIC por favor completá la siguiente información:</legend> -->
+    <fieldset>
+         <div class="form-group">
+            <label for="apellido" class="col-lg-3 control-label">Apellido</label>
+            <div class="col-lg-9">
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="" ng-model='cv.apellido' required>
+                
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="nombre" class="col-lg-3 control-label">Nombres</label>
+            <div class="col-lg-9">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" ng-model='cv.nombre' required>
+                
+            </div>
+        </div>
+       <div class="form-group">
+            <label for="fecha" class="col-lg-3 control-label">Fecha de Nacimiento</label>
+            <div class="col-lg-9">
+                <input type="date" class="form-control" id="fecha" name="fecha" placeholder="" ng-model='cv.fecha'>
+                
+            </div>
+        </div>
+
+               <div class="form-group">
+            <label for="direccion" class="col-lg-3 control-label">Dirección</label>
+            <div class="col-lg-9">
+                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="" ng-model='cv.direccion'>
+                
+            </div>
+        </div>
+   <div class="form-group">
+            <label for="telefono" class="col-lg-3 control-label">Teléfono</label>
+            <div class="col-lg-9">
+                <input type="text" class="form-control" id="telefono" name="telefono" placeholder=""  ng-model='cv.telefono'required>
+                
+            </div>
+        </div>
+    <div class="form-group">
+            <label for="correo" class="col-lg-3 control-label">Correo Electrónico</label>
+            <div class="col-lg-9">
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="" ng-model='cv.correo' required>
+                
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="archivo" class="col-lg-3 control-label">Adjuntar CV</label>
+            <div class="col-lg-9">
+                <input type="text" readonly="" class="form-control floating-label"  placeholder="Formatos permitidos: PDF y DOC" >
+                <input type="file" name="archivo" id="archivo"  file-model="cv.archivo">
+            </div>
+        </div>
+        
+
+        <div class="form-group">
+            <div class="col-lg-9 col-lg-offset-2">
+                
+                <button type="submit" class="btn btn-info pull-right"  >Enviar Datos</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+    		<!-- 0 -->
+    	</div>
+    </div>
+    
+  </div>
+       </section>
+       
+       
+    </div>
+
+ </div>
+</div>

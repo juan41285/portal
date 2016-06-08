@@ -1,0 +1,197 @@
+
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class=" margin-top-10">
+			<div class="btn-toolbar margin-top-15">
+			<div class="btn-group">
+        <a href="javascript:void(0)" class="btn   btn-material-blue-500">Todos</a>
+        
+    </div>
+    <div class="btn-group">
+        <a href="javascript:void(0)" class="btn btn-xs  btn-primary">Noticias</a>
+        <a href="javascript:void(0)" class="btn btn-xs  btn-material-yellow-800">Capacitaciones</a>
+        <a href="javascript:void(0)" class="btn  btn-xs btn-info">Experiencias</a>
+       
+    </div>
+
+    <div class="btn-group">
+        <a href="javascript:void(0)" class="btn  btn-xs btn-material-light-green-A700">Recursos</a>
+        <a href="javascript:void(0)" class="btn  btn-xs btn-material-grey-800">Libros</a>
+       
+    </div>
+
+        <div class="btn-group">
+        <a href="javascript:void(0)" class="btn  btn-xs btn-material-orange-A700">Fotos</a>
+        <a href="javascript:void(0)" class="btn  btn-xs btn-material-red-A700">Videos</a>
+
+    </div>
+
+   
+</div>
+			
+
+         
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	
+         <div  id="isotopeContainer" isotope-container ng-cloak  class="margin-top-15 "  >
+         <div class="col-md-4"  ng-repeat="exp in experiencias | limitTo: 2" isotope-item>
+       
+			<div class="articulos-cont border-exp well"  >
+			<a href="experiencia/{{exp.id_noticia}}">
+				<img src="{{exp.img_url}}" alt="" class="img-responsive">
+				<h4>{{exp.subtitulo}}</h4>
+				<div ng-bind-html="exp.Resumen"></div>
+			</a>
+					<div class="footer-experiencia">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/experiencia/{{exp.id_noticia}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/experiencia/{{exp.id_noticia}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a href="experiencia/{{exp.id_noticia}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+			</div>
+	</div>   
+	<div class="col-md-4"  ng-repeat="exp in noticias | limitTo: 2" isotope-item>
+			<div class="articulos-cont border-noticia well" >
+			<a href="articulo/{{exp.pg_id}}">
+		
+
+				<img src="{{exp.capa}}" alt="" class="img-responsive">
+				<h4>{{exp.pg_title}}</h4>
+				<div ng-bind-html="exp.pg_des"></div>
+			
+			</a>
+			<div class="footer-noticia">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/articulo/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/articulo/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a href="articulo/{{exp.pg_id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+		
+</div>
+
+</div>  
+ <div class="col-md-4"  ng-repeat="exp in capacitaciones | limitTo: 2" isotope-item>
+
+			<div class="articulos-cont border-capa well" >
+		
+			<a href="capacitacion/{{exp.pg_id}}">
+
+				<img src="{{exp.capa}}" alt="" class="img-responsive">
+				<h4>{{exp.pg_title}}</h4>
+				<div ng-bind-html="exp.pg_des"></div>
+			
+			</a>
+			<div class="footer-capacitacion">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/capacitacion/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/capacitacion/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a href="capacitacion/{{exp.pg_id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+			</div>
+
+</div>  
+ <div class="col-md-4"  ng-repeat="exp in recursos | limitTo: 2" isotope-item>
+	
+
+			<div class="articulos-cont border-capa well" >
+		
+			<a href="http://recursos.tictucuman.net/recurso.php?id={{exp.idRecurso}}">
+
+				<img src="{{exp.imagen}}" alt="" class="img-responsive">
+				<h4>{{exp.Nombre}}</h4>
+				<div ng-bind-html="exp.Descripcion"></div>
+			
+			</a>
+					<div class="footer-recurso">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/recurso/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/recurso/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a href="http://recursos.tictucuman.net/recurso.php?id={{exp.idRecurso}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+			</div>
+</div>   
+<div class="col-md-4"  ng-repeat="exp in libros | limitTo: 2" isotope-item>
+
+
+			<div class="articulos-cont border-capa well" >
+		
+			<a href="http://biblioteca.tictucuman.net/c_front/ver_ficha/{{exp.id}}">
+
+				<img src="http://biblioteca.tictucuman.net/assets/uploads/files/{{exp.link_img_rec}}" alt="" class="img-responsive">
+				<h4>{{exp.titulo}}</h4>
+				<div ng-bind-html="exp.descripcion"></div>
+			
+			</a>
+			<div class="footer-libro">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/libro/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/libro/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a  href="http://biblioteca.tictucuman.net/c_front/ver_ficha/{{exp.id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+			</div>
+	
+</div>   
+<div class="col-md-4"  ng-repeat="exp in fotos | limitTo: 2" isotope-item>
+
+			<div class="articulos-cont border-capa well" >
+		
+			<a href="galeria/{{exp.id}}">
+
+				<img src="http://tictucuman.net/Pagina/{{exp.url}}" alt="" class="img-responsive">
+				<h4>{{exp.titulo}}</h4>
+				
+			</a>
+			<div class="footer-galeria">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/galeria/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/galeria/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a  href="galeria/{{exp.pg_id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+			</div>
+
+</div>   
+
+<div class="col-md-4"  ng-repeat="exp in videos | limitTo: 2" isotope-item>
+		
+			<div class="art-video">
+			<img src="http://img.youtube.com/vi/{{exp.dest_frame | GetYouTubeID}}/hqdefault.jpg" alt="" class="img-responsive img-thumbnail img-polaroid  " ng-click="open(lg,exp.pg_id)"  >
+		
+<div class="footer-video">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/video/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/video/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a  href="video/{{exp.pg_id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+				
+			</div>	
+			
+
+
+</div>
+
+		<div class="col-md-4"  ng-repeat="exp in publicaciones | limitTo: 15" isotope-item>
+			<div class="articulos-cont border-noticia well" >
+			<a href="articulo/{{exp.pg_id}}">
+		
+
+				<img src="{{exp.capa}}" alt="" class="img-responsive">
+				<h4>{{exp.pg_title}}</h4>
+				<div ng-bind-html="exp.pg_des"></div>
+			
+			</a>
+			<div class="footer-noticia">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/articulo/{{exp.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/articulo/{{exp.pg_id}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a href="articulo/{{exp.pg_id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+		
+</div>
+
+</div> 	
+ 
+	</div>
+</div>
+</div>
+  
+            

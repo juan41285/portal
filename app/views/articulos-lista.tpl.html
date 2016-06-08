@@ -1,0 +1,95 @@
+<section class="shadow-z-3 s90">
+<div class="" >
+<h3 class="padding10 text-titulo">Últimos articulos publicados</h3> 
+
+ <center>
+ <div class="row">
+ <div class="col-xs-12">
+  <a href="javascript:void(0)"  ng-click="Accesos='noticias'; hrcolor='hrnoticia'" class="btn btn-xs btn-primary btn-raised">Noticias</a>
+  <a href="javascript:void(0)"  ng-click="Accesos='capacitaciones'; hrcolor='hrcapa'" class="btn btn-xs btn-material-orange btn-raised">Capacitaciones</a>
+  <a href="javascript:void(0)"  ng-click="Accesos='experiencias'; hrcolor='hrexp'" class="btn btn-xs btn-info btn-raised">Experiencias</a>
+  </div>
+</center>
+
+</div>
+<hr ng-class="hrcolor" class="hrnoticia">
+     <div ng-switch="Accesos" ng-init="Accesos='noticias'">
+       
+    <div ng-switch-when="noticias">
+  
+     <div  ng-repeat="articulos in articulo | limitTo:5" >
+     <div class="lista-articulo">
+      <a href="articulo/{{articulos.pg_id}}" class="lista-link">
+     <div class="row ">
+    
+       <div class="col-sm-8 col-xs-8">
+         <h4 class="text-titulo margin-left10">{{articulos.pg_title}}</h4>
+          <h5 class="text-titulo  margin-left10">{{articulos.subtitulo}}</h5>
+       </div>
+       <div class="col-sm-4 col-xs-4">
+          <img src="{{articulos.capa}}" alt="{{articulos.pg_title}}" class="img-responsive lista-img img-thumbnail">
+
+       </div>
+              </div></a>
+
+     </div>
+
+
+
+</div>
+      <div class="btn-center-in2">
+         <a href="/noticias" class="btn btn-warning btn-fab btn-raised mdi-content-add "></a>
+       </div>
+    </div> 
+
+<div ng-switch-when="capacitaciones">
+ <div  ng-repeat="articulos in capacitacion | limitTo:5" >
+     <div class="lista-articulo">
+      <a href="capacitacion/{{articulos.pg_id}}" class="lista-link">
+     <div class="row ">
+    
+       <div class="col-sm-8 col-xs-8">
+         <h4 class="text-titulo margin-left10">{{articulos.pg_title}}</h4>
+          <h5 class="text-titulo  margin-left10">{{articulos.subtitulo}}</h5>
+       </div>
+        <div class="col-sm-4 col-xs-4">
+          <img src="{{articulos.capa}}" alt="{{articulos.pg_title}}" class="img-responsive lista-img img-thumbnail">
+
+       </div>
+              </div></a>
+
+     </div>
+
+
+</div>
+ <div class="btn-center-in2">
+         <a href="/capacitaciones" class="btn btn-warning btn-fab btn-raised mdi-content-add "></a>
+       </div>
+    </div> 
+    <div ng-switch-when="experiencias" >
+ <div  ng-repeat="articulos in experiencia | limitTo: 5" >
+     <div class="lista-articulo">
+      <a href="experiencia/{{articulos.id_noticia}}" class="lista-link">
+     <div class="row ">
+    
+        <div class="col-sm-8 col-xs-8">
+         <h4 class="text-titulo margin-left10">{{articulos.Titulo}}</h4>
+          <h5 class="text-titulo  margin-left10">{{articulos.subtitulo}}</h5>
+       </div>
+        <div class="col-sm-4 col-xs-4">
+          <img src="{{articulos.img_url}}" alt="{{articulos.pg_title}}" class="img-responsive lista-img img-thumbnail">
+
+       </div>
+              </div></a>
+
+     </div>
+
+
+</div>
+ <div class="btn-center-in2">
+         <a href="/experiencias" class="btn btn-warning btn-fab btn-raised mdi-content-add "></a>
+       </div>
+    </div> 
+     </div>
+
+    </section>

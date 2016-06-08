@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+	<div class="bg-naranja-material">
+        <div class="col-md-12">
+        	<div class="titulo-naranja">Videos</div>
+        </div>
+        
+ 
+  <div >
+			<div class="col-md-3" ng-repeat="video in videos | limitTo: 4"  >
+			
+			<img src="http://img.youtube.com/vi/{{video.dest_frame | GetYouTubeID}}/hqdefault.jpg" alt="" class="img-responsive img-thumbnail img-polaroid img-album " ng-click="open(lg,video.pg_id)" >
+		
+
+				
+				
+			
+	
+</div>
+
+</div>
+       
+		</div>
+		
+	</div>
+</div>
+ 
+ 

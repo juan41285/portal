@@ -1,0 +1,81 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<section class="fondo-blanco ">
+			     <div class="row">
+			     	<div class="col-md-3">
+
+
+			     	<a href="http://bancos.tictucuman.net/" target="_blank"><img src="images/ebooks.jpg" alt="" class="img-responsive "></a></div>
+		<div class="col-md-3">
+		<div class="contenedor-img ejemplo-1">  
+     <img src="images/portada1.jpg" class="img-responsive" />  
+     <div class="mascara">  
+         <h2>Mi Querida Provincia</h2>  
+         <p>Publicado por la docente tucumana Gloria Ruiz, y su hija, Constanza Toro.</p>
+         <a href="http://tictucuman.net/miqueridaprovincia/ebook/miquerida.html" class="link" target="_blank">Ver Libro</a>  
+         <a href="http://tictucuman.net/miqueridaprovincia/ebook/miquerida/assets/downloads/publication.pdf" class="link" target="_blank" download>Descargar</a>  
+     </div>  
+</div>
+
+
+		<!-- <a href="http://tictucuman.net/miqueridaprovincia/ebook/miquerida.html" target="_blank"><img src="images/portada1.jpg" alt="" class="img-responsive "></a> --></div>
+			<div class="col-md-3">
+
+	<div class="contenedor-img ejemplo-1">  
+     <img src="images/portada2.jpg" class="img-responsive" />  
+     <div class="mascara">  
+         <h2>Experiencias TIC</h2>  
+         <p>Publicado por la Coordinación Provincial TIC.</p>
+         <a href="http://tictucuman.net/Pagina/secciones/Editorial/Revista2014/" class="link" target="_blank">Ver Libro</a>  
+         <a href="http://tictucuman.net/Pagina/secciones/Editorial/Revista2014L/files/assets/downloads/publication.pdf" class="link" target="_blank" download>Descargar</a>  
+     </div>  
+</div>
+			<!-- <a href="http://tictucuman.net/Pagina/secciones/Editorial/Revista2014/" target="_blank"><img src="images/portada2.jpg" alt="" class="img-responsive "></a> -->
+
+			</div>
+
+				<div class="col-md-3">
+<div class="contenedor-img ejemplo-1">  
+     <img src="images/portada3.jpg" class="img-responsive" />  
+     <div class="mascara">  
+         <h2>Batalla de San Lorenzo</h2>  
+         <p>La Marcha de San Lorenzo en Historietas.</p>
+         <a href="http://tictucuman.net/Pagina/secciones/Historieta/publicaciones/HTML/combate.html" class="link" target="_blank">Ver Libro</a>  
+         <a href="http://tictucuman.net/Pagina/secciones/Historieta/publicaciones/HTML/files/assets/downloads/publication.pdf" class="link" target="_blank" download>Descargar</a>  
+     </div>  
+</div>
+			<!-- 	<a href="http://tictucuman.net/Pagina/secciones/Historieta/publicaciones/HTML/combate.html" target="_blank"><img src="images/portada3.jpg" alt="" class="img-responsive "></a> --></div>
+			     </div>
+				
+			</section>
+		
+		</div>
+			
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<section class="fondo-exp ">
+			     <div class="row">
+			     	<div class="col-md-3"><a href="http://experiencias.tictucuman.net/" target="_blank"><img src="images/logo-exp-home.png" alt="" class="img-responsive margin-top-15"></a></div>
+				<div class="col-md-3" ng-repeat="exp in experiencia | limitTo:3">
+					<div class="shadow-z-3 exp-articulo padding10"> 
+						<a href="experiencia/{{exp.id_noticia}}">
+						<img src="{{exp.img_url}}" alt="" class="img-responsive"> 
+						<button class="btn btn-warning btn-fab-mini btn-raised mdi-content-add "></button>
+						<p>{{exp.subtitulo}}</p>
+						</a>
+					</div>
+				</div>
+			     </div>
+				
+			</section>
+		
+		</div>
+			
+	</div>
+</div>

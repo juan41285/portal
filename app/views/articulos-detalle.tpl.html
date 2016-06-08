@@ -1,0 +1,104 @@
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-md-12" >
+        <div class="loading-spiner-holder" data-loading ><div class="loading-spiner"><double-bounce-spinner></double-bounce-spinner></div></div>
+
+ 			<section class="shadow-z-3" >
+
+ 			<div class="noticia-copete">{{noticias.noticia[0].subtitulo}} 
+    <a href="#"  class="pull-right btn-share white" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/articulo/{{noticias.noticia[0].pg_id}}"><span class="fa fa-facebook-square"></span></a>
+        <a href="#" class="pull-right btn-share white"   socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/articulo/{{noticias.noticia[0].pg_id}}" socialshare-hashtags="{{noticias.noticia[0].subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+
+
+      </div>
+             <h1 class="noticia-titulo">{{noticias.noticia[0].pg_title}}</h1>
+             <div class="noticia-datos">
+             <div class="row">
+             	<div class="col-md-4 col-md-offset-2 col-xs-6" >
+             	 <span class="mdi-action-today"></span>    {{noticias.noticia[0].Fecha | dateToISO | date:'EEEE' }} {{noticias.noticia[0].Fecha | dateToISO | date:'d' }} de {{noticias.noticia[0].Fecha | dateToISO | date:'MMMM' }} de {{noticias.noticia[0].Fecha | dateToISO | date:'y' }}
+             	</div>
+             	<div class="col-md-4 col-xs-6 pull-right">
+             		<!-- <a href="#" class="tag">Front-end development</a> -->
+             	</div>
+             	</div> 
+             </div>
+            
+             <div class="row">
+             	<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                  <div class="noticia-des">
+                      <div class="row "> 
+
+                         <div class="col-md-3 col-xs-4 ">
+                              <img src="{{noticias.noticia[0].capa}}" alt="" class="img-responsive img-thumbnail">
+                        </div>
+                        <div class="col-md-9 col-xs-8 margin-top-10 "  ng-bind-html = "noticias.noticia[0].pg_des">
+                              {{noticias.noticia[0].pg_des}}
+                        </div>
+                        </div>
+            
+            </div>
+             		 <div class="noticia-cont" ng-bind-html ="noticias.noticia[0].pg_cont | trustAsHTML">
+             		 
+             	
+                       
+
+             		 </div>
+                  </div>
+             </div>
+             <div class="row" ng-controller="GaleriaCtrl"  ng-show="galerias.length > 0" >
+                   <div class="col-md-12" >
+                 <!-- slider container -->
+    <div class="slider shadow-z-3" >
+
+        <!-- enumerate all photos -->
+        <div ng-repeat="photo in galerias">
+        <img  class="slide img-responsive" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="http://tictucuman.net/Pagina/{{photo.url}}"   />
+          <div class="slider-caption" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)">
+                <h3><strong>{{photo.titulo}}</strong></h3>
+                <p>{{photo.descripcion}}</p>
+          </div>
+      </div>
+        <!-- prev / next controls -->
+       <!--  <a class="arrow prev btn btn-warning btn-fab btn-raised mdi-navigation-arrow-back" href="#" ng-click="showPrev()"></a>
+        <a class="arrow next  btn btn-warning btn-fab btn-raised mdi-navigation-arrow-back" href="#" ng-click="showNext()"></a> -->
+
+        <!-- extra navigation controls -->
+        <ul class="nav">
+            <li ng-repeat="photo in galerias" ng-class="{'active':isActive($index)}" class="shadow-z-2">
+                <img src="http://tictucuman.net/Pagina/{{photo.mini}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+            </li>
+        </ul>
+
+    </div>
+<!--  -->
+                   </div>
+             </div>
+ 			 			</section>
+ 		</div>
+ 	</div>
+
+ </div>
+ <section></section>
+<div class="container" ng-controller="ArtListCtrl">
+      <div class="row">
+            <div class="col-md-12">
+                 
+                       <div class="row">
+                       
+                        <div class="col-md-3" ng-repeat="exp in articulo | limitTo:4 ">
+                              <div class="shadow-z-3 art-articulo padding10"> 
+                                    <a href="articulo/{{exp.pg_id}}">
+                                    <img src="{{exp.capa}}" alt="" class="img-responsive"> 
+                                    <button class="btn btn-warning btn-fab-mini btn-raised mdi-content-add "></button>
+                                    <p>{{exp.pg_title}}</p>
+                                    </a>
+                              </div>
+                        </div>
+                       </div>
+                        
+              
+            
+            </div>
+                  
+      </div>
+</div>

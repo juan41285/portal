@@ -1,0 +1,136 @@
+.slider-caption{
+	z-index: 6;
+	position: absolute;
+	bottom: 0;
+	background:rgba(63, 174, 164,0.7);
+	padding:8px;
+	width: 100%;
+		color:white;
+}
+
+.arrow {
+    cursor: pointer;
+    display: block;
+    height: 64px;
+    margin-top: -35px;
+    outline: medium none;
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    z-index: 5;
+}
+.arrow.prev {
+  
+    left: 20px;
+    opacity: 0.2;
+    transition: all 0.2s linear 0s;
+}
+.arrow.next {
+  
+    opacity: 0.2;
+    right: 20px;
+    transition: all 0.2s linear 0s;
+}
+.arrow.prev:hover{
+    opacity:1;
+}
+.arrow.next:hover{
+    opacity:1;
+}
+
+.nav {
+    bottom: -100px;
+    display: block;
+    height: 60px;
+    left: 0;
+    margin: 0px auto;
+    padding: 1em 0 0.8em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+}
+.nav li {
+    border: 3px solid #f1f1f1;
+   
+    cursor: pointer;
+    display: inline-block;
+    margin: 8px;
+    position: relative;
+    width: 50px;
+}
+.nav li.active {
+    border: 5px solid #FFFFFF;
+}
+.nav li img {
+    width: 100%;
+    height: 30px;
+}
+
+.slider {
+    border: 15px solid #f1f1f1;
+    border-radius: 5px;
+    height: 500px;
+    margin: 0px auto;
+    position: relative;
+    width: 800px;
+    margin-bottom: 200px;
+
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    -o-perspective: 1000px;
+    perspective: 1000px;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.slider img{
+  height: 470px;
+  margin-top: -1px;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide.ng-hide-add {
+    opacity:1;
+
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
+
+    -webkit-transform: rotateX(50deg) rotateY(30deg);
+    -moz-transform: rotateX(50deg) rotateY(30deg);
+    -ms-transform: rotateX(50deg) rotateY(30deg);
+    -o-transform: rotateX(50deg) rotateY(30deg);
+    transform: rotateX(50deg) rotateY(30deg);
+
+    -webkit-transform-origin: right top 0;
+    -moz-transform-origin: right top 0;
+    -ms-transform-origin: right top 0;
+    -o-transform-origin: right top 0;
+    transform-origin: right top 0;
+}
+.slide.ng-hide-add.ng-hide-add-active {
+    opacity:0;
+}
+.slide.ng-hide-remove {
+    -webkit-transition:1s linear all;
+    -moz-transition:1s linear all;
+    -o-transition:1s linear all;
+    transition:1s linear all;
+
+    display:block!important;
+    opacity:0;
+}
+.slide, .slide.ng-hide-remove.ng-hide-remove-active {
+    opacity:1;
+}

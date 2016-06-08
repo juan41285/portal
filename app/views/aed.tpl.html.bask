@@ -1,0 +1,104 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		
+			<div class="bg-aed">
+				<h2> Área  de Educación a distancia</h2>
+			</div>
+			<div class="shadow-z-3 bg-white des-aed">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<p>Tiene  como objetivos promover acciones en la Opción Pedagógica de Educación a Distancia que permitan la articulación con el conjunto del Sistema Educativo, desarrollando e implementando sistemas de gestión que garanticen  democráticamente la participación de todas la instituciones educativas que tengan la intencionalidad de presentar propuestas en la modalidad, resaltando así su potencialidad, reconociendo en esta opción pedagógica, la posibilidad de contribución de estrategias didácticas pedagógicas, mediadas por el uso de recursos tecnológicos, lo cual estratégicamente contribuye al cumplimiento de los logros y propósito de seguir democratizando la universalización del acceso a la educación, garantizando  una educación de pertinencia y calidad en la modalidad. 
+<img src="images/aed_logo.jpg" class="img-resposive pull-left" style="margin:10px;">
+						</p>
+
+<p>Asimismo, teniendo en cuenta la naturaleza y organización del área en su conjunto del sistema educativo, desde la jurisdicción se trabaja de manera articulada con la Coordinación Técnica de la Comisión Federal de Registro y Evaluación Permanente de Estudios a Distancia, CFE,  a fin de remitir mediante declaración de viabilidad jurisdiccional las ofertas que reúnan las condiciones técnicas pedagógicas, para ser evaluadas por lo integrantes de la comisión. Cumplida esta instancia, teniendo en cuenta las misiones de la jurisdicción, se trabaja de manera articulada con diferentes áreas y equipos técnicos ministeriales a fin cumplimentar los aspectos técnicos, administrativos y legales, con el objeto de ratificar los dictámenes emitidos por la Comisión Federal. En este sentido, jurisdiccionalmente entre las diferentes áreas y equipos técnicos ministeriales se busca  unificar criterios y adecuar esta opción pedagógica a las normas educativas vigentes y, como consecuencia resguardar los intereses y derechos de los estudiantes. </p>
+					</div>
+				</div>
+
+
+<hr>
+</div>
+<div class="int-aed">
+	  <div class="row"> 
+		<div class="col-md-12">
+	
+	  	<h3>Integrantes</h3>
+	  </div>		
+			<div class="col-md-4">
+					<!-- Card widget -->
+<div class="card">
+
+  <div class="card-face face-1">
+ 
+    <!-- Avatar -->
+    <div class="card-face__avatar">
+    
+    <!-- User avatar -->
+    <img src="images/user-hombre.png" width="110" height="110" draggable="false"/></div>
+    <!-- Name -->
+    <h2 class="card-face__name">Julio Morán
+</h2>
+    <!-- Title -->
+    <span class="card-face__title">Referente del área</span>
+    <!-- Cart Footer -->
+    <div class="card-face-footer">
+  
+  <span></span>
+    </div>
+  </div>
+</div>
+				
+
+</div>
+<div class="col-md-8">
+<!-- 	<div class="row">
+		<div class="col-md-6">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-mujer.png" alt="Ash" />
+    <div class="username">Alicia González</div>
+  <div class="bio">
+  	Responsable Recursos Humanos
+  </div>
+</div>
+		</div>
+
+		
+				<div class="col-md-6">
+			<div class="user-profile">
+	<img class="avatar" src="images/user-hombre.png" alt="Ash" />
+    <div class="username">Juan Flores</div>
+  <div class="bio">
+  	
+  </div>
+</div>
+		</div>
+		
+		
+	</div> -->
+</div>
+
+			</div>
+
+	  </div>
+     
+   
+     <!-- lineas -->
+			<div class="shadow-z-3 bg-white des-aed" ng-controller="SlideLineasCtrl">
+			<div class="row">
+       <div class="col-md-12"><div class="lineas-titulo">Lineas de acción en las que participa</div></div>
+        <div class="col-md-2" ng-repeat="imagen in slineas">
+            <div style="padding:10px" class="slide-lineas-btn">
+                <a href="{{imagen.url_carpeta}}" target="_blanñ"><img src="{{imagen.boton_linea}}" alt="" class="img-responsive img-thumbnail"></a>
+            </div>
+        </div>
+    </div>
+            </div>
+     <!-- fin lineas -->
+
+    </div>
+
+			</div>
+		</div>
+	</div>
+</div>

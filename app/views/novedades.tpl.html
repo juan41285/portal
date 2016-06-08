@@ -1,0 +1,129 @@
+<div ng-include="template.calendario"></div>
+
+<div ng-include="template.noticias"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2 margin-top-10">
+      <div class="nov-menu">
+        <a href=""><h4>Noticias <span class="badge badge-info">{{noticia.length}}</span></h4></a>
+      </div>
+    </div>
+      <div class="col-md-2 margin-top-10">
+      <div class="nov-menu">
+       <a href=""><h4>Capacitaciones <span class="badge badge-info">15</span></h4></a>
+        
+      </div>
+    </div>
+      <div class="col-md-2 margin-top-10">
+      <div class="nov-menu">
+        <a href=""><h4>Experiencias <span class="badge badge-info">15</span></h4></a>
+        
+      </div>
+    </div>
+      <div class="col-md-2 margin-top-10">
+      <div class="nov-menu">
+        <a href=""><h4>Eventos <span class="badge badge-info">15</span></h4></a>
+        
+      </div>
+    </div>
+      <div class="col-md-2 margin-top-10">
+      <div class="nov-menu">
+        <a href=""><h4>Videos <span class="badge badge-info">15</span></h4></a>
+        
+      </div>
+    </div>
+      <div class="col-md-2 margin-top-10">
+      <div class="nov-menu">
+        <a href=""><h4>Fotos <span class="badge badge-info">15</span></h4></a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-show="menu">
+<div class="container">
+  <div class="row">
+            <div class="col-md-12 margin-top-15">
+                 
+                       <div class="row">
+                       
+                        <div class="col-md-3 " >
+                        
+                              <div class="shadow-z-3 art-articulo padding10"> 
+                                    <a href="articulo/{{noticia[0].pg_id}}">
+                                    <img src="{{noticia[0].capa}}" alt="" class="img-responsive"> 
+                                    <button class="btn btn-warning btn-fab-mini btn-raised mdi-content-add "></button>
+                                    <p class="ng-binding">{{noticia[0].pg_title}}</p>
+                                    </a>
+                              </div>
+                        </div>
+
+                                 <div class="col-md-3 " >
+                        
+                              <div class="shadow-z-3 art-articulo padding10"> 
+                                    <a href="capacitacion/{{capacitacion[0].pg_id}}">
+                                    <img src="{{capacitacion[0].capa}}" alt="" class="img-responsive"> 
+                                    <button class="btn btn-warning btn-fab-mini btn-raised mdi-content-add "></button>
+                                    <p class="ng-binding">{{capacitacion[0].pg_title}}</p>
+                                    </a>
+                              </div>
+                        </div>
+
+                                          <div class="col-md-3 " >
+                        
+                              <div class="shadow-z-3 art-articulo padding10"> 
+                                    <a href="experiencia/{{exp[0].id_noticia}}">
+                                    <img src="{{exp[0].img_url}}" alt="" class="img-responsive"> 
+                                    <button class="btn btn-warning btn-fab-mini btn-raised mdi-content-add "></button>
+                                    <p class="ng-binding">{{exp[0].subtitulo}}</p>
+                                    </a>
+                              </div>
+                        </div>
+
+                          <div class="col-md-3" >
+          <div class="shadow-z-3 banco-articulo padding10"> 
+            <a href="http://recursos.tictucuman.net/recurso.php?id={{recurso[0].idRecurso}}" target="_blank">
+            <img src="{{recurso[0].imagen}}" alt="" class="img-responsive"> 
+            <button class="btn btn-warning btn-fab-mini btn-raised mdi-content-add "></button>
+            <p>{{recurso[0].Nombre}}</p>
+            </a>
+          </div>
+        </div>
+
+
+              
+                       </div>
+                        
+              
+            
+            </div>
+                  
+      </div>
+  </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+        
+      </div>
+    </div>
+        <div class="col-md-6">
+      <div class="well">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+      <div class="well">
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>

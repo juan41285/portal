@@ -1,0 +1,48 @@
+<div class="cal-meses" >
+
+        <span class="mdi-action-view-list"></span> 
+                    <select class="form-control " id="select" ng-controller="MesesCtrl" ng-model="prop.value" ng-options="v for v in prop.values" >
+  </select>
+        </div>
+        <div >
+        <div class="cal-ahora" >
+       <time datetime="{{hoy[0].ag_fecha}}" class="icon hidden-xs">
+              <em>{{hoy[0].ag_fecha | date:'EEEE'}}</em>
+              <strong>{{hoy[0].ag_fecha | date:'MMMM'}}</strong>
+              <span>{{hoy[0].ag_fecha | date:'d'}}</span>
+          </time>
+
+
+         <div class="cal-evento" >
+           <div class="cal-evento-linea">{{hoy[0].ag_linea_accion }}</div>
+           <div class="cal-evento-tipo">{{hoy[0].ag_tipo_visita }}</div>
+           <div class="cal-evento-hora"><strong>comienza: </strong>{{hoy[0].ag_entrada }} - <strong>termina: </strong>{{hoy[0].ag_salida }}  </div>
+           <div class="cal-evento-sede">{{hoy[0].Nombre }}</div>
+         </div>
+     
+     
+                   
+                 
+   
+       
+
+        </div>
+        <div class="cal-hoy" >
+                    <div class="list-group" ng-repeat="dia in hoy">
+    <div class="list-group-item" >
+        <div class="row-action-primary">
+            <div class="cal-lista-dia verde"><span class="fa fa-arrow-circle-right verde"></span> {{dia.ag_entrada}}</div>
+            <div class="cal-lista-mes rojo"><span class="fa fa-arrow-circle-left rojo"></span> {{dia.ag_salida}}</div>
+        </div>
+        <div class="row-content">
+            <div class="least-content badge-linea">{{dia.ag_linea_accion }}</div>
+            <h4 class="list-group-item-heading bagde-tipo">{{dia.ag_tipo_visita }}</h4>
+            <p class="list-group-item-text badge-sede">{{dia.Nombre }}</p> 
+        </div>
+    </div>
+      <div class="list-group-separator"></div>
+   
+  
+</div>
+        </div>
+        </div>

@@ -1,0 +1,73 @@
+<div class="container" >
+	<div class="row">
+
+	    <div class="col-md-12" ng-controller="DesarrolloCtrl">	
+	    <section class="shadow-z-3">
+ 				 <div >
+ 				 	
+ 				 	
+ 				 	{{cogestor[0].pg_cont}}
+
+
+ 				 </div>
+ 		</section>		 
+	    </div>
+	 
+	  	<div class="col-md-4"> <section class="shadow-z-3">rrrrrrr</section></div>
+	  	<div class="col-md-8"> <section class="shadow-z-3"> rrrrrrrrrrr</section></div>
+	 
+		
+
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<section class="shadow-z-3">
+			 <div class="row">
+				<div class="col-md-8">
+        <main class="contenido">
+        <h1>Contenido principal</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a erat id dui egestas placerat. Duis vulputate dignissim accumsan. Vestibulum pretium ut mi ac condimentum. Phasellus a viverra sem, non suscipit urna. Morbi non lectus consequat, tempor nunc non, rutrum massa. Sed pulvinar ipsum nec dignissim commodo. Maecenas vitae quam magna. Donec elementum mauris massa, et elementum quam convallis quis...</p>
+	</main>	
+	</div>	
+	<div class="col-md-4 sidebar">
+		<aside class="sidebar">
+		<h2>Sidebar</h2>
+		<p>Este sidebar llega hasta abajo aunque tenga poco contenido</p>
+	</aside>
+	</div>
+	</div>
+			</section>
+		</div>
+	</div>
+</div> 
+
+ <div class="col-md-4" ng-controller="UltimasCapaCtrl">
+<div class="bg-capa" ><h3 class="padding10 text-titulo">Ultimas Capacitaciones</h3> </div>
+
+     
+     
+     <div  ng-repeat="capacitacion in capacitaciones | limitTo:5" class="shadow-z-3 bg-white" >
+     <div class="lista-articulo">
+      <a href="articulo/{{capacitacion.pg_id}}" class="lista-link">
+     <div class="row ">
+    
+       <div class="col-md-7 col-xs-12">
+         <h4 class="text-titulo margin-left10">{{capacitacion.pg_title}}</h4>
+        
+       </div>
+       <div class="col-md-5 hidden-xs">
+          <img src="{{capacitacion.capa}}" alt="{{capacitacion.pg_title}}" class="img-responsive lista-img img-thumbnail">
+
+       </div>
+              </div></a>
+
+     </div>
+
+
+</div>
+    
+</div>

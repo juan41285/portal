@@ -1,0 +1,23 @@
+.hexa-invisible{
+	visibility: hidden;
+	/*display: none;*/
+}
+
+.hex-row {
+    clear: right !important;
+}
+
+.tituloAreas{
+	    margin: 0px 20px;
+}
+
+.margin-bottom-30{
+	margin-bottom: 30px;
+}
+@media (max-width: 1200px){
+	.hexa-invisible{
+	/*visibility: hidden;*/
+	display: none;
+}
+}
+

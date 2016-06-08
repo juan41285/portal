@@ -1,0 +1,27 @@
+
+<div class="container">
+	<div class="row">
+	
+         <div  id="isotopeContainer" isotope-container ng-cloak  class="margin-top-15 "  >
+ 
+	         <div class="col-md-4"  ng-repeat="exp in experiencias | limitTo: 2" isotope-item>
+       
+			<div class="articulos-cont border-exp well"  >
+			<a href="experiencia/{{exp.id_noticia}}">
+				<img src="{{exp.img_url}}" alt="" class="img-responsive">
+				<h4>{{exp.subtitulo}}</h4>
+				<div ng-bind-html="exp.Resumen"></div>
+			</a>
+					<div class="footer-experiencia">
+				<a href="#" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/experiencia/{{exp.id_noticia}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/experiencia/{{exp.id_noticia}}" socialshare-hashtags="{{exp.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+				<a href="experiencia/{{exp.id_noticia}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
+			</div>
+			</div>
+	</div>   
+	
+ 
+	</div>
+</div>
+</div>
+  
