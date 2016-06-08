@@ -13,7 +13,7 @@ Sitio web Principal de la [Coordinación de Innovacion Educativa](http://innovac
 
 
 ## Instalacion inicial
-### Software usado Windows 
+## Software usado con Windows 
 
 
 - [instalar node y npm ](https://nodejs.org/en/)
