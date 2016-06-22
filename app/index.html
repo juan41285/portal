@@ -6,22 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
    
     <title ng-bind="viewTitle ? viewTitle + ' - Portal Educativo TIC - Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán' : 'Portal Educativo TIC - Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán'">Portal Educativo TIC - Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán</title>
-
-    <!-- Twitter summary card metadata. Unfortunately this won't work with crawlers that don't evaluate JavaScript 
-    <meta view-head property="twitter:card" content="summary" />
-    <meta view-head property="twitter:site" content="@conectartucuman" />
-    <meta view-head property="twitter:title" content="" />
-    <meta view-head property="twitter:description" content="" />
-    <meta view-head property="twitter:image" content="" />
-    <meta view-head property="twitter:url" content="" />
-
-
-  open graph metadview-head ata. This won't work either! 
-    <meta view-head property="og:title" content="" />
-    <meta view-head property="og:site_name " content="My Favourite Albums" />
-    <meta view-head property="og:url " content="" />
-    <meta view-head property="og:description" content="" />
-    <meta view-head property="og:image" content="" />-->
     <meta view-head name="viewport" content="width=device-width, initial-scale=1">
     <!-- Coloca favicon.ico y apple-touch-icon(s) en el directorio raíz -->
 <link rel="shortcut icon" type="image/png" href="http://www.tictucuman.net/favicon.png"/>
@@ -61,28 +45,23 @@ III. Anatomía de una aplicación AngularJS.
  <!-- Google Analytics: Cambia UA-XXXXX-X por el ID de t
 u sitio -->
   </head>
-  <body class="fondo-seccion"> 
-  
-<!--  <nav >
-  <div class="container-fluid">
+  <body > 
+   <nav class="fondo-menu-top shadow-z-1 " >
+    <!--  <a href="#" class="btn btn-default btn-xs">Entrar</a> -->
+   </nav>
+ <nav class="fondo-blanco shadow-z-1 margin-bottom-20" >
+  <div class="container">
    
-            <div class="row">
-        <div class="col-md-12">
-         <a href="https://www.facebook.com/coordinaciontictucuman" target="_blank" tooltip-placement="bottom" uib-tooltip="Facebook" class="pull-left"><span class="fa fa-facebook white"></span></a>
-          <a href="https://twitter.com/tictucuman" target="_blank" tooltip-placement="bottom"uib-tooltip="Twitter" class="pull-left"><span class="fa fa-twitter white"></span></a>
-          <a href="https://www.youtube.com/channel/UCpbI-q03K3u3fP0jB5pIVjA?sub_confirmation=1" target="_blank"  tooltip-placement="bottom" tooltip-placement="right" uib-tooltip="YouTube" class="pull-left" >
-              <span class="fa fa-youtube-play rojo-yt"></span>
-          </a>
-
-                      
-        <a href="http://tictucuman.net/personal/login.php" class="pull-right" target="_blank">Ingresar</a>
-        </div>
+<div class="row">
+     <div class="col-md-6">
+        <img src="images/banner-inn.png" alt="" class="img-responsive">
+     </div>
     </div>
         
   </div>
-</nav > -->
+</nav >
 
-<header class="azul-pnide altura-2">
+<!-- <header class="azul-pnide altura-2">
   <div class="container" id="top"> 
     <div class="row">
       <div class="col-md-12 col-xs-12" ng-controller="banner">
@@ -118,7 +97,7 @@ u sitio -->
     </div>
   </div>
 
-</header>
+</header> -->
 
 <!-- <div ng-controller="BuscadorCtrl" ng-include="template.buscador" ></div>  -->
 
@@ -167,6 +146,7 @@ u sitio -->
     <script src="/scripts/ngGallery.js"></script>
     <script src="/scripts/jquery.scrollpanel-0.5.0.min.js"></script>
     <script src="/scripts/jquery.mousewheel-3.1.3.js"></script>
+    <script src="/scripts/functions.js"></script>
     <script src="/scripts/filters.js"></script>
     <script src="/scripts/directives.js"></script>
     <script src="/scripts/controllers.js"></script>

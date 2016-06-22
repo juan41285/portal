@@ -9,9 +9,9 @@
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/slide-lista.tpl.html',
-        controller: 'SlideListCtrl',
-        controllerAs: 'slidelista'
+        templateUrl: 'views/home.tpl.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
       })
       .when('/articulo/:pg_id', {
         templateUrl: 'views/articulos-detalle.tpl.html',
