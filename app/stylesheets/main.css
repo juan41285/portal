@@ -13,6 +13,10 @@
 .margin-bottom-20 {
   margin-bottom: 20px;
 }
+.thumb-home {
+  width: 120px !important;
+  height: 100px !important;
+}
 /******************CSS ROBADOS********************/
 .fondo-menu-top {
   padding: 10px;
@@ -35,4 +39,14 @@
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
   width: 100%;
+}
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background: transparent !important;
+}
+.carousel-control.left {
+  right: auto;
+  left: 0;
+  background: transparent !important;
 }
