@@ -1,10 +1,25 @@
-@font-face {
-  font-family: 'Roboto Condensed';
-  src: url("fonts/RobotoCondensed-Regular.ttf");
+body,
+html {
+  font-family: 'Roboto Condensed' !important;
+  font-size: 16px;
+  line-height: 1.2;
 }
-@font-face {
-  font-family: 'Roboto bold';
-  src: url("fonts/RobotoCondensed-Bold.ttf");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: 'Hind Guntur', sans-serif !important;
+}
+a:hover {
+  color: #662d91;
+}
+.btn-default {
+  color: #333;
+  background-color: #fff !important;
+  border-color: #ccc;
 }
 .fondo-blanco {
   background: #fff;
@@ -16,6 +31,74 @@
 .thumb-home {
   width: 120px !important;
   height: 100px !important;
+}
+.slide-box {
+  background: #fff !important;
+  max-height: 500px;
+  height: 500px;
+  margin-top: 15px;
+}
+.slide-box img {
+  width: 100%;
+  height: 100% !important;
+  opacity: 0.8;
+}
+.slide-box h3 {
+  position: absolute;
+  top: 10%;
+  padding: 10px;
+  z-index: 999;
+  color: #fff;
+  font-size: 20px;
+  background: #489cea;
+  background: -moz-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #489cea), color-stop(100%, #1f7be5));
+  background: -webkit-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: -o-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: -ms-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: linear-gradient(to bottom, #489cea 0%, #1f7be5 100%);
+}
+.slide-box p {
+  padding: 10px;
+  color: #fff;
+}
+.slide-box div.bg-blue {
+  margin-top: -180px;
+  position: relative;
+  background: #489cea;
+  background: -moz-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #489cea), color-stop(100%, #1f7be5));
+  background: -webkit-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: -o-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: -ms-linear-gradient(top, #489cea 0%, #1f7be5 100%);
+  background: linear-gradient(to bottom, #489cea 0%, #1f7be5 100%);
+  margin-bottom: 10px;
+}
+.slide-box div.bg-blue > button {
+  background: #fff !important;
+}
+.bg-central {
+  margin-top: 40px;
+  background: #fff;
+  padding: 10px;
+}
+.barra-social {
+  margin-top: 20px;
+}
+.barra-social a {
+  text-decoration: none;
+}
+.barra-social a span:before {
+  font-size: 40px;
+}
+.color-fb {
+  color: #3b5998;
+}
+.color-tw {
+  color: #55acee;
+}
+.color-ut {
+  color: #b00;
 }
 /******************CSS ROBADOS********************/
 .fondo-menu-top {

@@ -1,5 +1,20 @@
-@import fonts
 
+body,html
+  font-family: 'Roboto Condensed' !important
+  font-size: 16px
+  line-height: 1.2
+  
+h1,h2,h3,h4,h5,h6,strong
+  font-family: 'Hind Guntur', sans-serif !important
+
+a:hover
+  color:#662D91
+.btn-default 
+  color: #333
+  background-color: #fff !important
+  border-color: #ccc
+
+  
 .fondo-blanco
   background: #fff
   padding: 10px
@@ -10,6 +25,73 @@
 .thumb-home
   width: 120px !important
   height: 100px  !important
+  
+.slide-box
+  background: #fff !important
+  max-height: 500px
+  height: 500px
+  margin-top:15px 
+  
+  & img 
+    width: 100%
+    height: 100% !important
+    opacity: 0.8
+  
+  & h3
+   position: absolute
+   top:10%
+   padding: 10px
+   z-index: 999
+   color:#fff
+   font-size: 20px
+   background: rgba(72,156,234,1)
+   background: -moz-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(72,156,234,1)), color-stop(100%, rgba(31,123,229,1)))
+   background: -webkit-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+   background: -o-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+   background: -ms-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+   background: linear-gradient(to bottom, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+  & p
+    padding: 10px
+    color:#fff
+   
+  
+  & div.bg-blue
+    margin-top:-180px
+    position: relative
+    background: rgba(72,156,234,1)
+    background: -moz-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(72,156,234,1)), color-stop(100%, rgba(31,123,229,1)))
+    background: -webkit-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+    background: -o-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+    background: -ms-linear-gradient(top, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+    background: linear-gradient(to bottom, rgba(72,156,234,1) 0%, rgba(31,123,229,1) 100%)
+    margin-bottom:10px
+    
+  & div.bg-blue > button 
+    background: #fff !important
+
+.bg-central
+  margin-top:40px
+  background: #fff
+  padding: 10px   
+  
+.barra-social
+  margin-top:20px
+  
+  & a
+    text-decoration: none
+    
+    & span:before 
+      font-size: 40px
+  
+.color-fb
+  color: #3b5998
+.color-tw
+  color:#55acee
+.color-ut
+  color:#bb0000
+    
 /******************CSS ROBADOS********************/
 .fondo-menu-top
   padding: 10px

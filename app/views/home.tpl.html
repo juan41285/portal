@@ -3,7 +3,7 @@
     <div id="main_area">
         <!-- Slider -->
         <div class="row">
-            <div class="col-sm-6" id="slider-thumbs">
+            <div class="col-md-6 hidden-sm hidden-xs" id="slider-thumbs">
                 <!-- Bottom switcher of slider -->
                 <ul class="hide-bullets">
                     <li class="col-sm-3 " ng-repeat="thumb in home.slides">
@@ -15,31 +15,36 @@
                     
                 </ul>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6 col-xs-12">
                 <div class="col-xs-12" id="slider">
                     <!-- Top part of the slider -->
                     <div class="row">
                         <div class="col-sm-12" id="carousel-bounding-box">
-                            <div class="carousel slide" id="myCarousel">
+                            <div class="carousel slide " id="myCarousel">
                                 <!-- Carousel items -->
-                                <div class="carousel-inner">
+                                <div class="carousel-inner ">
                               
-                                    <div class="item" ng-class="{active: thumb.pg_order == 0}"  ng-repeat="thumb in home.slides" data-slide-number="$index" >
+                                    <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_order == 0}"  ng-repeat="thumb in home.slides" data-slide-number="$index" >
                                     
                                         <img src="http://innovacioneducativa.gob.ar{{thumb.capa}}">
                                         <h3>{{thumb.pg_title}}</h3>
-                                        <p ng-bind-html="thumb.pg_des"></p>
+                                        <div class="bg-blue">
+                                        <div ng-bind-html="thumb.pg_des"></div>
+                                        <div class="clearfix">
+                                        <button class="btn btn-default btn-raised pull-right">Leer más</button>
+                                        </div>
+                                        </div>
                                    </div>    
                                  
                                    
                                 </div>
                                 <!-- Carousel nav -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                               <!--  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left"></span>
                                 </a>
                                 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                                     <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -48,5 +53,14 @@
             <!--/Slider-->
         </div>
 
+    </div>
+</div>
+<div class="bg-central shadow-z-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
     </div>
 </div>
