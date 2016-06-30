@@ -3,7 +3,7 @@
 
   // /* @ngInject */
   angular
-    .module('portal', ['ngRoute','portal.controllers', 'portal.services','ngSanitize','ui.bootstrap'])
+    .module('portal', ['ngRoute','portal.controllers', 'portal.services','ngSanitize','ui.bootstrap','ngScrollable'])
     .config(config);
 
 

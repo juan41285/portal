@@ -55,6 +55,7 @@
 
     </div>
 </div>
+<!-- accesos directos -->
 <div class="bg-central shadow-z-1">
     <div class="container">
         <div class="row">
@@ -80,4 +81,46 @@
             </div>
         </div>
     </div>
+    </div>
+    <!-- agendas -->
+        
+      
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 border-left">
+
+                <div class="shadow-z-1 bg-calendar-home">
+                <div class="ch-hoy">
+              <h1>Agenda para el día {{home.hoy[0].ag_fecha | date:'EEEE'}} {{home.hoy[0].ag_fecha | date:'d'}} de {{home.hoy[0].ag_fecha | date:'MMMM'}}</h1>
+                </div>
+                   <div ng-scrollable="{scrollX:'none',scrollY:'right'}"  spy-x="home.posX" spy-y="home.posY" style="width: 100%; height: 650px">
+                
+                        <div class="calendar-home-event" ng-repeat="dia in home.hoy">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <span class="ch-entrada"> {{dia.ag_entrada}}</span>
+                            <div class="ch-linea "> {{dia.ag_linea_accion }} <br>{{dia.Nombre }} </div>
+                            <div class="ch-tipo pull-right">{{dia.ag_tipo_visita }} <a href="#" class="btn btn-default btn-xs" ng-click="home.open(lg,dia.ag_id)">Detalles</a></div>
+                            <div class="ch-border"></div>
+                        </div>
+                           
+
+   
+  
 </div>
+
+                    
+                </div>
+                <a href="#" class="btn btn-info btn-fab ch-btn-up" ng-click="home.moveY(-120)"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-info btn-fab ch-btn-down" ng-click="home.moveY(120)"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+<div class="calendar-home-footer shadow-z-1">
+    
+    <h3>Cantidad de actividades agendadas para la fecha <span>{{home.hoy.length}}</span></h3>
+</div>
+                </div>
+            
+            </div>
+        </div>
+ 
+    <!-- end agendas -->
+
+  </div>

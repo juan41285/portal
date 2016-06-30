@@ -1,13 +1,19 @@
 <div class="modal-header modal-header-agenda">
-            <h4 class="modal-title">{{datos[0].ag_tipo_visita}}</h4>
+            <h4 class="modal-title">{{mag.datos[0].ag_tipo_visita}}</h4>
         </div>
         <div class="modal-body">
-            {{datos[0].ag_objetivo}}
-
+            {{mag.datos[0].ag_objetivo}}
+           <hr>
+           <ul>
+           	<li>Lugar: <strong>{{mag.datos[0].Nombre}}</strong></li>
+           	<li>Comienza: <strong>{{mag.datos[0].ag_entrada}}</strong></li>
+           	<li>Termina: <strong>{{mag.datos[0].ag_salida}}</strong></li>
+           
+           </ul>
         </div>
         <div class="modal-footer">
      
-            <button class="btn btn-primary" ng-click="cancel()">Cerrar</button>
+            <button class="btn btn-morado" ng-click="mag.cancel()">Cerrar</button>
           
         </div>
 
