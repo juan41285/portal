@@ -156,7 +156,7 @@ a:hover {
   content: '';
   position: absolute;
   top: 100px;
-  left: 60px;
+  left: 45px;
   height: 650px;
   width: 2px;
   background: #fff;
@@ -229,6 +229,13 @@ a:hover {
   background-color: #5238b5 !important;
   border-color: #5238b5;
 }
+.h1-mapa {
+  font-family: 'Raleway';
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 2px dashed #2587cf;
+  padding: 13px;
+}
 .btn-xs,
 .btn-group-xs > .btn {
   font-size: 11px !important;
@@ -244,3 +251,61 @@ a:hover {
   background-color: rgba(255,255,255,0.8);
   border: 0px !important;
 }
+/* Start of Column CSS */
+#container2 {
+  clear: left;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+/* column 2 background colour */
+}
+#container1 {
+  float: left;
+  width: 100%;
+  position: relative;
+  right: 50%;
+  background: #412a9b;
+/* column 1 background colour */
+}
+#col1 {
+  float: left;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  overflow: hidden;
+}
+#col2 {
+  float: left;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  #container2 {
+    clear: left;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+/* column 2 background colour */
+  }
+  #container1 {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 50%;
+    background: #412a9b;
+/* column 1 background colour */
+  }
+  #col1 {
+    float: left;
+    width: 100%;
+  }
+  #col2 {
+    float: left;
+    width: 100%;
+  }
+}
+/* --> */

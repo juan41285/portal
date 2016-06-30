@@ -17,6 +17,11 @@
         controller: 'HomeCtrl',
         controllerAs: 'home'
       })
+       .when('/articulos', {
+        templateUrl: 'views/publicaciones.tpl.html',
+        controller: 'PublicacionesCtrl',
+        controllerAs: 'articulos'
+      })
       .otherwise({ reditrectTo : "/" });
   }
 
