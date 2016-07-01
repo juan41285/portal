@@ -1,27 +1,9 @@
 
 <div class="container">
 
-<section class="well">
+<!-- <section class="well">
    <div class="row">
-   <div class="col-md-12">
-   	<h2>Historial de Publicaciones
-<div class="btn-group pull-right acomodar-10">
-              <a href="javascript:void(0)" class="btn btn-default btn-raised">{{anio}}</a>
-              <a href="#" data-target="#" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-              <ul class="dropdown-menu">
-               <li><a href="javascript:void(0)" ng-click="cambiaAnio(2016)">2016</a></li>
-                <li class="divider"></li>
-                <li><a href="javascript:void(0)" ng-click="cambiaAnio(2015)">2015</a></li>
-                <li class="divider"></li>
-                <li><a href="javascript:void(0)" ng-click="cambiaAnio(2014)">2014</a></li>
-                <li class="divider"></li>
-                <li><a href="javascript:void(0)" ng-click="cambiaAnio(2013)">2013</a></li>
-                <li class="divider"></li>
-                <li><a href="javascript:void(0)" ng-click="cambiaAnio(2012)">2012</a></li>
-
-              </ul>
-            </div>
-
+   
    <div class="btn-group pull-right acomodar-10">
               <a href="javascript:void(0)" class="btn btn-default btn-raised">{{tipo}}</a>
               <a href="#" data-target="#" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
@@ -57,34 +39,45 @@
         <div class="col-md-1"><a href="#" ng-click="cambiaMes(12)" class="btn btn-xs btn-info" ng-class="{'btn-material-lime-A700 btn-raised': mes == 12}">DIC</a></div>
    
   </div>
-  </section>
+  </section> -->
 </div>
 
 <div class="container">
 	<div class="row">
 	
-         <div  ng-show="articulos.length > 0" >
+         <div   >
  
-	<div class="col-md-12"  dir-paginate="art in articulos | itemsPerPage: 5">
+	<div class="col-md-12"  dir-paginate="art in noticias | itemsPerPage: 5">
 	<div class="articulos-cont border-noticia well" >
-			<a href="{{art.nav}}/{{art.id}}" >
+			<a href="articulo/{{art.pg_id}}" >
 		
 	  <div class="row">
 	  	<div class="col-md-3">
-	  		<img src="{{art.imagen}}" alt="" class="img-responsive">
+	  		<img src="http://innovacioneducativa.gob.ar{{art.capa}}" alt="" class="img-responsive">
 	  	</div>
 	  	<div class="col-md-9">
 	  		
-				<h4 ><strong >{{art.titulo}}</strong></h4>
+				<h4 ><strong >{{art.pg_title}}</strong></h4>
 				<h6>
-					 <span class="mdi-action-today"></span>    {{art.fecha | dateToISO | date:'EEEE' }} {{art.fecha | dateToISO | date:'d' }} de {{art.fecha | dateToISO | date:'MMMM' }} de {{art.fecha | dateToISO | date:'y' }}
+					 <span class="mdi-action-today"></span>    {{art.Fecha | dateToISO | date:'EEEE' }} {{art.Fecha | dateToISO | date:'d' }} de {{art.Fecha | dateToISO | date:'MMMM' }} de {{art.Fecha | dateToISO | date:'y' }}
 				</h6>
-				<div ng-bind-html="art.des"></div>
+				<div ng-bind-html="art.pg_des"></div>
 				<div class="footer-noticia">
-				<samll class="label label-info">{{art.nav}}</samll>
-				<a href="{{art.nav}}/{{art.id}}" class="pull-right"><span class="fa fa-plus-circle"></span></a>
-				<a href="#" class="pull-right" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/{{art.nav}}/{{art.id}}"><span class="fa fa-facebook-square"></span></a>
-				<a href="#"  class="pull-right" socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/{{art.nav}}/{{art.id}}" socialshare-hashtags="{{art.subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+        <div class="clearfix barra-social">
+         <a href="articulo/{{art.pg_id}}" class="pull-right btn btn-info" target="_blank">
+        Leer más
+       </a>
+       <a href="#" class="pull-left color-fb" socialshare="" socialshare-provider="facebook" socialshare-url="http://innovacioneducativa.gob.ar/articulo/{{art.pg_id}}">
+         <span class="flaticon-facebook-logo-button"></span>
+       </a>
+        <a href="#" class="pull-left color-tw" socialshare="" socialshare-provider="twitter" socialshare-url="http://innovacioneducativa.gob.ar/articulo/{{art.pg_id}}">
+         <span class="flaticon-twitter-logo-button"></span>
+       </a>
+    </div>
+				<!-- <samll class="label label-info">articulo</samll>
+				<a class="pull-right"><span class="fa fa-plus-circle"></span></a>
+				<a href="#" class="pull-right" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/articulo/{{art.pg_id}}"><span class="fa fa-facebook-square"></span></a>
+				<a href="#"  class="pull-right" socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/articulo/{{art.pg_id}}" socialshare-hashtags="{{art.pg_des}}"><span class="fa fa-twitter-square"></span></a> -->
 				
 			</div>
 	  	</div>
@@ -109,7 +102,7 @@
 	</div>
 
 	<div class="col-md-12" >
-	<div class="well"  ng-show="!articulos.length" >
+	<div class="well"  ng-show="!noticias.length" >
 		<center>
 		<div class="alert alert-info">
 			<h4><strong>No se encontraron articulos</strong></h4>

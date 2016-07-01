@@ -1,0 +1,48 @@
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-md-12" >
+        <div class="loading-spiner-holder" data-loading ><div class="loading-spiner"><double-bounce-spinner></double-bounce-spinner></div></div>
+
+ 			<section class="shadow-z-3" >
+
+ 			<div class="noticia-copete">{{noticia[0].subtitulo}} 
+    <a href="#"  class="pull-right btn-share white" socialshare="" socialshare-provider="facebook" socialshare-url="http://tictucuman.net/articulo/{{noticia[0].pg_id}}"><span class="fa fa-facebook-square"></span></a>
+        <a href="#" class="pull-right btn-share white"   socialshare  socialshare-provider="twitter" socialshare-via="ConectarTucuman" socialshare-url="http://tictucuman.net/articulo/{{noticia[0].pg_id}}" socialshare-hashtags="{{noticia[0].subtitulo}}"><span class="fa fa-twitter-square"></span></a>
+
+
+      </div>
+             <h1 class="noticia-titulo">{{noticia[0].pg_title}}</h1>
+             <div class="noticia-datos">
+             <div class="row">
+             	<div class="col-md-4 col-md-offset-2 col-xs-6" >
+             	 <span class="mdi-action-today"></span>    {{noticia[0].Fecha | dateToISO | date:'EEEE' }} {{noticia[0].Fecha | dateToISO | date:'d' }} de {{noticia[0].Fecha | dateToISO | date:'MMMM' }} de {{noticia[0].Fecha | dateToISO | date:'y' }}
+             	</div>
+             	<div class="col-md-4 col-xs-6 pull-right">
+             		<!-- <a href="#" class="tag">Front-end development</a> -->
+             	</div>
+             	</div> 
+             </div>
+            
+             <div class="row">
+             	<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+                  <div class="noticia-des">
+                      <div class="row "> 
+
+                         <div class="col-md-3 col-xs-4 ">
+                              <img src="{{noticia[0].capa}}" alt="" class="img-responsive img-thumbnail">
+                        </div>
+                        <div class="col-md-9 col-xs-8 margin-top-10 "  ng-bind-html = "noticia[0].pg_des">
+                              {{noticia[0].pg_des}}
+                        </div>
+                        </div>
+            
+            </div>
+             		 <div class="noticia-cont" ng-bind-html ="noticia[0].pg_cont | trustAsHTML">
+             		 
+             	
+                       
+
+             		 </div>
+                  </div>
+             </div>
+             

@@ -4,7 +4,11 @@
     <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-   
+    <meta content='http://innovacioneducativa.gob.ar/images/logo-face.jpg' property='og:image'>
+        <meta property="og:url" content="http://innovacioneducativa.gob.ar" />
+
+   <meta name="description" content="Sitio web de la Coordinación de Innovación Educativa de Tucumán - Ministerio de Educación. Encontra toda la información relacionada con los trayectos formativos orientados a la educación con la nuevas tecnologías">
+   <META name="keywords" content="Tucumán,Educación,TIC, Innovación, Innovacion, Tucuman Innovacion, Cursos de Tics, Capacitaciones Tucumán, Ministerio de Educación de Tucuman, Ciidept, Cursos, Certificados, Docentes, Panel Docente, Robotica, Conectar Igualdad Tucuman, Netbooks, Plataforma Virtual Educativa, Mapa Georeferencial, Festival de Cine, Bicentenario">
     <title ng-bind="viewTitle ? viewTitle + ' - Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán' : 'Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán'">Coordinación de Innovación Educativa - Ministerio de Educación de Tucumán</title>
     <meta view-head name="viewport" content="width=device-width, initial-scale=1">
     <!-- Coloca favicon.ico y apple-touch-icon(s) en el directorio raíz -->
@@ -48,136 +52,12 @@ III. Anatomía de una aplicación AngularJS.
 u sitio -->
   </head>
   <body > 
-   <nav class="fondo-menu-top shadow-z-1 " >
-     <!-- <a href="#" class="btn btn-default btn-xs">Entrar</a> -->
-   </nav>
- <nav class="fondo-blanco shadow-z-1 " >
-  <div class="container">
-   
-<div class="row">
-     <div class="col-md-6">
-        <a href="/"><img src="images/banner-inn.png" alt="" class="img-responsive"></a>
-     </div>
-     <div class="col-md-6">
-     
-     <div class="clearfix barra-social">
-         <a href="https://www.youtube.com/channel/UCpbI-q03K3u3fP0jB5pIVjA?sub_confirmation=1" class="pull-right color-ut" target="_blank">
-         <span class="flaticon-youtube-logotype"></span>
-       </a>
-       <a href="https://www.facebook.com/innovaciontuc" class="pull-right color-fb" target="_blank">
-         <span class="flaticon-facebook-logo-button"></span>
-       </a>
-        <a href="https://twitter.com/innovaciontuc?ref_src=twsrc%5Etfw" class="pull-right color-tw" target="_blank">
-         <span class="flaticon-twitter-logo-button"></span>
-       </a>
-    </div>
-     </div>
-    </div>
-        
-  </div>
-</nav >
-<div class="navbar navbar-info">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- <a class="navbar-brand" href="javascript:void(0)">Brand</a> -->
-    </div>
-    <div class="navbar-collapse collapse navbar-warning-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        <li><a href="/articulos">Publicaciones</a></li>
-  <!--       <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Action</a></li>
-            <li><a href="javascript:void(0)">Another action</a></li>
-            <li><a href="javascript:void(0)">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Dropdown header</li>
-            <li><a href="javascript:void(0)">Separated link</a></li>
-            <li><a href="javascript:void(0)">One more separated link</a></li>
-          </ul>
-        </li> -->
-      </ul>
-  <!--     <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control col-md-12" placeholder="Buscar en el sitio">
-        </div>
-      </form> -->
-<!--       <ul class="nav navbar-nav navbar-right">
-        <li><a href="javascript:void(0)">Link</a></li>
-        <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Action</a></li>
-            <li><a href="javascript:void(0)">Another action</a></li>
-            <li><a href="javascript:void(0)">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="javascript:void(0)">Separated link</a></li>
-          </ul>
-        </li>
-      </ul> -->
-    </div>
-  </div>
-</div>
-
-<!-- <header class="azul-pnide altura-2">
-  <div class="container" id="top"> 
-    <div class="row">
-      <div class="col-md-12 col-xs-12" ng-controller="banner">
-        <img src="images/fondo-material.png" alt="Logo coordinación Provincial TIC" class="img-responsive rwdimgmap" usemap="#Map" />
-<map name="Map">
-  <area shape="rect" coords="-2,0,229,133" href="http://tictucuman.net/">
-  <area shape="rect" coords="1070,14,1176,127" href="http://www.tucuman.gov.ar/" target="_blank">
-</map>
-      </div>
-     
-    </div>
-    <div class="col-md-12">
-      <ul class="list-inline menu-propio" ng-controller="activarMenuCtrl">
-  <li ng-class="{active: $route.current.activeMenu == '/'}"><a href="/">Inicio</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'desarrollo-profesional-tic'}"><a href="/desarrollo-profesional-tic">Desarrollo Profesional</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'noticias'}"><a href="/noticias">Noticias</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'agendas'}"><a href="/agendas">Agenda</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'lineas-de-accion'}"><a href="/lineas-de-accion">Líneas de Acción</a></li>
-</ul>
-
-<ul class="list-inline pull-right menu-propio-der">
-  <li><a href="https://www.facebook.com/coordinaciontictucuman" target="_blank" tooltip-placement="bottom" uib-tooltip="Facebook"><span class="fa fa-facebook white"></span></a></li>
-  <li><a href="https://twitter.com/tictucuman" target="_blank" tooltip-placement="bottom"uib-tooltip="Twitter"><span class="fa fa-twitter white"></span></a></li>
-  <li>
-  <a href="https://www.youtube.com/channel/UCpbI-q03K3u3fP0jB5pIVjA?sub_confirmation=1" target="_blank"  
-  tooltip-placement="bottom"  uib-tooltip="YouTube">
-  <span class="fa fa-youtube-play rojo-yt"></span></a>
-  </li>
-  <li> <a href="http://tictucuman.net/personal/login.php"  target="_blank" 
-   tooltip-placement="bottom" uib-tooltip="Directorio personal" ><span class="fa fa-user rojo-yt"></span></a></li>
-
-</ul>
-    </div>
-  </div>
-
-</header> -->
-
-<!-- <div ng-controller="BuscadorCtrl" ng-include="template.buscador" ></div>  -->
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <a href="http://cine.innovacioneducativa.gob.ar/festival/pre-inscripcion/index.php" target="_blank"><img src="images/aviso-festival.png" alt="" class="img-responsive shadow-z-1"></a>
-    </div>
-  </div>
-</div>
+<div ng-controller="NavbarCtrl" ng-include="template.navbar" ></div> 
 <div ng-view="">
   
 </div>
 
+<div ng-controller="FooterCtrl" ng-include="template.footer" ></div> 
 
 
 <div id="fb-root"></div>
@@ -206,15 +86,20 @@ u sitio -->
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angularjs-socialshare/dist/angular-socialshare.min.js"></script>
     <script src="lib/ngScrollable/min/ng-scrollable.min.js"></script>
+    <script src="lib/angularUtils-pagination/dirPagination.js"></script>
+    <script src="lib/angular-socialshare/dist/angular-socialshare.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->
     <!-- inject:js -->
     <script src="/scripts/services.js"></script>
     <script src="/scripts/services/Home.js"></script>
+    <script src="/scripts/services/Articulos.js"></script>
     <script src="/scripts/controllers.js"></script>
+    <script src="/scripts/controller/NavbarCtrl.js"></script>
     <script src="/scripts/controller/HomeCtrl.js"></script>
     <script src="/scripts/controller/FooterCtrl.js"></script>
+    <script src="/scripts/controller/ArticulosCtrl.js"></script>
     <script src="/scripts/templates.js"></script>
     <script src="/scripts/mapa_circuitos.js"></script>
     <script src="/scripts/jquery.mousewheel-3.1.3.js"></script>

@@ -13,8 +13,13 @@ h6,
 strong {
   font-family: 'Hind Guntur', sans-serif !important;
 }
+a {
+  text-decoration: none;
+  color: #808080;
+}
 a:hover {
   color: #662d91;
+  text-decoration: none;
 }
 .btn-default {
   color: #333;

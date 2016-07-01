@@ -3,7 +3,7 @@
 
   // /* @ngInject */
   angular
-    .module('portal', ['ngRoute','portal.controllers', 'portal.services','ngSanitize','ui.bootstrap','ngScrollable'])
+    .module('portal', ['ngRoute','portal.controllers', 'portal.services', 'portal.filters','ngSanitize','ui.bootstrap','ngScrollable','angularUtils.directives.dirPagination','720kb.socialshare'])
     .config(config);
 
 
@@ -15,12 +15,18 @@
       .when('/', {
         templateUrl: 'views/home.tpl.html',
         controller: 'HomeCtrl',
-        controllerAs: 'home'
+        controllerAs: 'home',
+        activeMenu: '/'
       })
        .when('/articulos', {
         templateUrl: 'views/publicaciones.tpl.html',
         controller: 'PublicacionesCtrl',
-        controllerAs: 'articulos'
+        controllerAs: 'pub',
+        activeMenu: 'articulos'
+      })
+      .when('/articulo/:id', {
+        templateUrl: 'views/articulo-detalle.tpl.html',
+        controller: 'ArticuloCtrl'
       })
       .otherwise({ reditrectTo : "/" });
   }
