@@ -8,7 +8,7 @@
                 <ul class="hide-bullets">
                     <li class="col-sm-3 " ng-repeat="thumb in home.slides">
                         <a class="thumbnail" id="carousel-selector-{{$index}}">
-                            <img src="http://innovacioneducativa.gob.ar{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1">
+                            <img src="{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1">
                         </a>
                     </li>
 
@@ -24,9 +24,9 @@
                                 <!-- Carousel items -->
                                 <div class="carousel-inner ">
                               
-                                    <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_order == 0}"  ng-repeat="thumb in home.slides" data-slide-number="$index" >
+                                    <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == 982}"  ng-repeat="thumb in home.slides" data-slide-number="$index" >
                                     
-                                        <img src="http://innovacioneducativa.gob.ar{{thumb.capa}}">
+                                        <img src="{{thumb.capa}}">
                                         <h3>{{thumb.pg_title}}</h3>
                                         <div class="bg-blue">
                                         <div ng-bind-html="thumb.pg_des"></div>

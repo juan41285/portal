@@ -38,7 +38,7 @@
     };
  $scope.noticias = Historial.query({anio: $scope.anio, mes: $scope.mes, tipo: $scope.tipo });
 
-    console.log($scope.noticias);
+    // console.log($scope.noticias);
 
   }
 
@@ -47,7 +47,9 @@ function ArticuloCtrl ($scope,$routeParams,Articulo) {
     $scope.noticia = {};
     // this.relacion = Slide.get();
   
-    $scope.noticia =  Articulo.query({ id: $routeParams.pg_id });
+    $scope.noticia =  Articulo.query({ pg_id: $routeParams.pg_id });
+    console.log( $scope.noticia);
+    console.log($routeParams.pg_id);
     //this.galeria =  Galeria.query({ id: $routeParams.pg_id });
 
   } 

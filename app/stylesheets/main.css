@@ -314,3 +314,26 @@ a:hover {
   }
 }
 /* --> */
+.noticia-copete {
+  background: #6347d1;
+  color: #fff;
+  padding: 10px;
+}
+.color-white-noticia {
+  color: #fff;
+  margin-left: -10px;
+}
+.color-white-noticia:hover {
+  color: #fff;
+}
+.noticia-titulo {
+  background: #fff;
+  font-family: 'Raleway';
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(237,231,246,0.48);
+}
+.noticia-datos {
+  color: #673ab7;
+  font-size: 0.9em;
+}

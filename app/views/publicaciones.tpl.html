@@ -53,7 +53,7 @@
 		
 	  <div class="row">
 	  	<div class="col-md-3">
-	  		<img src="http://innovacioneducativa.gob.ar{{art.capa}}" alt="" class="img-responsive">
+	  		<img src="{{art.capa}}" alt="" class="img-responsive">
 	  	</div>
 	  	<div class="col-md-9">
 	  		
@@ -64,7 +64,7 @@
 				<div ng-bind-html="art.pg_des"></div>
 				<div class="footer-noticia">
         <div class="clearfix barra-social">
-         <a href="articulo/{{art.pg_id}}" class="pull-right btn btn-info" target="_blank">
+         <a href="articulo/{{art.pg_id}}" class="pull-right btn btn-info" >
         Leer más
        </a>
        <a href="#" class="pull-left color-fb" socialshare="" socialshare-provider="facebook" socialshare-url="http://innovacioneducativa.gob.ar/articulo/{{art.pg_id}}">

@@ -24,9 +24,11 @@
         controllerAs: 'pub',
         activeMenu: 'articulos'
       })
-      .when('/articulo/:id', {
+      .when('/articulo/:pg_id', {
         templateUrl: 'views/articulo-detalle.tpl.html',
-        controller: 'ArticuloCtrl'
+        controller: 'ArticuloCtrl',
+        controllerAs: 'art',
+        activeMenu: 'articulos'
       })
       .otherwise({ reditrectTo : "/" });
   }
