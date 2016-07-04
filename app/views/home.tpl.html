@@ -6,7 +6,7 @@
             <div class="col-md-6 hidden-sm hidden-xs" id="slider-thumbs">
                 <!-- Bottom switcher of slider -->
                 <ul class="hide-bullets">
-                    <li class="col-sm-3 " ng-repeat="thumb in home.slides">
+                    <li class="col-sm-3 " ng-repeat="thumb in home.slides ">
                         <a class="thumbnail" id="carousel-selector-{{$index}}">
                             <img src="{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1">
                         </a>
@@ -20,18 +20,19 @@
                     <!-- Top part of the slider -->
                     <div class="row">
                         <div class="col-sm-12" id="carousel-bounding-box">
+                       
                             <div class="carousel slide " id="myCarousel">
                                 <!-- Carousel items -->
                                 <div class="carousel-inner ">
                               
-                                    <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == 982}"  ng-repeat="thumb in home.slides" data-slide-number="$index" >
+                                    <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == 982}"  ng-repeat="thumb in home.slides" data-slide-number="$index" index="thumb.pg_id">
                                     
                                         <img src="{{thumb.capa}}">
                                         <h3>{{thumb.pg_title}}</h3>
                                         <div class="bg-blue">
-                                        <div ng-bind-html="thumb.pg_des"></div>
+                                        <div ng-bind-html="thumb.pg_des | limitTo:350"></div>
                                         <div class="clearfix">
-                                        <a href="/articulo/{{thumb.pg_id}}" class="btn btn-default btn-raised pull-right">Leer más</a>
+                                        <a href="/articulo/{{thumb.pg_id}}" class="btn btn-info btn-raised pull-right">Leer más</a>
                                         </div>
                                         </div>
                                    </div>    
@@ -134,7 +135,7 @@
                     <div class="detalle-c1 col-md-4">
                       <strong>Circuito 1</strong>
                       <ul>                 
-                          <li>Buruyacu</li>
+                          <li>Burruyacú</li>
                           <li>Cruz Alta</li>
                           <li>Leales</li>
                       </ul>
@@ -150,7 +151,7 @@
                       <strong>Circuito 3</strong>
                       <ul>                 
                           <li>Trancas</li>
-                          <li>Tafi Viejo</li>
+                          <li>Tafí Viejo</li>
                           <li>Yerba Buena</li>
                           <li>Lules</li>
                       </ul>
@@ -159,8 +160,8 @@
                     <div class="detalle-c1 col-md-4">
                       <strong>Circuito 4</strong>
                       <ul>                 
-                          <li>Tafi del Valle</li>
-                          <li>Famailla</li>
+                          <li>Tafí del Valle</li>
+                          <li>Famaillá</li>
                           <li>Simoca</li>
                           <li>Monteros</li>
                       </ul>
@@ -168,8 +169,8 @@
                     <div class="detalle-c1 col-md-4">
                       <strong>Circuito 5</strong>
                       <ul>                 
-                          <li>Chicligaste</li>
-                          <li>Rio Chico</li>
+                          <li>Chicligasta</li>
+                          <li>Río Chico</li>
                           <li>J.B. Alberdi</li>
                         
                       </ul>

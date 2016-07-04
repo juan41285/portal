@@ -1,5 +1,5 @@
   $('#myCarousel').carousel({
-                interval: 5000
+                interval: 1500
         });
 
 $(document).on('click', '[id^=carousel-selector-]', function(event) {

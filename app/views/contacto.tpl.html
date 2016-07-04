@@ -1,0 +1,81 @@
+
+<div class="container boxme" ng-show="mensaje" id="mensaje">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+
+        <div class="well fondo-contacto margin-top-15">
+       <div class="row">
+          <div class="col-md-6">
+             <form class="form-horizontal " ng-submit="enviarMensaje()" ng-show="msj">
+    <fieldset>
+        <legend>Formulario de contacto</legend>
+       <span class="help-block">Contáctese enviando un mensaje</span>
+       <hr>
+       <div class="row">
+           <div class="col-md-6 borde-lateral-der">
+         <div class="form-titulo">Datos personales</div>
+
+                  <div class="form-group">
+            <label for="nombre" class="col-md-3 control-label">Nombre</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="nombre" name="nombre" ng-model="mData.nombre" placeholder="Nombre y Apellido " required>
+            </div>
+        </div>
+               <div class="form-group">
+            <label for="mail" class="col-md-3 control-label">E-Mail</label>
+            <div class="col-md-9">
+                <input type="email" class="form-control" id="mail" name="mail" ng-model="mData.mail" placeholder="" required>
+            </div>
+        </div>
+                   <div class="form-group">
+            <label for="tel" class="col-md-3 control-label">Teléfono</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="telefono" name="telefono" ng-model="mData.telefono" placeholder="" >
+            </div>
+        </div>
+           </div>
+
+                     <div class="col-md-6 borde-lateral-der">
+         <div class="form-titulo">Mensaje</div>
+
+                  <div class="form-group">
+            <label for="nombre" class="col-md-3 control-label">Asunto</label>
+            <div class="col-md-9">
+                <input type="text" class="form-control" id="asunto" name="asunto" ng-model="mData.asunto" placeholder="" required>
+            </div>
+        </div>
+                   <div class="form-group">
+            <label for="tel" class="col-md-3 control-label">Mensaje</label>
+            <div class="col-md-9">
+               <textarea class="form-control" rows="4" id="mensaje" name="mensaje" ng-model="mData.mensaje" required></textarea>
+            </div>
+        </div>
+           </div>
+
+
+       </div>
+     
+      
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                
+                <button type="submit" class="btn btn-info pull-right" ng-show="enviar">Enviar mensaje</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div ng-show="msj_ok"><div class="sus-ok"><span class="mdi-navigation-check"></span><p>Su mensaje fue enviado correctamente. Si es necesario nos pondremos en contacto con usted!. Muchas Gracias</p></div></div>
+<div ng-show="msj_mal"><div class="sus-error"><span class="mdi-navigation-cancel"></span><p>El mensaje no pudo ser enviado, Reinicie su navegador e intente nuevamente</p></div></div>
+
+</div>
+ <div class="col-md-6 col-sm-6 col-xs-12">
+   <img src="images/fondo-contacto.png" alt="" class="img-responsive pull-right">
+   </div>
+</div>
+        </div>
+           
+        </div>
+  
+    </div>
+</div>

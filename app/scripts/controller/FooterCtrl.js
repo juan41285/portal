@@ -13,5 +13,7 @@
     $scope.template = {'footer': 'views/footer.tpl.html'};
 }
 
+
+
 })();
  

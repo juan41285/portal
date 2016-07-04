@@ -30,6 +30,17 @@
         controllerAs: 'art',
         activeMenu: 'articulos'
       })
+      .when('/agenda', {
+        templateUrl: 'views/agenda.tpl.html',
+        controller: 'AgendaCrtl',
+        activeMenu: 'agenda'
+      })
+    .when('/contacto', {
+        templateUrl: 'views/contacto.tpl.html',
+        controller: 'ContactoCtrl',
+        controllerAs: 'contacto',
+        activeMenu: 'contacto'
+      })
       .otherwise({ reditrectTo : "/" });
   }
 
