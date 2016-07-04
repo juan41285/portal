@@ -1,5 +1,5 @@
 {
-  "name": "portal-educativo-tic",
+  "name": "innovacion-educativa",
   "version": "0.0.1",
   "description": "Sitio web de la Coordinación de innovacion educativa",
   "author": "Juan ALderete <juan41285@gmail.com> http://bit0.com.ar",
@@ -12,7 +12,7 @@
   ],
   "license": {
     "type": "MIT",
-    "url": ""
+    "url": "http://www.opensource.org/licenses/mit-license.php"
   },
   "repository": {
     "type": "git",
