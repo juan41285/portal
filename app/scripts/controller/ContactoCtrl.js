@@ -33,7 +33,7 @@ function ContactoCtrl ($scope, $http)
 
         $http({
               method  : 'POST',
-              url     : 'http://www.tictucuman.net/Pagina/suscribir.php',
+              url     : 'http://innovacioneducativa.gob.ar/Pagina/suscribir.php',
               data    : $.param($scope.sData),  // pass in data as strings
               headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
           })
@@ -123,7 +123,7 @@ $scope.mData.destino = correo;
 
         $http({
               method  : 'POST',
-              url     : 'http://tictucuman.net/Pagina/admin/emails/mensaje_contacto.php',
+              url     : 'http://innovacioneducativa.gob.ar/Pagina/admin/emails/mensaje_contacto.php',
               data    : $.param($scope.mData),  
               headers : { 'Content-Type': 'application/x-www-form-urlencoded' } 
           })
