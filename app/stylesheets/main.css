@@ -308,7 +308,8 @@ a:hover {
   font-family: 'Raleway';
   text-align: center;
   padding: 10px;
-  border-bottom: 1px solid rgba(237,231,246,0.48);
+  border-bottom: 1px solid rgba(103,58,183,0.29);
+  margin-bottom: 10px;
 }
 .noticia-datos {
   color: #673ab7;
@@ -328,6 +329,43 @@ a:hover {
 }
 .margin-top-10 {
   margin-top: 10px;
+}
+.noticia-cont {
+  padding: 10px;
+}
+.noticia-cont p {
+  text-align: justify;
+  padding: 0px 30px;
+  display: table;
+}
+.noticia-cont img {
+  padding: 0px;
+  margin: 10px auto;
+}
+.noticia-cont ul > li {
+  margin-left: 20px;
+  padding: 0px 15px;
+}
+.noticia-sidebar {
+  background: #6347d1;
+  padding: 30px;
+  color: #fff;
+}
+.noticia-sidebar span {
+  color: #fff;
+}
+.noticia-sidebar .control-label,
+.noticia-sidebar a {
+  color: #03a9f4;
+  padding: 0px !important;
+}
+.noticia-sidebar .form-control {
+  color: #fff !important;
+}
+.titulo-inscripcion {
+  border-bottom: 1px solid rgba(3,169,244,0.42);
+  padding-bottom: 3px;
+  margin-bottom: 7px;
 }
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
