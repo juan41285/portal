@@ -367,6 +367,67 @@ a:hover {
   padding-bottom: 3px;
   margin-bottom: 7px;
 }
+.inscripcion-form {
+  background: #fff;
+}
+.inscripcion-form p {
+  color: #000 !important;
+  font-weight: normal;
+  text-align: left;
+  padding-top: 15px;
+}
+.inscripcion-form ul {
+  padding-top: 10px;
+  font-size: 0.7em !important;
+  text-align: left;
+  color: #03a9f4;
+}
+.inscripcion-titulo-error {
+  color: #f00;
+  font-weight: bold;
+  text-align: center;
+}
+.inscripcion-titulo-suspension {
+  font-weight: bold;
+  color: #ffa500;
+  text-align: center;
+}
+.inscripcion-titulo-suspension a {
+  color: #03a9f4;
+}
+.inscripcion-titulo-1capa {
+  font-weight: bold;
+  color: #ffa500;
+  text-align: center;
+}
+.inscripcion-titulo-1capa a {
+  color: #03a9f4;
+}
+.inscripcion-titulo-ok {
+  font-weight: bold;
+  color: #008000;
+  text-align: center;
+}
+.inscripcion-titulo-ok a {
+  color: #03a9f4;
+}
+.inscripcion-titulo-2capa {
+  font-weight: bold;
+  color: #ffa500;
+  text-align: center;
+}
+.color-verde {
+  color: #008000 !important;
+  font-size: 3em;
+}
+.color-rojo {
+  color: #f00 !important;
+  font-size: 3em;
+}
+.color-naranja {
+  color: #ffa500 !important;
+  font-size: 3em;
+}
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
   list-style: none;

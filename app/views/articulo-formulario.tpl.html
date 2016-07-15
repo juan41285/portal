@@ -1,160 +1,120 @@
-        <div class="titulo-inscripcion">Formulario de Inscripción</div>
-   
-         
-              <!-- <div class="well inscripcion-form" ng-show="resultado == 0">
-                  <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
-                  <div class="inscripcion-titulo-error"> <span class="mdi-navigation-cancel"></span> <br>  Datos incorrectos <p>Verifique sus datos de acceso al panel docente</p></div>
-              </div> -->
-              <!-- Condicion -->
-<!--               <div class="well inscripcion-form" ng-show="resultado == 1">
-                  <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
 
-                  <div class="inscripcion-titulo-suspension"> <span class="mdi-content-report"></span> <br>  Usted se encuentra momentáneamente suspendido para realizar inscripciones.
-                  <p>La suspensión se debe a la reincidencia de abandonos o inscripciones sin asistir a las capacitaciones </p>
-                     <ul>
-                         <li><strong>Fecha de suspensión: {{fecha_suspension}} </strong></li>
-                         <li><strong>La suspensión finaliza el día: {{fecha_alta}}</strong></li>
-                     </ul>
-                  <a href="http://docentes.tictucuman.net/" target="_blank" class="btn btn-material-light-blue-50">Ingresar al panel docente</a>
-                  </div>
-              </div> -->
-              <!-- Condicion -->
+<div class="titulo-inscripcion">Formulario de Inscripción</div>
 
-                         <!--   <div class="well inscripcion-form" ng-show="resultado == 2" >
-                     <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
+<!-- ****************************************************** -->
+<!-- se realizan los controles y mensajes posibles al inscribirse -->
 
-                     <div class="inscripcion-titulo-2capa"> <span class="mdi-alert-error"></span> <br> 
-                        Sólo se pueden cursar hasta dos capacitaciones simultáneamente.
-                       <p >Usted actualmente se encuentra cursando  dos capacitaciones:</p>
-                       <ul>
-                           <li>{{cursando1}}</li>
-                           <li>{{cursando2}}</li>
-                       </ul>
-                       <p>Por favor, póngase en contacto con los respectivos capacitadores.</p>
-                     
-                     <a href="http://docentes.tictucuman.net/" target="_blank" class="btn btn-material-light-blue-50">Ingresar al panel docente</a>
-                     </div>
+<div class="well inscripcion-form" ng-show="resultado == 0" > 
+    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-error"> <span class="fa fa-times-circle-o color-rojo" aria-hidden="true"></span> <br>Datos incorrectos  <p class="help-block">Verifique sus datos de acceso al panel docente. Para ingresar haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p></div>
+</div>
 
-                     </div> -->
+<div class="well inscripcion-form" ng-show="resultado == 1">
+    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br>Usted se encuentra momentáneamente suspendido para realizar inscripciones
+    <p class="help-block">La suspensión momentanea se debe a la reincidencia de abandonos o inscripciones sin asistir a las capacitaciones</p> 
+    <ul>
+        <li><strong>Inicio de suspensión: {{fecha_suspension}} </strong></li>
+        <li><strong>Fin de suspensión: {{fecha_alta}}</strong></li>
+    </ul>
+    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>
+    </div>
+</div>
+              
+<div class="well inscripcion-form" ng-show="resultado == 2">
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
+    <div class="inscripcion-titulo-1capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
+        Sólo se puede cursar <br> una capacitacion por vez
+        <p class="help-block" >Actualmente se encuentra cursando la capacitación:</p>
+          <ul>
+            <li>{{cursando1}}</li>
+          </ul>
+        <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>
+    </div>
+</div>
 
-                 <!--  <div class="well inscripcion-form"  ng-show="resultado == 3" >
-                     <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
+<div class="well inscripcion-form" ng-show="resultado == 3" >
+    <!-- <a href="#" ng-click="limpiar()" class="fa fa-check" aria-hidden="true"></a> -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-ok"><span class="fa fa-check color-verde" aria-hidden="true"></span><br> 
+      La inscripcion se realizó correctamente
+      <p class="help-block" >El código de la inscripción realizada es <strong>COD{{codigo}}</strong></p>
+      <ul>
+          <li><strong>Capacitación: {{capacitacion}}</strong></li>
+          <li><strong>Fecha de inicio: {{fecha_ini}}</strong></li>
+          <li><strong>Horario: {{horario}}</strong></li>
+          <li><strong>Lugar: {{lugar}}</strong></li>
+      </ul>
+      <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>                
+    </div>
+</div>
 
-                     <div class="inscripcion-titulo-ok"> <span class="mdi-toggle-check-box"></span> <br> 
-                       La inscripcion se realizó correctamente
-                       <p >El código de la inscripción realizada es <strong>COD{{codigo}}</strong></p>
-                       <ul>
-                           <li><strong>Capacitación: {{capacitacion}}</strong></li>
-                           <li><strong>Fecha de inicio: {{fecha_ini}}</strong></li>
-                           <li><strong>Horario: {{horario}}</strong></li>
-                           <li><strong>Lugar: {{lugar}}</strong></li>
-                       </ul>
-                       
-                     <a href="http://docentes.tictucuman.net/" target="_blank" class="btn btn-material-light-blue-50">Ingresar al panel docente</a>
-                     </div>
+<!--  -->
+<div class="well inscripcion-form" ng-show="resultado == 4">
+    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br> 
+    El cupo de este curso está completo
+    <p class="help-block">Consulte en <a href="/desarrollo-profesional-tic" target="_blank">Capacitaciones</a> la oferta disponible </p>
+    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>                
+    </div>
+</div>
 
-                  </div>
- -->
-                  <!-- <div class="well inscripcion-form"  ng-show="resultado == 6"  >
-                     <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
+<div class="well inscripcion-form" ng-show="resultado == 5" >
+    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-2capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
+    Ya registra una inscripción para este mismo curso
+    <p class="help-block">Capacitaciones en las que se encuentra inscripto:</p>
+        <ul>
+            <li><strong>Fecha de inscripción: {{fecha_ins | dateToISO | date: 'd-M-yyyy'}}</strong></li>
+            <li><strong>Código de inscripción: </strong> COD{{codigo}}</li>
+        </ul>
+    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>                               
+    </div>
+</div>
 
-                     <div class="inscripcion-titulo-esc"> <span class="mdi-action-report-problem"></span> <br> 
-                       Usted No tiene escuelas asociadas.
-                       <p >Estimada/o Docente: Para poder realizar el curso debe asignar mediante el Panel Docente el o los establecimiento/s de educación de gestión estatal donde realiza el ejercicio activo de la docencia.</p>
-                       
-                       
-                     <a href="http://docentes.tictucuman.net/" target="_blank" class="btn btn-material-light-blue-50">Ingresar al panel docente</a>
-                     </div>
+<div class="well inscripcion-form" ng-show="resultado == 12" >
+    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-2capa"> <span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
+    La inscripción no puede realizarse
+    <p class="help-block">Usted ya aprobó esta capacitación en ediciones anteriores.</p>
+    <p class="help-block">Sugerimos la lectura del <a href="">Protocolo Reglamentario</a></p> 
+    </div>
+</div>
 
-                  </div> -->
+<!-- ****************************************************** -->
+<!-- Formulario de Inscripcion -->
 
-                  <!-- <div class="well inscripcion-form" ng-show="resultado == 4" >
-                     <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
-
-                     <div class="inscripcion-titulo-suspension"> <span class="mdi-av-not-interested"></span> <br> 
-                      El cupo de este curso está completo.
-                       
-                         <a href="/desarrollo-profesional-tic" target="_blank" class="btn btn-material-light-blue-50">Ver otras ofertas de capacitación</a>
-                       
-                     <a href="http://docentes.tictucuman.net/" target="_blank" class="btn btn-material-light-blue-50">Ingresar al panel docente</a>
-                     </div>
-
-                  </div> -->
-
-                  <!-- <div class="well inscripcion-form"  ng-show="resultado == 5">
-                     <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
-
-                     <div class="inscripcion-titulo-2capa"> <span class="mdi-alert-error"></span> <br> 
-                     Usted ya presenta una inscripción en este curso.
-                       
-                        <p>Capacitaciones en las que se encuentra inscripto:</p>
-                        <ul>
-                            <li><strong>Fecha de inscripción: {{fecha_ins | dateToISO | date: 'd-M-yyyy'}}</strong></li>
-                            <li><strong>Código de inscripción: </strong> COD{{codigo}}</li>
-                        </ul>
-                       
-                     <a href="http://docentes.tictucuman.net/" target="_blank" class="btn btn-material-light-blue-50">Ingresar al panel docente</a>
-                     </div>
-                  </div> -->
-
-                  <!-- <div class="well inscripcion-form"  ng-show="resultado == 12">
-                     <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a>
-
-                     <div class="inscripcion-titulo-2capa"> <span class="mdi-alert-error"></span> <br> 
-                      <strong>Atención!: La inscripción no puede realizarse</strong>
-                     <p>Usted ya aprobó esta capacitación en ediciones anteriores.</p>
-                      
-                       
-                     <a href="http://docentes.tictucuman.net/pautas.php" target="_blank" class="btn btn-material-light-blue-50">Leer Protocolo Reglamentario</a>
-                     </div>
-                   </div> -->
-
-              <!-- <div class="well inscripcion-form" ng-hide="sinEnviar"> -->
-
-                <form class="" ng-submit="" >
-                  <fieldset>
-                    <!-- Nota: fieldset, para deshabilitar cualquier campo de formulario que se encuentre en su interior. -->
+<div class="" ng-hide="" ng-show="resultado == 20" >
+<form class="" ng-submit="" >
+  <fieldset>
+  <!-- Nota: fieldset, para deshabilitar cualquier campo de formulario que se encuentre en su interior. -->
                     
-                      <div class="padding-top-20">
-                        <span class="help-block">Estimada/o Docente: Para inscribirse en el curso debe ingresar su DNI y contraseña del Panel Docente. 
+      <div class="padding-top-20">
+        <span class="help-block">Estimada/o Docente: Para inscribirse en el curso debe ingresar su DNI y contraseña del Panel Docente. 
                         Si aún no está registrado, regístrese haciendo clic  <a href="http://www.http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a></span>
-                      </div>
-                      <div class="form-group " >
-                          <label for="dni_doc" class="control-label">DNI</label>
-                          <!-- <div class="col-lg-10"> -->
-                              <input type="text" class="form-control" id="DNI" name="DNI" ng-model="InsData.DNI" placeholder=""  required >
-                               <span class="help-block">Ingrese el DNI sin puntos</span>
-                          <!-- </div> -->
-                      </div>
-         
-                      <div class="form-group">
-                            <label for="pass_don" class="control-label">Contraseña</label>
-                            <!-- <div class="col-lg-10"> -->
-                              <input type="password" class="form-control" id="pass_doc" name="password" ng-model="InsData.password" placeholder="" required>
-                                  <br>
-                            <!-- </div> -->
-                      </div>
+      </div>
+      <div class="form-group " >
+          <label for="dni_doc" class="control-label">DNI</label>
+          <input type="text" class="form-control" id="DNI" name="DNI" ng-model="InsData.DNI" placeholder=""  required >
+          <span class="help-block">Ingrese el DNI sin puntos</span>
+      </div>
+      <div class="form-group">
+          <label for="pass_don" class="control-label">Contraseña</label>
+          <input type="password" class="form-control" id="pass_doc" name="password" ng-model="InsData.password" placeholder="" required>
+          <br>
+      </div>
                       
-                      <!-- <div class="padding-top-20">
-                           <span class="help-block">Para concretar la inscripción debe marcar las siguientes opciones, previa lectura del Protocolo Reglamentario</span>
-                      </div>
-
-                      <div class="checkbox" >
-                         <label>
-                            <input type="checkbox" required> Conozco el Protocolo Reglamentario para la inscripción, cursado y aprobación de Trayectos Formativos de Desarrollo Profesional Docente - Coordinación de Innovación Educativa. (Leer protocolo <a href="http://www.docentes.tictucuman.net/pautas.php" target="_blank">Aquí</a>)
-                         </label>
-                      </div>
-                      <div class="checkbox" >
-                         <label>
-                             <input type="checkbox" required> Comprendo y acepto cada una de las cláusulas del Protocolo Reglamentario para la inscripción, cursado y aprobación de Trayectos Formativos de Desarrollo Profesional Docente - Coordinación de Innovación Educativa. (Leer protocolo <a href="http://www.docentes.tictucuman.net/pautas.php" target="_blank">Aquí</a>)
-                         </label>
-                      </div>
-                      <br> -->
-                      <span class="help-block">Al Inscribirse confirma haber leido y estar de acuerdo con el Protocolo Reglamentario. <a href="">Leer Protocolo</a></span>                     
-                      <div class="form-group">
-                              <button type="submit" class="btn btn-block btn-info ">Inscribirse</button>
-                      </div>
-                    
-                  </fieldset>
-                </form>
-            <!-- </div> -->
+      <span class="help-block">Al Inscribirse confirma haber leido y estar de acuerdo con el Protocolo Reglamentario. <a href="">Leer Protocolo</a></span>                     
+      <div class="form-group">
+          <button type="submit" class="btn btn-block btn-info ">Inscribirse</button>
+      </div>
+  </fieldset>
+</form>
+</div> <!-- Cierro div para ocultar formulario -->
+       
