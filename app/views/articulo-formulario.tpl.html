@@ -6,25 +6,25 @@
 
 <div class="well inscripcion-form" ng-show="resultado == 0" > 
     <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-error"> <span class="fa fa-times-circle-o color-rojo" aria-hidden="true"></span> <br>Datos incorrectos  <p class="help-block">Verifique sus datos de acceso al panel docente. Para ingresar haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p></div>
+     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-error"> <span class="fa fa-times-circle-o color-rojo" aria-hidden="true"></span> <br>Datos incorrectos  <p class="help-block">Verifique sus datos de acceso al panel docente. Para ingresar haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p></div>
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 1">
     <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br>Usted se encuentra momentáneamente suspendido para realizar inscripciones
     <p class="help-block">La suspensión momentanea se debe a la reincidencia de abandonos o inscripciones sin asistir a las capacitaciones</p> 
     <ul>
         <li><strong>Inicio de suspensión: {{fecha_suspension}} </strong></li>
         <li><strong>Fin de suspensión: {{fecha_alta}}</strong></li>
     </ul>
-    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>
+    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>
     </div>
 </div>
               
 <div class="well inscripcion-form" ng-show="resultado == 2">
-     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
     <div class="inscripcion-titulo-1capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
         Sólo se puede cursar <br> una capacitacion por vez
@@ -32,13 +32,13 @@
           <ul>
             <li>{{cursando1}}</li>
           </ul>
-        <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>
+        <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>
     </div>
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 3" >
     <!-- <a href="#" ng-click="limpiar()" class="fa fa-check" aria-hidden="true"></a> -->
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-ok"><span class="fa fa-check color-verde" aria-hidden="true"></span><br> 
       La inscripcion se realizó correctamente
       <p class="help-block" >El código de la inscripción realizada es <strong>COD{{codigo}}</strong></p>
@@ -48,24 +48,24 @@
           <li><strong>Horario: {{horario}}</strong></li>
           <li><strong>Lugar: {{lugar}}</strong></li>
       </ul>
-      <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>                
+      <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>                
     </div>
 </div>
 
 <!--  -->
 <div class="well inscripcion-form" ng-show="resultado == 4">
     <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br> 
     El cupo de este curso está completo
     <p class="help-block">Consulte en <a href="/desarrollo-profesional-tic" target="_blank">Capacitaciones</a> la oferta disponible </p>
-    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>                
+    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>                
     </div>
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 5" >
     <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-2capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     Ya registra una inscripción para este mismo curso
     <p class="help-block">Capacitaciones en las que se encuentra inscripto:</p>
@@ -73,13 +73,13 @@
             <li><strong>Fecha de inscripción: {{fecha_ins | dateToISO | date: 'd-M-yyyy'}}</strong></li>
             <li><strong>Código de inscripción: </strong> COD{{codigo}}</li>
         </ul>
-    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a> </p>                               
+    <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>                               
     </div>
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 12" >
     <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-2capa"> <span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     La inscripción no puede realizarse
     <p class="help-block">Usted ya aprobó esta capacitación en ediciones anteriores.</p>
@@ -90,14 +90,16 @@
 <!-- ****************************************************** -->
 <!-- Formulario de Inscripcion -->
 
-<div class="" ng-hide="" ng-show="resultado == 20" >
-<form class="" ng-submit="" >
+<div class="" ng-show="resultado == 20"  >
+<form class="" ng-submit="Inscribir(capacitacion[0].comision)" >
+ 
+
   <fieldset>
   <!-- Nota: fieldset, para deshabilitar cualquier campo de formulario que se encuentre en su interior. -->
                     
       <div class="padding-top-20">
         <span class="help-block">Estimada/o Docente: Para inscribirse en el curso debe ingresar su DNI y contraseña del Panel Docente. 
-                        Si aún no está registrado, regístrese haciendo clic  <a href="http://www.http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a></span>
+                        Si aún no está registrado, regístrese haciendo clic  <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a></span>
       </div>
       <div class="form-group " >
           <label for="dni_doc" class="control-label">DNI</label>
@@ -117,4 +119,3 @@
   </fieldset>
 </form>
 </div> <!-- Cierro div para ocultar formulario -->
-       
