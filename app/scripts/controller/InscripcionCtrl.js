@@ -9,12 +9,13 @@
 
    	function InscripcionCtrl($scope, $routeParams,Capacitacion, $http, $document) {
 
-    	$scope.template = {'formulario': 'views/articulo-formulario.tpl.html'};
+    	$scope.template = {'formulario': 'views/articulo-formulario.tpl.html', 'relacionados':'views/articulo-relacionados.tpl.html'};
 		// Esta variable determina el div que se debe mostrar (mensaje o formulario)
     	$scope.resultado = 20;
          
     	$scope.capacitacion = {};
-      
+      	// Capacitacion es un servicio que ejecuta una api cap/:pg_id que devuelve 
+      	// un arreglo con los datos de la comision
     	$scope.capacitacion =  Capacitacion.query({ id: $routeParams.pg_id });
 		console.log($scope.capacitacion);	   
    		

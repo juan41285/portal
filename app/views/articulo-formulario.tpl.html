@@ -1,17 +1,16 @@
-
+<div class="noticia-sidebar" >
+    <!-- noticia-sidebar envuelve todo el codigo, hasta el final  -->
 <div class="titulo-inscripcion">Formulario de Inscripción</div>
 
 <!-- ****************************************************** -->
 <!-- se realizan los controles y mensajes posibles al inscribirse -->
 
 <div class="well inscripcion-form" ng-show="resultado == 0" > 
-    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
      <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-error"> <span class="fa fa-times-circle-o color-rojo" aria-hidden="true"></span> <br>Datos incorrectos  <p class="help-block">Verifique sus datos de acceso al panel docente. Para ingresar haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p></div>
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 1">
-    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
      <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br>Usted se encuentra momentáneamente suspendido para realizar inscripciones
     <p class="help-block">La suspensión momentanea se debe a la reincidencia de abandonos o inscripciones sin asistir a las capacitaciones</p> 
@@ -25,7 +24,6 @@
               
 <div class="well inscripcion-form" ng-show="resultado == 2">
      <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
     <div class="inscripcion-titulo-1capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
         Sólo se puede cursar <br> una capacitacion por vez
         <p class="help-block" >Actualmente se encuentra cursando la capacitación:</p>
@@ -37,7 +35,6 @@
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 3" >
-    <!-- <a href="#" ng-click="limpiar()" class="fa fa-check" aria-hidden="true"></a> -->
     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-ok"><span class="fa fa-check color-verde" aria-hidden="true"></span><br> 
       La inscripcion se realizó correctamente
@@ -54,7 +51,6 @@
 
 <!--  -->
 <div class="well inscripcion-form" ng-show="resultado == 4">
-    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br> 
     El cupo de este curso está completo
@@ -64,7 +60,6 @@
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 5" >
-    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-2capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     Ya registra una inscripción para este mismo curso
@@ -78,7 +73,6 @@
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 12" >
-    <!-- <a href="#" ng-click="limpiar()" class="btn btn-danger btn-fab btn-raised mdi-content-clear btn-exterior"></a> -->
     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-2capa"> <span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     La inscripción no puede realizarse
@@ -119,3 +113,4 @@
   </fieldset>
 </form>
 </div> <!-- Cierro div para ocultar formulario -->
+</div> <!-- cierro noticia-sidebar -->

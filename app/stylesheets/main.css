@@ -428,6 +428,24 @@ a:hover {
   color: #ffa500 !important;
   font-size: 3em;
 }
+.color-relacionado {
+  background: #fff;
+  height: 180px;
+}
+.titulo-relacionado {
+  padding: 3px;
+}
+.titulo-relacionado p {
+  color: #03a9f4;
+}
+.titulo-relacionado label {
+  font-size: 0.8em;
+}
+.noticia-relacionado {
+  background: #03a9f4;
+  padding: 30px;
+  color: #fff;
+}
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
   list-style: none;

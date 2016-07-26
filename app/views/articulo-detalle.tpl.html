@@ -22,12 +22,19 @@
                   <div class="noticia-cont" ng-bind-html ="noticia[0].pg_cont | trustAsHTML">
                   </div>
           </div>
-          <!-- Inscripcion a la capacitacion  -->
-          <div class="col-md-4">
-            <div class="noticia-sidebar">
-              <div ng-controller="InscripcionCtrl" ng-include="template.formulario"></div>
-            </div>
-          </div>
+
+          <!-- A continuacion muestro:
+           si hay cupo: Inscripcion a la capacitacion
+           si no hay cupo y
+              hay otras capacitaciones: mensaje y otras capacitaciones
+              no hay otras capacitaciones: mensaje y suscripcion -->
+              <!-- operador ternario condicion?accion_si_verdadero:accion_si_falso -->
+           <div class="col-md-4">
+              <div ng-controller="InscripcionCtrl" ng-include="(capacitacion[0].estado == 1)?template.formulario: template.relacionados">                
+              </div>
+
+          </div> <!-- cierro col-md-4 -->
+
         </div>
       </div>
 
