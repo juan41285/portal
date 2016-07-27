@@ -430,10 +430,6 @@ a:hover {
 }
 .color-relacionado {
   background: #fff;
-  height: 180px;
-}
-.titulo-relacionado {
-  padding: 3px;
 }
 .titulo-relacionado p {
   color: #03a9f4;
@@ -445,6 +441,13 @@ a:hover {
   background: #03a9f4;
   padding: 30px;
   color: #fff;
+}
+.copete {
+  background: #673ab7;
+  color: #fff;
+  white: 15px;
+  position: absolute;
+  top: 85%;
 }
 /*************CALENDARIOS******************************/
 ul.calendar-dias {

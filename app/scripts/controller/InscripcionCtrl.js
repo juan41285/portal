@@ -7,7 +7,7 @@
     .controller('InscripcionCtrl', InscripcionCtrl);
 
 
-   	function InscripcionCtrl($scope, $routeParams,Capacitacion, $http, $document) {
+   	function InscripcionCtrl($scope, $routeParams,Capacitacion,Publicar, $http, $document) {
 
     	$scope.template = {'formulario': 'views/articulo-formulario.tpl.html', 'relacionados':'views/articulo-relacionados.tpl.html'};
 		// Esta variable determina el div que se debe mostrar (mensaje o formulario)
@@ -20,8 +20,14 @@
 		console.log($scope.capacitacion);	   
    		
    		// formularios
-         // enviar form
+        // enviar form
       	$scope.InsData = {};
+
+      	//*****************
+      	$scope.publicar = {};
+      	$scope.publicar = Publicar.query({ id: $routeParams.pg_id });
+      	console.log($scope.publicar);
+      	//*****************
      	
       	$scope.Inscribir = function(com) {
       

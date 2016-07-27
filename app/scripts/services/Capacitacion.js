@@ -5,7 +5,8 @@
   angular
     .module('portal.services')    
     .factory('Capacitacion',Capacitacion)
-    .factory('Comision',Comision);
+    .factory('Comision',Comision)
+    .factory('Publicar',Publicar);
 
   //muestra mezcaldas noticias y capacitaciones
 
@@ -20,6 +21,13 @@ function Comision ($resource, BaseUrl) {
       { idComision: '@_id' }
     );
   }
+
+function Publicar ($resource, BaseUrl) {
+    return $resource(BaseUrl + '/ins/nav/:id',
+      { pg_id: '@_id' }
+    );
+  }
+
 
 })();
 

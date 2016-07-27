@@ -1,23 +1,14 @@
 <div class="noticia-relacionado">
 	<div class="titulo-inscripcion">Articulos Relacionados</div>
-
-	<!-- <div id="listado-capacitaciones"> -->
-  	<div class="well color-relacionado">
-     	<div class="titulo-relacionado"><p><strong>Titulo de la noticia capacitación taller</strong></p>
-	     	<div class="row">
-		     	<div class="col-md-4">
-		        	<img src="http://localhost/api/imagenes/20160711154744150.jpeg" alt="" class="img-responsive">
-		      	</div>
-		      	<div class="col-md-8">
-			        <label>Este taller intenta brindar al docente la posibilidad de confeccionar sus propios instrumentos musicales electrónicos, introduciéndolo, además, en la programación.</label><a href="">...Leer más</a>  
-				</div>
-			</div>
+	
+  	<div class="well color-relacionado" ng-repeat="noticia in publicar | limitTo:3 " >
+	    <div class="row">
+			<div class="col-md-12">
+			    <div class="titulo-relacionado"><p><strong>{{noticia.titulo}}</strong></p></div>
+				<img src="http://innovacioneducativa.gob.ar/Pagina//imagenes/capacitaciones/mini/Banner%20matematicas-01.jpg" alt="" class="img-responsive">
+ 				<div class="copete">{{noticia.copete}}</div>
+			</div>		    
 		</div>
-  	<!-- </div>  -->
-  	
-  	<!-- <div class="titulo-relacionado">
-  	</div> -->
-
 	</div> <!-- cierro color-relacionado -->           
 </div> <!-- cierro noticia-relacionado -->
 
