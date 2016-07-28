@@ -362,10 +362,10 @@ a:hover {
 .noticia-sidebar .form-control {
   color: #fff !important;
 }
-.titulo-inscripcion {
-  border-bottom: 1px solid rgba(3,169,244,0.42);
-  padding-bottom: 3px;
-  margin-bottom: 7px;
+.linea-titulo-inscripcion {
+  font-weight: bold;
+  color: rgba(18,18,19,0.54);
+  text-transform: uppercase;
 }
 .inscripcion-form {
   background: #fff;
@@ -438,16 +438,34 @@ a:hover {
   font-size: 0.8em;
 }
 .noticia-relacionado {
-  background: #03a9f4;
   padding: 30px;
-  color: #fff;
+  border-left: 1px solid #673ab7;
 }
 .copete {
   background: #673ab7;
   color: #fff;
   white: 15px;
   position: absolute;
-  top: 85%;
+  top: 88%;
+}
+.insc-cerrada {
+  background-color: rgba(103,58,183,0.88);
+  color: #fff;
+  position: relative;
+  padding: 8px 30px;
+  border: 0;
+  margin: 10px 1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.linea-separador {
+  border-bottom: 1px dashed rgba(15,16,16,0.42);
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+.frm-suscripcion .control-label {
+  color: #fff;
 }
 /*************CALENDARIOS******************************/
 ul.calendar-dias {

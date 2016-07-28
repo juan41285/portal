@@ -1,14 +1,60 @@
 <div class="noticia-relacionado">
-	<div class="titulo-inscripcion">Articulos Relacionados</div>
+	<div class="insc-cerrada">{{publicar[0].mensaje}}</div>
+	<div class="linea-separador"></div>
 	
-  	<div class="well color-relacionado" ng-repeat="noticia in publicar | limitTo:3 " >
-	    <div class="row">
-			<div class="col-md-12">
-			    <div class="titulo-relacionado"><p><strong>{{noticia.titulo}}</strong></p></div>
-				<img src="http://innovacioneducativa.gob.ar/Pagina//imagenes/capacitaciones/mini/Banner%20matematicas-01.jpg" alt="" class="img-responsive">
- 				<div class="copete">{{noticia.copete}}</div>
-			</div>		    
-		</div>
-	</div> <!-- cierro color-relacionado -->           
-</div> <!-- cierro noticia-relacionado -->
+	<div ng-show="publicar[0].muestroCapa == 1">
+		<div class="linea-titulo-inscripcion">Articulos Relacionados</div>
+	  	<div class="color-relacionado" ng-repeat="noticia in publicar | limitTo:3 " >
+		   <a href="http://localhost:8888/articulo/{{noticia.articulo}}">
+		    <div class="row">
+				<div class="col-md-12">
+					<div class="linea-separador"></div>
+				    
+				    <div class="titulo-relacionado"><p><strong>{{noticia.titulo}}</strong></p></div>
+					<img src="http://innovacioneducativa.gob.ar/Pagina//imagenes/capacitaciones/mini/celestiabanner%20(1)%20-%20copia.jpg" alt="" class="img-responsive">
+	 				<div class="copete">{{noticia.copete}}</div>
+				</div>		    
+			</div>
+		  </a>  	
+		</div> <!-- cierro color-relacionado --> 
+	</div>
+
+	<div ng-show="publicar[0].muestroCapa == 0">
+		    <div class="row">
+
+		<!-- <div class="titulo-inscripcion">Suscripción</div> -->
+
+				<div class="col-md-12 frm-suscripcion ">
+
+				   	<form class="" ng-submit="Suscribir()" >
+        				<legend>Formulario de suscripción</legend>
+       					<span class="help-block">Reciba en su casilla novedades, ofertas de capacitación y noticias de la Coordinación de Innovación Educativa.</span>
+				        <div class="form-group">
+				            <label for="nombre" class="control-label">Nombre *</label>
+				            <input type="text" class="form-control" id="nombre" name="nombre" ng-model="sData.nombre" placeholder="Nombre y Apellido " required>
+				        </div>
+				        <div class="form-group">
+				            <label for="dni" class="control-label">Documento</label>
+				                <input type="text" class="form-control" id="dni" name="dni" ng-model="sData.dni" placeholder="Número de documento sin puntos">
+				        </div>
+			            <div class="form-group">
+				            <label for="esc" class="control-label">Escuela</label>
+				            <input type="text" class="form-control" id="esc" name="esc" ng-model="sData.esc" placeholder="">
+			        	</div>
+		               	<div class="form-group">
+				            <label for="mail" class="control-label">E-Mail *</label>
+				                <input type="email" class="form-control" id="correo" name="correo" ng-model="sData.correo" placeholder="" required>
+		        		</div>
+      
+				        <div class="form-group">
+				            <div class="col-lg-10 col-lg-offset-2">
+				                <button type="submit" class="btn btn-info" >Suscribirse</button>
+				            </div>
+				        </div>
+				</form> <!-- Fin de formulario de suscripción -->
+			</div>	<!-- Cierro col-md-12 -->	    
+		</div> <!-- cierro row -->
+	</div> <!-- Cierro div publicar suscripción -->
+
+</div> <!-- cierro `div principal de noticia-relacionado -->
 

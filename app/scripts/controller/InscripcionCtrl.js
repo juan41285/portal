@@ -23,11 +23,14 @@
         // enviar form
       	$scope.InsData = {};
 
-      	//*****************
+      	//***************************************************************
       	$scope.publicar = {};
       	$scope.publicar = Publicar.query({ id: $routeParams.pg_id });
+      	
+      	console.log($scope.muestroCapa);
       	console.log($scope.publicar);
-      	//*****************
+      	//***************************************************************
+      	//
      	
       	$scope.Inscribir = function(com) {
       
