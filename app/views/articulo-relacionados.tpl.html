@@ -1,9 +1,12 @@
 <div class="noticia-relacionado">
-	<div class="insc-cerrada">{{publicar[0].mensaje}}</div>
-	<div class="linea-separador"></div>
+	<div class="insc-cerrada">
+		<span class="fa fa-exclamation-triangle color-blanco" aria-hidden="true"></span>
+		<br>{{publicar[0].mensaje}}
+	</div>
+	<div class="margin-top-10 linea-separador"></div>
 	
 	<div ng-show="publicar[0].muestroCapa == 1">
-		<div class="linea-titulo-inscripcion">Articulos Relacionados</div>
+		<div class="titulo-inscripcion">Articulos Relacionados</div>
 	  	<div class="color-relacionado" ng-repeat="noticia in publicar | limitTo:3 " >
 		   <a href="http://localhost:8888/articulo/{{noticia.articulo}}">
 		    <div class="row">
@@ -11,7 +14,7 @@
 					<div class="linea-separador"></div>
 				    
 				    <div class="titulo-relacionado"><p><strong>{{noticia.titulo}}</strong></p></div>
-					<img src="http://innovacioneducativa.gob.ar/Pagina//imagenes/capacitaciones/mini/celestiabanner%20(1)%20-%20copia.jpg" alt="" class="img-responsive">
+					<img src="http://innovacioneducativa.gob.ar/Pagina//imagenes/capacitaciones/mini/taller-CmapTools%20(1)%20-%20copia-noticia.jpg" alt="" class="img-responsive">
 	 				<div class="copete">{{noticia.copete}}</div>
 				</div>		    
 			</div>
@@ -19,15 +22,18 @@
 		</div> <!-- cierro color-relacionado --> 
 	</div>
 
+	<!-- <div ng-controller="SuscripcionCtrl" ng-include="template.formulario">   	          
+              		</div>	 -->
+
 	<div ng-show="publicar[0].muestroCapa == 0">
-		    <div class="row">
+		<div class="row">
 
-		<!-- <div class="titulo-inscripcion">Suscripción</div> -->
-
-				<div class="col-md-12 frm-suscripcion ">
-
-				   	<form class="" ng-submit="Suscribir()" >
-        				<legend>Formulario de suscripción</legend>
+			<div class="col-md-12 frm-suscripcion ">
+					
+				<form class="" ng-submit="Suscribir()" >
+        				<div class="titulo-suscripcion">Formulario de suscripción</div>
+						<!-- <div class="linea-separador"></div> -->
+						
        					<span class="help-block">Reciba en su casilla novedades, ofertas de capacitación y noticias de la Coordinación de Innovación Educativa.</span>
 				        <div class="form-group">
 				            <label for="nombre" class="control-label">Nombre *</label>
@@ -37,10 +43,6 @@
 				            <label for="dni" class="control-label">Documento</label>
 				                <input type="text" class="form-control" id="dni" name="dni" ng-model="sData.dni" placeholder="Número de documento sin puntos">
 				        </div>
-			            <div class="form-group">
-				            <label for="esc" class="control-label">Escuela</label>
-				            <input type="text" class="form-control" id="esc" name="esc" ng-model="sData.esc" placeholder="">
-			        	</div>
 		               	<div class="form-group">
 				            <label for="mail" class="control-label">E-Mail *</label>
 				                <input type="email" class="form-control" id="correo" name="correo" ng-model="sData.correo" placeholder="" required>
@@ -49,9 +51,17 @@
 				        <div class="form-group">
 				            <div class="col-lg-10 col-lg-offset-2">
 				                <button type="submit" class="btn btn-info" >Suscribirse</button>
+
 				            </div>
 				        </div>
+						<div class="linea-separador"></div>
+
 				</form> <!-- Fin de formulario de suscripción -->
+
+				<!-- <div ng-show="alta_ok"><div class="sus-ok"><span class="mdi-navigation-check"></span><p>La suscripción se realizó correctamente!</p></div></div>
+				<div ng-show="alta_mal"><div class="sus-error"><span class="mdi-navigation-cancel"></span><p>La suscripción no pudo realizarse, Reinicie su navegador e intente nuevamente</p></div></div>
+				<div ng-show="alta_repe"><div class="sus-repe"><span class="mdi-alert-warning"></span><p>Usted ya se encuentra suscripto!.<small>Si no esta recibiendo mensajes verifique su carpeta de correo no deseado y agregue la dirección <a>novedades@tictucuman.net</a> a su lista de contactos</small></p></div></div> -->	
+
 			</div>	<!-- Cierro col-md-12 -->	    
 		</div> <!-- cierro row -->
 	</div> <!-- Cierro div publicar suscripción -->
