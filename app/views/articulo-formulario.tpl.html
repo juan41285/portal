@@ -6,12 +6,12 @@
 <!-- se realizan los controles y mensajes posibles al inscribirse -->
 
 <div class="well inscripcion-form" ng-show="resultado == 0" > 
-     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+     <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-error"> <span class="fa fa-times-circle-o color-rojo" aria-hidden="true"></span> <br>Datos incorrectos  <p class="help-block">Verifique sus datos de acceso al panel docente. Para ingresar haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p></div>
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 1">
-     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+     <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br>Usted se encuentra momentáneamente suspendido para realizar inscripciones
     <p class="help-block">La suspensión momentanea se debe a la reincidencia de abandonos o inscripciones sin asistir a las capacitaciones</p> 
     <ul>
@@ -23,7 +23,7 @@
 </div>
               
 <div class="well inscripcion-form" ng-show="resultado == 2">
-     <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+     <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-1capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
         Sólo se puede cursar <br> una capacitacion por vez
         <p class="help-block" >Actualmente se encuentra cursando la capacitación:</p>
@@ -35,7 +35,7 @@
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 3" >
-    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-ok"><span class="fa fa-check color-verde" aria-hidden="true"></span><br> 
       La inscripcion se realizó correctamente
       <p class="help-block" >El código de la inscripción realizada es <strong>COD{{codigo}}</strong></p>
@@ -51,7 +51,7 @@
 
 <!--  -->
 <div class="well inscripcion-form" ng-show="resultado == 4">
-    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br> 
     El cupo de este curso está completo
     <p class="help-block">Consulte en <a href="/desarrollo-profesional-tic" target="_blank">Capacitaciones</a> la oferta disponible </p>
@@ -60,7 +60,7 @@
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 5" >
-    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-2capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     Ya registra una inscripción para este mismo curso
     <p class="help-block">Capacitaciones en las que se encuentra inscripto:</p>
@@ -73,7 +73,7 @@
 </div>
 
 <div class="well inscripcion-form" ng-show="resultado == 12" >
-    <button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
     <div class="inscripcion-titulo-2capa"> <span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     La inscripción no puede realizarse
     <p class="help-block">Usted ya aprobó esta capacitación en ediciones anteriores.</p>
@@ -85,9 +85,8 @@
 <!-- Formulario de Inscripcion -->
 
 <div class="" ng-show="resultado == 20"  >
-<form class="" ng-submit="Inscribir(capacitacion[0].comision)" >
+<form class="" ng-submit="Inscribir(capacitacionDatos[0].comision)" >
  
-
   <fieldset>
   <!-- Nota: fieldset, para deshabilitar cualquier campo de formulario que se encuentre en su interior. -->
                     

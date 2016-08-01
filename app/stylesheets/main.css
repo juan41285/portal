@@ -485,6 +485,22 @@ mar
   color: rgba(18,18,19,0.54);
   text-transform: uppercase;
   padding-top: 25px;
+  margin-bottom: 15px;
+}
+.sus-ok {
+  color: #008000 !important;
+  font-size: 1.2em !important;
+  text-align: center;
+}
+.sus-error {
+  color: #f00 !important;
+  font-size: 1.2em !important;
+  text-align: center;
+}
+.sus-repe {
+  color: #ffa500 !important;
+  font-size: 1.2em !important;
+  text-align: center;
 }
 .margin-top-10 {
   margin-top: 10px;

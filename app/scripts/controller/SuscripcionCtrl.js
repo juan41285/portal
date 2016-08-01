@@ -19,7 +19,6 @@ function SuscripcionCtrl ($scope, $http)
   $scope.alta_mal = false;
   $scope.alta_repe = false;
   $scope.alta_ok = false;
-  // $scope.sinRobot = false;
 
       $scope.Suscribir = function()
       {
@@ -39,7 +38,7 @@ function SuscripcionCtrl ($scope, $http)
                 $scope.sData = {};
                 $scope.alta_mal = true;
                 $scope.alta_nuevo = false;
-                $scope.mensaje = "La suscripción no pudo realizarse, Reinicie su navegador e intente nuevamente";
+                // $scope.mensaje = "La suscripción no pudo realizarse, Reinicie su navegador e intente nuevamente";
                 
               }
 
@@ -52,7 +51,6 @@ function SuscripcionCtrl ($scope, $http)
                  console.log($scope.alta_repe);
                  console.log($scope.mensaje);
 
-                  
               }
 
               if(data.resultado == 3){
@@ -60,8 +58,8 @@ function SuscripcionCtrl ($scope, $http)
                  $scope.sData = {};
                  $scope.alta_ok = true;
                  $scope.alta_nuevo = false;
-                 $scope.mensaje = "La suscripción se realizó correctamente!";
-                 console.log($scope.mensaje);
+                 // $scope.mensaje = "La suscripción se realizó correctamente!";
+                 // console.log($scope.mensaje);
                  
               }
 
@@ -74,19 +72,9 @@ function SuscripcionCtrl ($scope, $http)
         $scope.alta_mal = false;
         $scope.alta_repe = false;
         $scope.alta_ok = false;
-        $scope.mensaje = {};
-      }
-
-     //  $scope.limpiarMsj = function()
-     //  {
-
-     //    $scope.mData = {};
-     //    $scope.msj = true;
-     //    $scope.msj_mal = false;
-     //    $scope.msj_ok = false;
         
-     //    $scope.mData.destino = {};
-     // }
-}
+      }
+      
+     }
 
 })();

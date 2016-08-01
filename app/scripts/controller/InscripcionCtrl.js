@@ -13,11 +13,11 @@
 		// Esta variable determina el div que se debe mostrar (mensaje o formulario)
     	$scope.resultado = 20;
          
-    	$scope.capacitacion = {};
+    	$scope.capacitacionDatos = {};
       	// Capacitacion es un servicio que ejecuta una api cap/:pg_id que devuelve 
       	// un arreglo con los datos de la comision
-    	$scope.capacitacion =  Capacitacion.query({ id: $routeParams.pg_id });
-		console.log($scope.capacitacion);	   
+    	$scope.capacitacionDatos =  Capacitacion.query({ id: $routeParams.pg_id });
+		console.log($scope.capacitacionDatos);	   
    		
    		// formularios
         // enviar form
@@ -27,7 +27,7 @@
       	$scope.publicar = {};
       	$scope.publicar = Publicar.query({ id: $routeParams.pg_id });
       	
-      	console.log($scope.muestroCapa);
+      	// console.log($scope.muestroCapa);
       	console.log($scope.publicar);
       	//***************************************************************
       	//
@@ -36,7 +36,7 @@
       
 	      	$scope.InsData.id = com;
 	      	console.log($scope.InsData);
-
+	      	console.log($scope.InsData.id);
 	        $http({
 	              method  : 'POST',
 	              url     : 'http://innovacioneducativa.gob.ar/Pagina/alta_curso_angular.php',

@@ -27,10 +27,10 @@
 
 	<div ng-show="publicar[0].muestroCapa == 0">
 		<div class="row">
-
-			<div class="col-md-12 frm-suscripcion ">
+			
+			<div class="col-md-12 frm-suscripcion" ng-controller="SuscripcionCtrl">
 				<!-- <div ng-show="alta_nuevo">	 -->
-				<form class="" ng-submit="Suscribir()"  >
+				<form class=""  ng-submit="Suscribir()" ng-show="alta_nuevo" >
         				<div class="titulo-suscripcion">Formulario de suscripción</div>
 						<!-- <div class="linea-separador"></div> -->
 						
@@ -51,22 +51,38 @@
 				        <div class="form-group">
 				            <div class="col-lg-10 col-lg-offset-2">
 				                <button type="submit" class="btn btn-info" >Suscribirse</button>
-
 				            </div>
 				        </div>
 						<div class="linea-separador"></div>
-
+				
 				</form> <!-- Fin de formulario de suscripción -->
 				<!-- </div> -->
-				<div class="well">
-					<button type="button" ng-click="limpiar()" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:#000">&times;</span></button>
-					no muestra el mensaje => {{mensaje}} 
-				</div>
-				<!-- <div ng-show="alta_ok"><div class="sus-ok"><span class="mdi-navigation-check"></span><p>La suscripción se realizó correctamente!</p></div></div>
-				<div ng-show="alta_mal"><div class="sus-error"><span class="mdi-navigation-cancel"></span><p>La suscripción no pudo realizarse, Reinicie su navegador e intente nuevamente</p></div></div> -->
-				<!-- <div ng-show="alta_repe == true"><div class="sus-repe"><span class="mdi-alert-warning"></span><p>Usted ya se encuentra suscripto!.<small>Si no esta recibiendo mensajes verifique su carpeta de correo no deseado y agregue la dirección <a>novedades@tictucuman.net</a> a su lista de contactos</small></p></div></div>	 -->
 
+				<!--******* Mensajes de suscripcion	************* -->
+				<!--  -->
+				<div ng-show="alta_ok">
+					<div class="sus-ok well">
+						<button type="button" ng-click="limpiar()" class="close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+						<span class="fa fa-check color-verde" aria-hidden="true"></span><p>La suscripción se realizó correctamente!</p>
+					</div>
+				</div>
+				<!--  -->
+				<div ng-show="alta_mal">
+					<div class="sus-error well">
+						<button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+						<span class="fa fa-times-circle color-rojo" aria-hidden="true"></span><p>La suscripción no pudo realizarse. Reinicie su navegador e intente nuevamente</p>
+					</div>
+				</div>
+				<!--  -->
+				<div ng-show="alta_repe">
+					<div class="sus-repe well">
+						<button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+						<span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><p>Usted ya se encuentra suscripto!. <br><span class="help-block">Si no esta recibiendo mensajes verifique su carpeta de correo no deseado y agregue la dirección <a>novedades@innovacioneducativa.gob.ar</a> a su lista de contactos.</span></p>
+					</div>
+				</div>	
+				
 			</div>	<!-- Cierro col-md-12 -->	    
+				
 		</div> <!-- cierro row -->
 	</div> <!-- Cierro div publicar suscripción -->
 
