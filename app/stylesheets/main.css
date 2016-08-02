@@ -472,7 +472,7 @@ mar
 .linea-separador {
   border-bottom: 1px dashed rgba(15,16,16,0.42);
   padding-bottom: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .frm-suscripcion .control-label {
   color: #673ab7;
@@ -504,6 +504,25 @@ mar
 }
 .margin-top-10 {
   margin-top: 10px;
+}
+.titulo-galeria {
+  background: #6347d1;
+  color: #fff;
+  padding: 10px;
+  margin-top: -10px;
+}
+.titulo-noticia-relacionado p {
+  color: #03a9f4;
+}
+.titulo-noticia-relacionado label {
+  font-size: 0.8em;
+}
+.copete-noticia {
+  background: #03a9f4;
+  color: #fff;
+  white: 15px;
+  padding-left: 5px;
+  position: relative;
 }
 /*************CALENDARIOS******************************/
 ul.calendar-dias {

@@ -47,6 +47,13 @@ function CortarTexto()
         };
 }
 
+function startFrom()
+{
+  return function(input,start){
+      start = +start;
+      return input.slice(start);
+  }
+}
 
   angular
     .module('portal.filters', ['portal.services','ngLocale'])
@@ -54,6 +61,7 @@ function CortarTexto()
     .filter('GetYouTubeID',GetYouTubeID)
     .filter('QuitarTagHTML',QuitarTagHTML)
     .filter('CortarTexto',CortarTexto)
+    .filter('startFrom',startFrom)
     .filter('trustAsHTML', ['$sce', function($sce){
 				return function(text) {
 					return $sce.trustAsHtml(text);

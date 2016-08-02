@@ -23,26 +23,36 @@
                   </div>
           </div>
 
-          <!-- A continuacion muestro:
-           si hay cupo: Inscripcion a la capacitacion
-           si no hay cupo y
-              hay otras capacitaciones: mensaje y otras capacitaciones
-              no hay otras capacitaciones: mensaje y suscripcion -->
-              <!-- operador ternario condicion?accion_si_verdadero:accion_si_falso -->
+          <!-- Si hay cupo: Inscripcion a la capacitacion
+           si no hay cupo y hay otras capacitaciones: mensaje y otras capacitaciones
+           si no hay cupo y no hay otras capacitaciones: mensaje y suscripcion -->
+          <!-- operador ternario condicion?accion_si_verdadero:accion_si_falso -->
            
            <div class="col-md-4">
-              <div ng-controller="InscripcionCtrl" ng-include="(capacitacionDatos[0].estado == 1)?template.formulario: template.relacionados">     
-              </div>
+           <!-- (articuloDatos[0].nav == 2)?(articuloDatos[0].estado == 1)?template.formulario: template.relacionados -->
+           <!-- (articuloDatos[0].estado == 1)?template.formulario: template.relacionados -->
+              <div ng-controller="InscripcionCtrl">           
+                
+                  <div ng-show="articuloDatos[0].nav == 2" > 
+                    <div ng-include="(articuloDatos[0].estado == 1)?template.formulario: template.relacionados">     
+                    </div>
+                  </div>
 
+                  <div ng-show="articuloDatos[0].nav == 1">
+                      <div ng-include="template.relacionados"></div>
+                  </div> 
+              </div>           
               <div ng-controller="SuscripcionCtrl" ng-include="template.suscribir"></div>
+           </div> <!-- cierro col-md-4 -->
 
-          </div> <!-- cierro col-md-4 -->
-
-        </div>
+        </div> <!-- cierro seg row -->
       </div>
-
+      <!-- Si hay muestro GALERIA -->
+      <!-- (mostrar_galeria[0].mostrarG == 1)? -->
+         <div ng-controller="GaleriaCtrl" ng-include="template.galeria"></div>
     </div> <!-- cierro col-md-12 -->
   </div> <!-- cierro row -->
 </div> <!-- Cierro div container -->
+
 
              

@@ -13,11 +13,11 @@
 		// Esta variable determina el div que se debe mostrar (mensaje o formulario)
     	$scope.resultado = 20;
          
-    	$scope.capacitacionDatos = {};
+    	$scope.articuloDatos = {};
       	// Capacitacion es un servicio que ejecuta una api cap/:pg_id que devuelve 
       	// un arreglo con los datos de la comision
-    	$scope.capacitacionDatos =  Capacitacion.query({ id: $routeParams.pg_id });
-		console.log($scope.capacitacionDatos);	   
+    	$scope.articuloDatos =  Capacitacion.query({ id: $routeParams.pg_id });
+		console.log($scope.articuloDatos);	   
    		
    		// formularios
         // enviar form
