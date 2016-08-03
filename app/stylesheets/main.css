@@ -474,6 +474,11 @@ mar
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
+.linea-separador-vertical {
+  border-right: 1px dashed rgba(15,16,16,0.42);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
 .frm-suscripcion .control-label {
   color: #673ab7;
   font-weight: bold;
@@ -524,7 +529,8 @@ mar
   padding-left: 5px;
   position: relative;
 }
-/*************CALENDARIOS******************************/
+.titulo-imagen,
+.descripcion-imagen,
 ul.calendar-dias {
   list-style: none;
   padding: 0;
@@ -532,6 +538,8 @@ ul.calendar-dias {
   text-align: center;
   font-size: 0.7em;
 }
+.titulo-imagen li,
+.descripcion-imagen li,
 ul.calendar-dias li {
   display: inline-block;
   padding: 4px;
@@ -539,9 +547,13 @@ ul.calendar-dias li {
   border-right: none;
   background: #fff;
 }
+.titulo-imagen li:last-child,
+.descripcion-imagen li:last-child,
 ul.calendar-dias li:last-child {
   border-right: 1px solid #ddd !important;
 }
+.titulo-imagen li a,
+.descripcion-imagen li a,
 ul.calendar-dias li a {
   display: block;
   text-decoration: none;
@@ -549,6 +561,8 @@ ul.calendar-dias li a {
   height: 100%;
   color: #ad1457;
 }
+.titulo-imagen .calendar-num,
+.descripcion-imagen .calendar-num,
 ul.calendar-dias .calendar-num {
   font-weight: bold;
   font-size: 1.4em;

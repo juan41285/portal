@@ -127,7 +127,7 @@
 
 	//}
 
-	console.log($scope.resultado);
+	// console.log($scope.resultado);
 
 })();
  

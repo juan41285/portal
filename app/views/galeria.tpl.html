@@ -1,21 +1,26 @@
 <div class="titulo-galeria">Galeria de Imagenes</div>
 
-MENSAJE => {{saludo}}
-<!-- <div >
+<div class="well"> 
+  <div class="row">
     <ul>
-        <img style="height: 200px; width: 200px" data-ng-src={{selectedPhoto}}>
         <br>
-        <br>
-        <br>
-        <li style="display: inline" ng-repeat="url in images | startFrom:currentPage*pageSize | limitTo:pageSize">
-            <img style="height: 100px; width: 100px" ng-click="select(url)" data-ng-src={{url}}>
-        </li>
+        <div class="col-md-8 " >
+	        <img class="img-responsive " src="http://innovacioneducativa.gob.ar/Pagina/{{images[selectedPhoto].url}}" alt="">
+	        <div class="linea-separador"></div>
+	        <!-- <div class="linea-separador-vertical"></div> -->
+	        <div class="titulo-imagen"><h4>{{images[selectedPhoto].titulo}}</h4></div>
+	        <div class="descripcion-imagen"><h5>{{images[selectedPhoto].descripcion}}</h5></div>
+	        <br>
+	        <br>
+	        <br>
+        </div>
+        <div class="col-md-4 " >
+	        <li style="display: inline" ng-repeat="url in images ">
+	            <img style="height: 120px; width: 120px" ng-click="select($index)" src="http://innovacioneducativa.gob.ar/Pagina/{{url.url}}">
+	        </li>
+        </div>
     </ul>
     <br>
-    <button class="btn btn-default" ng-disabled="currentPage === 0" ng-click="currentPage=currentPage-1">
-        <i class="glyphicon glyphicon-chevron-left"></i>
-    </button>
-    <button class="btn btn-default" ng-disabled="currentPage >= images.length/pageSize - 1" ng-click="currentPage=currentPage+1">
-        <i class="glyphicon glyphicon-chevron-right"></i>
-    </button>
-</div> -->
+  </div>
+</div>
+
