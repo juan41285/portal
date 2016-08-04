@@ -13,7 +13,7 @@ function GaleriaCtrl($scope, $rootScope, $routeParams, $http, HGaleria, $documen
 	// Con el servicio HGaleria averiguo si el articulo en cuestion tiene galeria
 	$scope.mostrar_galeria = {};
 	$scope.mostrar_galeria = HGaleria.query({ id: $routeParams.pg_id });
-	console.log($scope.mostrar_galeria);
+	// console.log($scope.mostrar_galeria);
 
 	$scope.selectedPhoto =0;
 	//arreglo de imagenes		

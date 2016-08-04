@@ -1,23 +1,27 @@
 <div class="titulo-galeria">Galeria de Imagenes</div>
 
-<div class="well"> 
+<div class="fondo-galeria"> 
   <div class="row">
     <ul>
         <br>
         <div class="col-md-8 " >
-	        <img class="img-responsive " src="http://innovacioneducativa.gob.ar/Pagina/{{images[selectedPhoto].url}}" alt="">
-	        <div class="linea-separador"></div>
-	        <!-- <div class="linea-separador-vertical"></div> -->
-	        <div class="titulo-imagen"><h4>{{images[selectedPhoto].titulo}}</h4></div>
-	        <div class="descripcion-imagen"><h5>{{images[selectedPhoto].descripcion}}</h5></div>
-	        <br>
+	        <span class="centrar-imagen"><img class="img-responsive " src="http://innovacioneducativa.gob.ar/Pagina/{{images[selectedPhoto].url}}" alt=""></span>
+	        <div class="titulo-noticia">{{images[selectedPhoto].titulo_noticia}}</div>
+	        <div class="linea-separador-galeria"></div>
+	        <div class="titulo-desc-imagen">
+		        <div>{{images[selectedPhoto].titulo}}</div>
+		        <div>{{images[selectedPhoto].descripcion}}</div>
+	        </div>
 	        <br>
 	        <br>
         </div>
         <div class="col-md-4 " >
 	        <li style="display: inline" ng-repeat="url in images ">
-	            <img style="height: 120px; width: 120px" ng-click="select($index)" src="http://innovacioneducativa.gob.ar/Pagina/{{url.url}}">
+	            <span class="margen-inferior"><img style="height: 120px; width: 120px" ng-click="select($index)" src="http://innovacioneducativa.gob.ar/Pagina/{{url.url}}"></span>
 	        </li>
+	        <br>
+	        <br>
+	        
         </div>
     </ul>
     <br>
