@@ -532,6 +532,10 @@ mar
 .centrar-imagen img {
   display: block;
   margin: auto;
+  border: 5px solid rgba(245,239,239,0.97);
+}
+.marco img {
+  border: 5px solid rgba(245,239,239,0.97);
 }
 .margen-inferior img {
   margin-bottom: 10px;
@@ -543,7 +547,7 @@ mar
 .titulo-noticia {
   color: rgba(255,255,255,0.44);
   font-size: 1em;
-  margin-top: 10px;
+  margin-top: 20px;
   color: rgba(255,255,255,0.44);
 }
 .linea-separador-galeria {
@@ -1256,6 +1260,19 @@ label.custom-option.toggle input[type="checkbox"]:checked + .button-checkbox:aft
 label.custom-option.toggle input[type="radio"]:checked + .button-radio:after {
   left: 23px;
   background: #4fd0fb;
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+  display: block !important;
+}
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove {
+  opacity: 0;
+}
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
 }
 @-moz-keyframes hvr-bob {
   0% {

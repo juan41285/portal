@@ -198,6 +198,19 @@ function spy ($location, $anchorScroll) {
   };
 };
 
+
+function fadeIn($timeout){
+    return {
+        restrict: 'A',
+        link: function($scope, $element, attrs){
+            $element.addClass("ng-hide-remove");
+            $element.on('load', function() {
+                $element.addClass("ng-hide-add");
+            });
+        }
+    };
+}
+
 /***********/
 
   angular
@@ -209,6 +222,7 @@ function spy ($location, $anchorScroll) {
     .directive('mdButton',mdButton)
     .directive('spy',spy)
     .directive('scrollSpy',scrollSpy)
+    .directive('fadeIn',fadeIn)
     .directive('fileModel', ['$parse', function($parse){
     return {
         restrict: 'A',
@@ -226,4 +240,8 @@ function spy ($location, $anchorScroll) {
 }]);
 
    
+
+
+
+
 })();

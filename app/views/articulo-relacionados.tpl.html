@@ -10,7 +10,7 @@
 	<div ng-show="publicar[0].muestroCapa == 1">
 		<div class="titulo-inscripcion">Más Capacitaciones</div>
 	  	<div class="color-relacionado" ng-repeat="noticia in publicar | limitTo:3 " >
-		   <a href="http://localhost:8888/articulo/{{noticia.articulo}}">
+		   <a href="/articulo/{{noticia.articulo}}">
 		    <div class="row">
 				<div class="col-md-12">
 					<div class="linea-separador"></div>
@@ -27,7 +27,7 @@
 	<div ng-show="publicar[0].muestroCapa == 2">
 		<div class="titulo-inscripcion">Noticias Relacionadas</div>
 	  	<div class="color-relacionado" ng-repeat="noticia in publicar | limitTo:3 " >
-		   <a href="http://localhost:8888/articulo/{{noticia.articulo}}">
+		   <a href="/articulo/{{noticia.articulo}}">
 		    <div class="row">
 				<div class="col-md-12">
 					<div class="linea-separador"></div>

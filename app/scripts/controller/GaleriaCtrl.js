@@ -6,7 +6,7 @@
     .module('portal.controllers')
     .controller('GaleriaCtrl', GaleriaCtrl);
 
-function GaleriaCtrl($scope, $rootScope, $routeParams, $http, HGaleria, $document){
+function GaleriaCtrl($scope, $rootScope, $routeParams, $http, HGaleria, $document, $timeout){
 
 	$scope.template = {'galeria': 'views/galeria.tpl.html'};
 	
@@ -17,12 +17,40 @@ function GaleriaCtrl($scope, $rootScope, $routeParams, $http, HGaleria, $documen
 
 	$scope.selectedPhoto =0;
 	//arreglo de imagenes		
-	$scope.images= $scope.mostrar_galeria;
-	console.log($scope.images);
+	$rootScope.images= $scope.mostrar_galeria;
+	// console.log('galeria data: '+$rootScope.images);
+
 	
 	$scope.select=function(index){
 		$scope.selectedPhoto=index;
 	}
+	
+	$rootScope.images.$promise.then(function(res){
+			var tam= res.length
+
+var countUp = function() {
+	        if ($scope.selectedPhoto == tam-1){
+				$scope.selectedPhoto = 0;
+				$timeout(countUp, 5000);
+				exit(); 
+	        }
+
+	        $scope.selectedPhoto+= 1;
+	        $timeout(countUp, 5000);
+	    }
+	    
+	    $timeout(countUp, 5000);
+
+		});
+
+    
+    
+
+    
+
+
+
+	// }
 
 }
 
