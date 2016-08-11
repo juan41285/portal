@@ -64,7 +64,6 @@
 	                      $scope.resultado = data.resultado;
 	                      
 	                      $scope.cursando1 = data.curso1;
-	                      $scope.cursando2 = data.curso2;
 
 	                  }
 	                  if (data.resultado == 3) {
@@ -90,13 +89,6 @@
 	                      $scope.resultado = 5;
 	                      $scope.fecha_ins = data.fecha_ins;
 	                      $scope.codigo = data.codigo;
-	                   
-	                  }
-	                    if (data.resultado == 6) {
-	                      $scope.resultado = data.resultado;
-	                      
-	                      // $scope.fecha_ins = data.fecha_ins;
-	                      // $scope.codigo = data.codigo;
 	                   
 	                  }
 
