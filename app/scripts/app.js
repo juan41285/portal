@@ -30,6 +30,12 @@
         controllerAs: 'art',
         activeMenu: 'articulos'
       })
+      .when('/capacitaciones', {
+        templateUrl: 'views/capacitaciones.tpl.html',
+        controller: 'CapacitacionCtrl',
+        controllerAs: 'cap',
+        activeMenu: 'capacitacion'
+      })
       .when('/agenda', {
         templateUrl: 'views/agenda.tpl.html',
         controller: 'AgendaCrtl',
