@@ -5,13 +5,21 @@
   angular
     .module('portal.services')    
     .factory('Capacitaciones',Capacitaciones)
+    .factory('ComisionesCapa',ComisionesCapa)
     .factory('Capacitacion',Capacitacion)
     .factory('Comision',Comision)
     .factory('Publicar',Publicar);
 
-  //muestra mezcaldas noticias y capacitaciones
+//servicio que muestra capacitaciones 2016 en portal
 function Capacitaciones ($resource, BaseUrl){
     return $resource(BaseUrl + '/ins/capanew', {});
+}
+//servicio que muestra en el portal las comisiones 
+//con inscripcion abierta de una capacitacion   
+function ComisionesCapa($resource, BaseUrl){
+    return $resource(BaseUrl + '/ins/comCapa/:id',
+      { pg_id: '@_id' }
+    );
 }
 
 function Capacitacion ($resource, BaseUrl) {
@@ -32,7 +40,7 @@ function Publicar ($resource, BaseUrl) {
     );
 }
 
-
+ //muestra mezcaldas noticias y capacitaciones
 })();
 
 

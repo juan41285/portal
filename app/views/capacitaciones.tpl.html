@@ -1,10 +1,20 @@
 <div class="container">
   <div class="row">
-	<div class="col-md-12">
-		<div>Listado de Capacitaciones 2016</div>		
+	<div class="col-md-12 well">
+		<div>Listado de Capacitaciones 2016</div>	
+		
 	  	<div class="" ng-repeat="capa in mostrarCapa " >
-			<div>{{capa.nombre}}</div>	
+			<div class="listar_capas" ng-click="funcionMostrarCom(capa.id)">{{capa.nombre}} | <span>{{capa.comision}}</span>
+			</div>	
+			<!-- si hay comisiones para inscribirse muestro -->
+			<div ng-show="mostrar" >
+				<div ng-repeat="com in listarCom">
+					<div>
+					COM{{com.idComision}} | Fecha Inicio: {{com.Fec_inicio}} | Sede: {{com.Lugar}} 
+					</div>
+				</div>
+			</div>
 		</div>	
-	</div>
+	</div>	
   </div>
 </div>
