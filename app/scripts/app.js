@@ -36,6 +36,12 @@
         controllerAs: 'cap',
         activeMenu: 'capacitacion'
       })
+      .when('/capacitacion/:idComision', {
+        templateUrl: 'views/capacitaciones-detalle.tpl.html',
+        controller: 'CapacitacionCtrl',
+        controllerAs: 'cap',
+        activeMenu: 'capacitacion'
+      })
       .when('/agenda', {
         templateUrl: 'views/agenda.tpl.html',
         controller: 'AgendaCrtl',

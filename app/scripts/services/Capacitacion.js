@@ -6,6 +6,7 @@
     .module('portal.services')    
     .factory('Capacitaciones',Capacitaciones)
     .factory('ComisionesCapa',ComisionesCapa)
+    .factory('SDetalleCom',SDetalleCom)
     .factory('Capacitacion',Capacitacion)
     .factory('Comision',Comision)
     .factory('Publicar',Publicar);
@@ -21,6 +22,14 @@ function ComisionesCapa($resource, BaseUrl){
       { pg_id: '@_id' }
     );
 }
+//servicio que muestra la informacion de una comision 
+//incluidos los datos de la capacitacion
+function SDetalleCom($resource, BaseUrl){
+    return $resource(BaseUrl + '/ins/detalleCom/:id',
+      { pg_id: '@_id' }
+    );
+}
+
 
 function Capacitacion ($resource, BaseUrl) {
     return $resource(BaseUrl + '/ins/capa/:id',

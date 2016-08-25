@@ -10,9 +10,9 @@
 			<!-- si hay comisiones para inscribirse muestro -->
 			<div ng-show="mostrar" >
 				<div ng-repeat="com in listarCom">
-					<div>
+					<a href="/capacitacion/{{com.idComision}}">
 					COM{{com.idComision}} | Fecha Inicio: {{com.Fec_inicio}} | Sede: {{com.Lugar}} 
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>	
