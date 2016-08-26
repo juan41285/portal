@@ -570,6 +570,20 @@ mar
   padding: 10px;
   margin-bottom: 5px;
 }
+.descripcion{
+  padding-top: 15px;
+  text-align: justify;
+}
+.codigos{
+  color: #03a9f4; 
+  margin-left: 40px;
+  font-weight: bold !important;
+}
+
+.margin-left-40{
+  margin-left: 40px;
+}
+
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
   list-style: none;

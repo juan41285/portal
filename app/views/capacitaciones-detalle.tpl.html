@@ -1,152 +1,160 @@
 
 <div class="container well ">
-		<div class="row">
+	<div class="row">
 			<div class="col-md-12">
 				<h3 class="text-center">{{mostrarCom[0].Nombre}}</h3>
 				<hr>
 			</div>
 			
 			<div class="col-md-7 ">
-                <p class="codigos">CAPA{{mostrarCom[0].idCapacitacion}} - COM{{mostrarCom[0].idComision}}</p>
+          <p class="codigos">CAPA{{mostrarCom[0].idCapacitacion}} - COM{{mostrarCom[0].idComision}}</p>
                 
-				<p class="margin-left-40" >	
-					<img src="{{mostrarCom[0].imagenGrande}}" class="img-responsive">
-				</p>
-				<p class="descripcion margin-left-40">{{mostrarCom[0].Descripcion}}</p>
+				  <p class="margin-left-40" >	
+					   <img src="{{mostrarCom[0].imagenGrande}}" class="img-responsive">
+				  </p>
+				  <p class="descripcion margin-left-40">{{mostrarCom[0].Descripcion}}</p>
 
-				<div class="col-md-6" >
-	                <ul style="margin-left: 10px">
+				  <div class="col-md-6" >
+	            <ul style="margin-left: 10px">
 	                	<hr>
 	                  	<li><strong>Área: </strong>{{mostrarCom[0].Area}}</li>
 	                    <li><strong>Disciplina: </strong>{{mostrarCom[0].Disciplina}}</li>
 	                	<li><strong>Encuentros presenciales: </strong>{{mostrarCom[0].Duracion}}</li>
 	                    <li><strong>Horas cátedra: </strong>{{mostrarCom[0].Hs_catedra}}</li>	
 	                	<hr>
-	                </ul>	
-                </div>
-                <div class="col-md-6">
-                	<ul style="background: #f1f1f1; margin-right: 20px">
+	            </ul>	
+          </div>
+          <div class="col-md-6">
+              <ul style="background: #f1f1f1; margin-right: 20px">
 	                	<hr>
 	                  	<li><strong>Sede: </strong>{{mostrarCom[0].Lugar}}</li>
 	                    <li><strong>Fecha de Inicio: </strong>{{mostrarCom[0].Fec_inicio}}</li>
 						          <li><strong>Fecha de Fin: </strong>{{mostrarCom[0].Fec_fin}}</li>	
 						          <li><strong>Horario: </strong>{{mostrarCom[0].Horario}}</li>
 	                	<hr>
-                	</ul>
-                </div>
+              </ul>
+          </div>
 			</div>
-            <div class="col-md-offset-1 col-md-4">
-				<div class="noticia-sidebar">
-    						<form id="frm-inscribir-ajax" autocomplete="off"  method="POST" data-validate="parsley" action="">
-							<fieldset>
-								<div class="titulo-inscripcion linea-separador-inscripcion">Formulario de Inscripción</div>
+      
+      <div class="col-md-offset-1 col-md-4">
+				  
+          <div class="noticia-sidebar" ng-controller="InscripcionCtrl" >
+    <!-- noticia-sidebar envuelve todo el codigo, hasta el final  -->
+<div class="titulo-inscripcion linea-separador-inscripcion">Formulario de Inscripción</div>
 
-								<div class="padding-top-15">
-			        				<span class="help-block">Estimada/o Docente: Para inscribirse en el curso debe ingresar su DNI y contraseña del Panel Docente. 
-			                        Si aún no está registrado, regístrese haciendo clic  <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a></span>
-			      				</div>
-			                </fieldset> 
-			                   
-							<fieldset>
-									<div class="form-group " >
-								        <label class="control-label">DNI</label>
-										<input type="text" name="DNI" id="DNI" size="10" maxlength="8" data-required="true" data-type="digits" data-minlength="7" data-maxlength="8" class="form-control"/> 
-										<span class="help-block"><small>Ingrese el DNI sin puntos</small></span>
+<!-- ****************************************************** -->
+<!-- se realizan los controles y mensajes posibles al inscribirse -->
 
-
-      								</div>
-									<div class="form-group">
-          								<label class="control-label">CONTRASEÑA</label>
-										<input type="password" id="password" name="password"  size="45" maxlength="45" class="form-control" data-required="true"/>
-										<input type="hidden" name="id" id="id" value="<?php echo $id_com; ?>">		
-          								<br>
-      								</div>
-							</fieldset>
-							<br/>
-								<span class="help-block">Al Inscribirse confirma haber leido y estar de acuerdo con el Protocolo Reglamentario. <a href="">Leer Protocolo</a></span>   
-          						<button type="submit" class="btn btn-block btn-info ">Inscribirse</button>
-
-									
-				 			</form>
-
-<!-- Inicio de mensajes -->
-<div class="hidden resultado resultado-0 inscripcion-form " > 
-     <button type="button" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-error"> <span class="flaticon-cancel color-rojo" aria-hidden="true"></span> <br>Datos incorrectos  <p class="help-block">Verifique sus datos de acceso al panel docente. Para ingresar haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p></div>
+<div class="well inscripcion-form" ng-show="resultado == 0" > 
+     <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-error"> <span class="fa fa-times-circle-o color-rojo" aria-hidden="true"></span> <br>Datos incorrectos  <p class="help-block">Verifique sus datos de acceso al panel docente. Para ingresar haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p></div>
 </div>
 
-<div class="hidden resultado resultado-1 inscripcion-form " >
-     <button type="button" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-suspension"><span class="flaticon-warning color-naranja" aria-hidden="true"></span> <br>Usted se encuentra momentáneamente suspendida/o para realizar inscripciones
+<div class="well inscripcion-form" ng-show="resultado == 1">
+     <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br>Usted se encuentra momentáneamente suspendida/o para realizar inscripciones
     <p class="help-block">La suspensión momentanea se debe a la reincidencia de abandonos o inscripciones sin asistir a las capacitaciones</p> 
     <ul>
-        <li><strong>Inicio de suspensión: <span class="msj msj-fecha_suspension"></span></strong></li>
-        <li><strong>Fin de suspensión: <span class="msj msj-fecha_alta"></span></strong></li>
+        <li><strong>Inicio de suspensión: {{fecha_suspension}} </strong></li>
+        <li><strong>Fin de suspensión: {{fecha_alta}}</strong></li>
     </ul>
     <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>
     </div>
 </div>
               
-<div class="hidden resultado resultado-2 inscripcion-form">
-     <button type="button" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-1capa"><span class="flaticon-warning color-naranja" aria-hidden="true"></span><br> 
+<div class="well inscripcion-form" ng-show="resultado == 2">
+     <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-1capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
         Sólo se puede cursar <br> una capacitacion por vez
         <p class="help-block" >Actualmente se encuentra cursando la capacitación:</p>
           <ul>
-            <li><span class="msj msj-cursando1"></span></li>
+            <li>{{cursando1}}</li>
           </ul>
         <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>
     </div>
 </div>
 
-<div class="hidden resultado resultado-3 inscripcion-form" >
-    <button type="button" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-ok"><span class="flaticon-success color-verde" aria-hidden="true"></span><br> 
+<div class="well inscripcion-form" ng-show="resultado == 3" >
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-ok"><span class="fa fa-check color-verde" aria-hidden="true"></span><br> 
       La inscripcion se realizó correctamente
-      <p class="help-block" >El código de la inscripción realizada es <span class="msj msj-codigo"></span></p>
+      <p class="help-block" >El código de la inscripción realizada es <strong>COD{{codigo}}</strong></p>
       <ul>
-          <li><strong>Capacitación: <span class="msj msj-capacitacion"></span></strong></li>
-          <li><strong>Fecha de inicio: <span class="msj msj-fecha_ini"></span></strong></li>
-          <li><strong>Horario: <span class="msj msj-horario"></span></strong></li>
-          <li><strong>Lugar: <span class="msj msj-lugar"></span></strong></li>
+          <li><strong>Capacitación: {{capacitacion}}</strong></li>
+          <li><strong>Fecha de inicio: {{fecha_ini}}</strong></li>
+          <li><strong>Horario: {{horario}}</strong></li>
+          <li><strong>Lugar: {{lugar}}</strong></li>
       </ul>
       <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>                
     </div>
 </div>
 
 <!--  -->
-<div class="hidden resultado resultado-4 inscripcion-form" >
-    <button type="button" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-suspension"><span class="flaticon-warning color-naranja" aria-hidden="true"></span> <br> 
+<div class="well inscripcion-form" ng-show="resultado == 4">
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br> 
     El cupo de este curso está completo
     <p class="help-block">Consulte en <a href="/desarrollo-profesional-tic" target="_blank">Capacitaciones</a> la oferta disponible </p>
     <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>                
     </div>
 </div>
 
-<div class="hidden resultado resultado-5 inscripcion-form" >
-    <button type="button" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-2capa"><i class="flaticon-warning color-naranja" aria-hidden="true"></i><br> 
+<div class="well inscripcion-form" ng-show="resultado == 5" >
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-2capa"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     Ya registra una inscripción para este mismo curso
     <p class="help-block">Capacitaciones en las que se encuentra inscripto:</p>
         <ul>
-            <li><strong>Fecha de inscripción: <span class="msj msj-fecha_ins"></span></strong></li>
-            <li><strong>Código de inscripción: </strong> COD<span class="msj msj-codigo"></span></li>
+            <li><strong>Fecha de inscripción: {{fecha_ins | dateToISO | date: 'd-M-yyyy'}}</strong></li>
+            <li><strong>Código de inscripción: </strong> COD{{codigo}}</li>
         </ul>
     <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">Aquí.</a> </p>                               
     </div>
 </div>
 
-<div class="hidden resultado resultado-12 inscripcion-form" >
-    <button type="button" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
-    <div class="inscripcion-titulo-2capa"> <span class="flaticon-warning color-naranja" aria-hidden="true"></span><br> 
+<div class="well inscripcion-form" ng-show="resultado == 12" >
+    <button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+    <div class="inscripcion-titulo-2capa"> <span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br> 
     La inscripción no puede realizarse
     <p class="help-block">Usted ya aprobó esta capacitación en ediciones anteriores.</p>
     <p class="help-block">Sugerimos la lectura del <a href="">Protocolo Reglamentario</a></p> 
     </div>
 </div>
-<!-- fin de mensajes -->
-        </div>
-			</div> <!-- Cierro segundo col-md-6 -->
-        </div> <!-- cierro row -->
+
+<!-- ****************************************************** -->
+<!-- Formulario de Inscripcion -->
+
+<div class="" ng-show="resultado == 20"  >
+<form class="" ng-submit="Inscribir(mostrarCom[0].idComision)" >
+ 
+  <fieldset>
+  <!-- Nota: fieldset, para deshabilitar cualquier campo de formulario que se encuentre en su interior. -->
+                    
+      <div class="padding-top-15">
+        <span class="help-block">Estimada/o Docente: Para inscribirse en el curso debe ingresar su DNI y contraseña del Panel Docente. 
+                        Si aún no está registrado, regístrese haciendo clic  <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" target="_blank">Aquí.</a></span>
+      </div>
+      <div class="form-group " >
+          <label for="dni_doc" class="control-label">DNI</label>
+          <input type="text" class="form-control" id="DNI" name="DNI" ng-model="InsData.DNI" placeholder=""  required >
+          <span class="help-block">Ingrese el DNI sin puntos</span>
+      </div>
+      <div class="form-group">
+          <label for="pass_don" class="control-label">Contraseña</label>
+          <input type="password" class="form-control" id="pass_doc" name="password" ng-model="InsData.password" placeholder="" required>
+          <br>
+      </div>
+                      
+      <span class="help-block">Al Inscribirse confirma haber leido y estar de acuerdo con el Protocolo Reglamentario. <a href="">Leer Protocolo</a></span>                     
+      <div class="form-group">
+          <button type="submit" class="btn btn-block btn-info ">Inscribirse</button>
+      </div>
+  </fieldset>
+</form>
+</div> <!-- Cierro div para ocultar formulario -->
+</div> <!-- cierro noticia-sidebar -->
+
+
+			</div> <!-- Cierro segundo col-md-4 -->
+  </div> <!-- cierro row -->
 </div>

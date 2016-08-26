@@ -26,9 +26,9 @@ function GaleriaCtrl($scope, $rootScope, $routeParams, $http, HGaleria, $documen
 	}
 	
 	$rootScope.images.$promise.then(function(res){
-			var tam= res.length
+		var tam= res.length
 
-var countUp = function() {
+		var countUp = function() {
 	        if ($scope.selectedPhoto == tam-1){
 				$scope.selectedPhoto = 0;
 				$timeout(countUp, 5000);
@@ -41,7 +41,7 @@ var countUp = function() {
 	    
 	    $timeout(countUp, 5000);
 
-		});
+	});
 
     
     
