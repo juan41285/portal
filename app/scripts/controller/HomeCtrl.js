@@ -8,12 +8,58 @@
     .controller('AgendaDescCtrl', AgendaDescCtrl);
 
       /* @ngInject */
-  function HomeCtrl ($scope,homeSlide,$http, Hoy,$uibModal) {
+  function HomeCtrl ($scope,homeSlide,$http, Hoy,$uibModal, $timeout) {
 
-     var vm = this;
+    var vm = this;
 
     vm.slides = homeSlide.query();
     // console.log(vm.slides);
+    // 
+    // //////////////////////////////////////////
+    
+
+    $scope.selectedPhoto =0;
+
+    $scope.select=function(index){
+      $scope.selectedPhoto=index;
+    }
+    // var tam = vm.slides.length;
+    // console.log(tam);
+    var tam = 16;
+
+    var countUp = function() {
+        if ($scope.selectedPhoto == tam-1){
+          $scope.selectedPhoto = 0;
+          $timeout(countUp, 5000);
+          // exit(); 
+        }else{
+          $scope.selectedPhoto+= 1;
+          $timeout(countUp, 5000);  
+        }
+        
+    }
+      
+       $timeout(countUp, 5000);
+
+  // $rootScope.images.$promise.then(function(res){
+  //   var tam= res.length
+
+  //   var countUp = function() {
+  //         if ($scope.selectedPhoto == tam-1){
+  //       $scope.selectedPhoto = 0;
+  //       $timeout(countUp, 5000);
+  //       exit(); 
+  //         }
+
+  //         $scope.selectedPhoto+= 1;
+  //         $timeout(countUp, 5000);
+  //     }
+      
+  //     $timeout(countUp, 5000);
+
+  // });
+
+    // //////////////////////////////////////////
 
     //agendas
     vm.hoy = Hoy.get();

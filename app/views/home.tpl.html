@@ -8,12 +8,18 @@
                 <!-- Bottom switcher of slider -->
 
                 <ul class="hide-bullets">
-                    <li class="col-sm-3 " ng-repeat="thumb in home.slides ">
+
+                    <li class="col-sm-3 " ng-repeat="thumb in home.slides">
+                      <a class="thumbnail"><img ng-src="{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1" ng-click="select($index)"></a>
+                    </li>
+                  
+                    <!-- codigo original (no borrar)         -->
+                    <!-- <li class="col-sm-3 " ng-repeat="thumb in home.slides ">
                         <a class="thumbnail" id="carousel-selector-{{$index}}">
                             <img src="{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1">
 
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="col-md-6 col-xs-12 margin-bottom-20">
@@ -25,8 +31,22 @@
                             <div class="carousel slide " id="myCarousel">
                                 <!-- Carousel items -->
                                 <div class="carousel-inner ">
-                              
-                                    <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == 996}"  ng-repeat="thumb in home.slides" data-slide-number="$index" index="thumb.pg_id">
+                                  <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == thumb.pg_id}">    
+                                      <img src="{{home.slides[selectedPhoto].capa}}" alt="">
+                                  
+                                      <h3>{{home.slides[selectedPhoto].pg_title}}</h3>     
+                                      <div class="bg-blue">
+                                        <div ng-bind-html="home.slides[selectedPhoto].pg_des | limitTo:340"></div>
+                                        <!-- <div class="clearfix"> -->
+                                          <a href="/articulo/{{home.slides[selectedPhoto].pg_id}}" class="btn btn-info btn-raised pull-right" style="margin-right:10px">Leer más</a>
+                                        <!-- </div> -->
+                                      </div> 
+                                  </div>    
+
+                                </div>
+
+                                    <!-- codigo original (no borrar)     -->
+                                    <!-- <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == 982}"  ng-repeat="thumb in home.slides" data-slide-number="$index" index="thumb.pg_id">
                                     
                                         <img src="{{thumb.capa}}">
                                         <h3>{{thumb.pg_title}}</h3>
@@ -36,10 +56,10 @@
                                         <a href="/articulo/{{thumb.pg_id}}" class="btn btn-info btn-raised pull-right">Leer más</a>
                                         </div>
                                         </div>
-                                   </div>    
+                                   </div>    --> 
                                  
                                    
-                                </div>
+                            </div>
                                 <!-- Carousel nav -->
                                <!--  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -89,6 +109,15 @@
                <div class="col-md-3">
                 <a href="http://mapa.innovacioneducativa.gob.ar/" target="_blank">
                     <img src="images/mapa.png" alt="" class="img-responsive">
+                </a>
+            </div>
+           
+        </div>
+        <div class="row">
+           <div class="col-md-3">
+                <a href="http://innovacioneducativa.gob.ar/EAD/" target="_blank">
+                    <!-- images/adistancia.png -->
+                    <img src="http://innovacioneducativa.gob.ar/images/adistancia.png" alt="" class="img-responsive">
                 </a>
             </div>
         </div>
