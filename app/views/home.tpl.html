@@ -1,17 +1,17 @@
 
 <div class="container">
-    <div id="main_area">
-        <!-- Slider -->
-        <div class="row">
+  <div id="main_area">
+      <!-- Slider -->
+      <div class="row">
 
-            <div class="col-md-6 hidden-sm hidden-xs margin-bottom-20" id="slider-thumbs">
+            <!-- <div class="col-md-6 hidden-sm hidden-xs margin-bottom-20" id="slider-thumbs"> -->
                 <!-- Bottom switcher of slider -->
 
-                <ul class="hide-bullets">
+               <!--  <ul class="hide-bullets">
 
                     <li class="col-sm-3 " ng-repeat="thumb in home.slides">
                       <a class="thumbnail"><img ng-src="{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1" ng-click="select($index)"></a>
-                    </li>
+                    </li> -->
                   
                     <!-- codigo original (no borrar)         -->
                     <!-- <li class="col-sm-3 " ng-repeat="thumb in home.slides ">
@@ -20,58 +20,42 @@
 
                         </a>
                     </li> -->
-                </ul>
-            </div>
-            <div class="col-md-6 col-xs-12 margin-bottom-20">
-                <div class="col-xs-12" id="slider">
-                    <!-- Top part of the slider -->
-                    <div class="row">
-                        <div class="col-sm-12" id="carousel-bounding-box">
-                       
-                            <div class="carousel slide " id="myCarousel">
-                                <!-- Carousel items -->
-                                <div class="carousel-inner ">
-                                  <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == thumb.pg_id}">    
-                                      <img src="{{home.slides[selectedPhoto].capa}}" alt="">
-                                  
-                                      <h3>{{home.slides[selectedPhoto].pg_title}}</h3>     
-                                      <div class="bg-blue">
-                                        <div ng-bind-html="home.slides[selectedPhoto].pg_des | limitTo:340"></div>
-                                        <!-- <div class="clearfix"> -->
-                                          <a href="/articulo/{{home.slides[selectedPhoto].pg_id}}" class="btn btn-info btn-raised pull-right" style="margin-right:10px">Leer más</a>
-                                        <!-- </div> -->
-                                      </div> 
-                                  </div>    
+            <!--     </ul>
+            </div> -->
 
-                                </div>
-
-                                    <!-- codigo original (no borrar)     -->
-                                    <!-- <div class="item slide-box shadow-z-1" ng-class="{active: thumb.pg_id == 982}"  ng-repeat="thumb in home.slides" data-slide-number="$index" index="thumb.pg_id">
-                                    
-                                        <img src="{{thumb.capa}}">
-                                        <h3>{{thumb.pg_title}}</h3>
-                                        <div class="bg-blue">
-                                        <div ng-bind-html="thumb.pg_des | limitTo:350"></div>
-                                        <div class="clearfix">
-                                        <a href="/articulo/{{thumb.pg_id}}" class="btn btn-info btn-raised pull-right">Leer más</a>
-                                        </div>
-                                        </div>
-                                   </div>    --> 
-                                 
-                                   
+          <div class="col-md-12 col-xs-12 ">
+              <div class="col-xs-12 fondo-blanco shadow-z-1" id="slider">
+                <div class="col-sm-12" id="carousel-bounding-box">
+                    <div class="carousel slide " id="myCarousel">
+                        <!-- Carousel items -->
+                        <div class="carousel-inner ">
+                            <div class="col-md-4 margin-bottom-20">
+                                <img src="{{home.slides[selectedPhoto].capa}}" alt="" class="img-responsive">
                             </div>
-                                <!-- Carousel nav -->
-                               <!--  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right"></span>
-                                </a> -->
-                            </div>
+                            <div class="col-md-8">
+                                <h3>{{home.slides[selectedPhoto].pg_title}}</h3>     
+                                <div class="bg-blue">
+                                  <div ng-bind-html="home.slides[selectedPhoto].pg_des | limitTo:400"></div>
+                                  <a href="/articulo/{{home.slides[selectedPhoto].pg_id}}" class="btn btn-info btn-raised pull-right" style="margin-right:10px">Leer más</a>
+                                </div> 
+                            </div>  
                         </div>
                     </div>
+                    
+                    <!-- Carousel nav -->
+                    <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a> -->
                 </div>
-            </div>
+              </div>
+          </div>
+
+
+          
+      </div>
             <!--/Slider-->
             <div class="col-md-12">
             <div class="video-200">
@@ -83,10 +67,9 @@
             </div>
               
             </div>
-        </div>
-
-    </div>
+  </div>
 </div>
+<!-- </div> -->
 <!-- accesos directos -->
 <div class="bg-central shadow-z-1">
     <div class="container">
