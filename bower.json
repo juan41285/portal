@@ -11,7 +11,6 @@
     "angular-resource": "1.2.21",
     "bootstrap-material-design": "0.2.2",
     "angular-sanitize": "1.2.21",
-    "angular-bootstrap": "0.14.3",
     "angular-utils-pagination": "0.7.0",
     "angular-scroll": "0.6.5",
     "angular-animate": "^1.5.8",
@@ -19,6 +18,7 @@
     "ngScrollable": "ng-scrollable#^0.2.5",
     "angularUtils-pagination": "angular-utils-pagination#^0.11.1",
     "angular-socialshare": "angularjs-socialshare#^2.2.3",
-    "angular-video-bg": "^0.3.3"
+    "angular-video-bg": "^0.3.3",
+    "angular-bootstrap": "^2.1.3"
   }
 }

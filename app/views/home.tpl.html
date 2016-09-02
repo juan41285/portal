@@ -4,77 +4,53 @@
       <!-- Slider -->
       <div class="row">
 
-            <!-- <div class="col-md-6 hidden-sm hidden-xs margin-bottom-20" id="slider-thumbs"> -->
-                <!-- Bottom switcher of slider -->
-
-               <!--  <ul class="hide-bullets">
-
-                    <li class="col-sm-3 " ng-repeat="thumb in home.slides">
-                      <a class="thumbnail"><img ng-src="{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1" ng-click="select($index)"></a>
-                    </li> -->
-                  
-                    <!-- codigo original (no borrar)         -->
-                    <!-- <li class="col-sm-3 " ng-repeat="thumb in home.slides ">
-                        <a class="thumbnail" id="carousel-selector-{{$index}}">
-                            <img src="{{thumb.capa}}" class="img-responsive thumb-home shadow-z-1">
-
-                        </a>
-                    </li> -->
-            <!--     </ul>
-            </div> -->
-
-          <div class="col-md-12 col-xs-12 ">
-              <div class="col-xs-12 fondo-blanco shadow-z-1" id="slider">
-                <div class="col-sm-12" id="carousel-bounding-box">
-                    <div class="carousel slide " id="myCarousel">
-                        <!-- Carousel items -->
-                        <div class="carousel-inner ">
-                            <div class="col-md-4 margin-bottom-20">
-                                <img src="{{home.slides[selectedPhoto].capa}}" alt="" class="img-responsive">
-                            </div>
-                            <div class="col-md-8">
-                                <h3>{{home.slides[selectedPhoto].pg_title}}</h3>     
-                                <div class="bg-blue">
-                                  <div ng-bind-html="home.slides[selectedPhoto].pg_des | limitTo:400"></div>
-                                  <a href="/articulo/{{home.slides[selectedPhoto].pg_id}}" class="btn btn-info btn-raised pull-right" style="margin-right:10px">Leer más</a>
-                                </div> 
-                            </div>  
+          <div class="container" >
+          <div class="row">
+          <div class="col-md-12">
+              <div class="well" style="height: 230px; padding:20px; "  >
+                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                  <div uib-slide ng-repeat="slide in home.slides track by slide.pg_id" index="$index">
+                   <div class="row">
+                     <div class="col-md-3">
+                       <img ng-src="{{slide.capa}}" style="margin:auto; width:250px; height:150px; " class="img-responsive">
+                     </div>
+                     <div class="col-md-9">
+                        <h3>{{slide.pg_title}}</h3>     
+                        <div class="bg-blue">
+                          <div ng-bind-html="slide.pg_des | limitTo:400"></div>
+                          <div class="clearfix">
+                          <a href="/articulo/{{slide.pg_id}}" class="btn btn-info btn-raised pull-right" style="margin-right:10px; z-index:999;">Leer más</a>
+                          </div>
                         </div>
+                     </div>   
+                      
                     </div>
-                    
-                    <!-- Carousel nav -->
-                    <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a> -->
+                  </div>
                 </div>
               </div>
+              </div>
+              </div>
           </div>
-
+          <!-- //////////////// -->
+     <!--  -->
+ <div class="col-md-12">
+      <a href="http://cine.innovacioneducativa.gob.ar" target="_blank"><img src="images/Aviso-festival.png" alt="" class="img-responsive shadow-z-1"></a>
+    </div>
 
           
       </div>
-            <!--/Slider-->
-            <div class="col-md-12">
-            <div class="video-200">
-            <a href="http://bicentenario.innovacioneducativa.gob.ar/bicentenario_argentino/index.php" target="_blank" class="btn btn-raised btn-default">Ingresar al sitio</a><br>
-            <a href="http://bicentenario.innovacioneducativa.gob.ar/juegos/index.php" target="_blank" class="btn btn-raised btn-warning">Juegos del Bicentenario</a><br>
-            <a href="http://bicentenario.innovacioneducativa.gob.ar/independencia/index.php" target="_blank" class="btn btn-raised btn-info">Sitio: independencia interactivo</a><br>
-            <a href="http://cine.innovacioneducativa.gob.ar/festival/index.php" target="_blank" class="btn btn-raised btn-primary">Bicentenario en Cortos</a>
-              <video-bg video-id="'RU1T3yQUhOw'"></video-bg>
-            </div>
-              
-            </div>
-  </div>
 </div>
-<!-- </div> -->
+</div>  
+
+
 <!-- accesos directos -->
-<div class="bg-central shadow-z-1">
+<div class="" style="margin-top: 20px">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+          <div class="col-md-12">
+            <div class="well">
+              <div class="row">
+                    <div class="col-md-3">
                 <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">
                     <img src="images/Panel-Docente.png" alt="" class="img-responsive">
                 </a>
@@ -112,9 +88,25 @@
                     <img src="images/experiencias.png" alt="" class="img-responsive" >
                 </a>
             </div>
-        </div>
+        </div>    
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-md-12 well">
+            <div class="video-200">
+            <a href="http://bicentenario.innovacioneducativa.gob.ar/bicentenario_argentino/index.php" target="_blank" class="btn btn-raised btn-default">Ingresar al sitio</a><br>
+            <a href="http://bicentenario.innovacioneducativa.gob.ar/juegos/index.php" target="_blank" class="btn btn-raised btn-warning">Juegos del Bicentenario</a><br>
+            <a href="http://bicentenario.innovacioneducativa.gob.ar/independencia/index.php" target="_blank" class="btn btn-raised btn-info">Sitio: independencia interactivo</a><br>
+            <a href="http://cine.innovacioneducativa.gob.ar/festival/index.php" target="_blank" class="btn btn-raised btn-primary">Bicentenario en Cortos</a>
+              <video-bg video-id="'RU1T3yQUhOw'"></video-bg>
+            </div>
+              
+            </div>   
     </div>
     </div>
+
+
     <!-- agendas -->
         <div class="container">
     <div id="container2">
