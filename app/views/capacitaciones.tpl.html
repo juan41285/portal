@@ -18,21 +18,17 @@
 
 			</div>
 			<div uib-collapse="!capaVar{{capa.id}}">
-				<div class="content_capa">Some content</div>
-			</div>
-		</div>
-	  	<div class="" ng-repeat="capa in mostrarCapa " >
-			<div class="listar_capas" ng-click="funcionMostrarCom(capa.id)">{{capa.nombre}} | <span>{{capa.comision}}</span>
-			</div>	
-			<!-- si hay comisiones para inscribirse muestro -->
-			<div ng-show="mostrar" >
-				<div ng-repeat="com in listarCom">
+				<div class="content_capa">
+				<button type="button" class="close" ng-click="funcionMostrarCom(capa.id)"><span aria-hidden="true">&times;</span></button>
+					<div ng-repeat="com in listarCom">
 					<a href="/capacitacion/{{com.idComision}}">
 					COM{{com.idComision}} | Fecha Inicio: {{com.Fec_inicio}} | Sede: {{com.Lugar}} 
 					</a>
 				</div>
+				</div>
 			</div>
-		</div>	
+		</div>
+	  	
 	</div>
 	</div>	
   </div>

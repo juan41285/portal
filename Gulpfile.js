@@ -116,10 +116,10 @@ gulp.task('wiredep', function () {
 // Compila las plantillas HTML parciales a JavaScript
 // para ser inyectadas por AngularJS y minificar el código
 gulp.task('templates', function() {
-  gulp.src('./app/templates/**/*.tpl.html')
+  gulp.src('./app/views/**/*.tpl.html')
     .pipe(templateCache({
       root: 'templates/',
-      module: 'ppe.templates',
+      module: 'portal.templates',
       standalone: true
     }))
     .pipe(gulp.dest('./app/scripts'));
