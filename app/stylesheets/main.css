@@ -31,7 +31,7 @@ a:hover {
   padding: 10px;
 }
 .margin-bottom-20 {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 .thumb-home {
   width: 120px !important;
@@ -92,13 +92,7 @@ a:hover {
 /******************CSS ROBADOS********************/
 .fondo-menu-top {
   padding: 10px;
-  background: #489cea;
-  background: -moz-linear-gradient(top, #489cea 0%, #1f7be5 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, #489cea), color-stop(100%, #1f7be5));
-  background: -webkit-linear-gradient(top, #489cea 0%, #1f7be5 100%);
-  background: -o-linear-gradient(top, #489cea 0%, #1f7be5 100%);
-  background: -ms-linear-gradient(top, #489cea 0%, #1f7be5 100%);
-  background: linear-gradient(to bottom, #489cea 0%, #1f7be5 100%);
+  background: #03a9f4 !important;
 }
 .hide-bullets {
   list-style: none;
@@ -467,7 +461,6 @@ a:hover {
   margin: 0px 1px;
   border-radius: 5px;
   text-align: center;
-mar
 }
 .linea-separador {
   border-bottom: 1px dashed rgba(15,16,16,0.42);
@@ -567,23 +560,32 @@ mar
 }
 .listar_capas {
   background: #f1f1f1;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 5px;
+  font-family: 'Cabin Condensed';
+  border: 1px solid #ddd;
 }
-.descripcion{
+.content_capa {
+  background-color: #a2a3a4;
+  padding: 10px;
+}
+.descripcion {
   padding-top: 15px;
   text-align: justify;
 }
-.codigos{
-  color: #03a9f4; 
+.codigos {
+  color: #03a9f4;
   margin-left: 40px;
   font-weight: bold !important;
 }
-
-.margin-left-40{
+.margin-left-40 {
   margin-left: 40px;
 }
-
+.fondo-mensaje {
+  background: #f1f1f1 !important;
+  margin: 10px;
+  padding: 10px;
+}
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
   list-style: none;
@@ -1014,26 +1016,6 @@ label .additional,
   left: 0;
   right: auto;
 }
-/*.has-success .form-control { border-color: #0ac964; }
-
-.has-success .form-control-feedback { color: #0ac964; }
-
-
-
-.has-warning .form-control { border-color: #c19716; }
-
-.has-warning .form-control-feedback { color: #c19716; }
-
-
-
-.has-error .form-control { border-color: #f45858; }
-
-.has-error .form-control-feedback { color: #f45858; }*/
-/*
-
-  File input
-
-*/
 .file-input {
   position: relative;
 }

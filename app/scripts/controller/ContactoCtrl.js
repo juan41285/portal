@@ -10,9 +10,8 @@
 function ContactoCtrl ($scope, $http)
 {
   
- 
   $scope.mensaje = true;
- 
+  $scope.mnsaje = true;
 
 
   //enviar suscripcion
@@ -23,9 +22,7 @@ function ContactoCtrl ($scope, $http)
   $scope.alta_repe = false;
   $scope.sinRobot = false;
   
-  
     // console.log("hola"+$scope.areas);
-
 
       // enviar form
       $scope.Suscribir = function() {
@@ -78,14 +75,10 @@ function ContactoCtrl ($scope, $http)
       $scope.alta_ok = false;
       $scope.alta_repe = false;
 
-      
-
     }
 
  $scope.limpiarMsj = function()
     {
-
-
       $scope.mData = {};
       $scope.msj = true;
       $scope.msj_mal = false;
@@ -135,10 +128,6 @@ $scope.mData.destino = correo;
                       $scope.msj_ok = true;
                       $scope.msj = false;
                       $scope.msj_mal = false;
-
-
-                   
-
                   }
                   else
                   {

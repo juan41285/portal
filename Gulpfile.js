@@ -24,11 +24,9 @@ gulp.task('server', function() {
   connect.server({
     root: './app',
     hostname: '0.0.0.0',
-    port: 8888,
+    port: 8080,
     livereload: true,
-    middleware: function(connect, opt) {
-      return [ historyApiFallback ];
-    }
+   middleware: function (connect, opt) { return [ historyApiFallback({}) ]; }
   });
 });
 
@@ -118,10 +116,10 @@ gulp.task('wiredep', function () {
 // Compila las plantillas HTML parciales a JavaScript
 // para ser inyectadas por AngularJS y minificar el código
 gulp.task('templates', function() {
-  gulp.src('./app/views/**/*.tpl.html')
+  gulp.src('./app/templates/**/*.tpl.html')
     .pipe(templateCache({
-      root: 'views/',
-      module: 'portal.templates',
+      root: 'templates/',
+      module: 'ppe.templates',
       standalone: true
     }))
     .pipe(gulp.dest('./app/scripts'));
@@ -148,9 +146,9 @@ gulp.task('uncss', function() {
 
 
 gulp.task('imagenes', function () {
-    return gulp.src(['./app/images/*.*'])
+    return gulp.src(['./app/img/*.*'])
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/images/'));
+        .pipe(gulp.dest('./dist/img/'));
 });
 
 // Vigila cambios que se produzcan en el código

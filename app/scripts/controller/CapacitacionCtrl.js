@@ -28,13 +28,14 @@
 
 		$scope.funcionMostrarCom = function(pg_id){
 			$scope.mostrar = true;
-			
+			$scope['capaVar'+pg_id] = !$scope['capaVar'+pg_id];
 			$scope.listarCom = {};
 			$scope.listarCom = ComisionesCapa.query({id: pg_id});
-			console.log($scope.listarCom);
+			console.log(pg_id);
+
+
 
 		}
-
 
 
 

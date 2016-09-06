@@ -1,9 +1,26 @@
 <div class="container">
+
   <div class="row">
 	<div class="col-md-12">
 	<div class="well">
-		<div>Listado de Capacitaciones 2016</div>	
+		<div class="row">
+			<div class="col-md-5">
+				<img src="images/secciondesarrollo.png" class="img-responsive">
+			</div>
+			<div class="col-md-7">
+				<div>Listado de Capacitaciones 2016</div>			
+			</div>
+		</div>
+	  	<div class="" ng-repeat="capa in mostrarCapa " >
 		
+			<div class="listar_capas" ng-click="funcionMostrarCom(capa.id)">
+			{{capa.nombre}} | Inscripciones<span>{{capa.comision}}</span>
+
+			</div>
+			<div uib-collapse="!capaVar{{capa.id}}">
+				<div class="content_capa">Some content</div>
+			</div>
+		</div>
 	  	<div class="" ng-repeat="capa in mostrarCapa " >
 			<div class="listar_capas" ng-click="funcionMostrarCom(capa.id)">{{capa.nombre}} | <span>{{capa.comision}}</span>
 			</div>	
