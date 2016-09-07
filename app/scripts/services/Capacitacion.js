@@ -33,7 +33,7 @@ function SDetalleCom($resource, BaseUrl){
 //servicio que muestra los destinatarios de una capacitacion
 function SDestinatarios($resource, BaseUrl){
     return $resource(BaseUrl + '/ins/destinatarios/:id',
-      { pg_id: '@_id' }
+      { id: '@_id' }
     );
 }
 

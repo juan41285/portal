@@ -7,81 +7,52 @@
     .controller('CapacitacionCtrl', CapacitacionCtrl);
 
     function CapacitacionCtrl($scope,$rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios){
-
+      $("html, body").animate({ scrollTop: 0 }, 1500);
     	$scope.sData = {};
   		$scope.mostrar = false;
       $scope.capacitacion = [];
-     	// Capacitaciones es un servicio que ejecuta una api /capanew que devuelve 
-     	// un arreglo con todas las capacitaciones del segundo semestre de 2016
     	$scope.mostrarCapa = {};
-       $scope.listarCom = {};
+      $scope.listarCom = {};
+      $scope.destinatarios = {};
       $scope.mostrarCapa =  Capacitaciones.query({});
 		  $scope.mostrarCapa.$promise.then(function(res){
-        console.log('res', res);
         var total = res.length;
         for (var i = 0; i <= total; i++) {
-             
-       var idc = res[i].id;
+           
+          var idc = res[i].id;
    
-      $scope.listarCom = ComisionesCapa.query({id: idc});
-      $scope.capacitacion.push({capa:res[i], datos:$scope.listarCom, activo: true, collapse: false, id: res[i].id});
+          $scope.listarCom = ComisionesCapa.query({id: idc});
+          $scope.destinatarios = SDestinatarios.query({id: idc});
+          $scope.capacitacion.push({capa:res[i], datos:$scope.listarCom, activo: true, collapse: false, id: res[i].id, destinatarios:$scope.destinatarios});
         // console.log('nuevo array', $scope.capacitacion);
 
         }
  
       }); 
-      //scope.capacitacion controla que no se abra si no hay comisiones  
-      console.log('nuevo array', $scope.capacitacion);
+   $scope.destinatarios = SDestinatarios.query({id: 248});
+      // console.log('destinatarios', $scope.destinatarios);
 
-      // DetalleCom es un servicio que ejecuta una api /detalleCom que devuelve 
-      // todos los datos de una comision
-      // Nota: $routeParams.idComision - idComision es el nombre que se puso en la ruta
-      // en app.js en este caso '/capacitacion/:idComision'
       $scope.mostrarCom = {};
       $scope.mostrarCom = SDetalleCom.query({id: $routeParams.idComision});
-      console.log($scope.mostrarCom);  
-
-    //******CONTROLAR 
-    // $scope.funcionDestinatarios = function(pg_id){
-    //   //servicio para mostrar destinatarios de una capacitacion
-    //   $scope.mostrarDestinatarios = {};
-    //   $scope.mostrarDestinatarios = SDestinatarios.query({id: pg_id});
-    //   console.log($scope.mostrarDestinatarios);  
-    // }
-    /////////////////////////////
-    
-     $scope.capaVar = true;
-		// $scope.funcionMostrarCom = function(pg_id){
-		// 	$scope.mostrar = true;
-		// 	$scope['capaVar'+pg_id] = !$scope['capaVar'+pg_id];
-		// 	$scope.listarCom = {};
-		// 	$scope.listarCom = ComisionesCapa.query({id: pg_id});
-		// 	console.log(pg_id);
-
-		// }
+      // console.log('comision',$scope.mostrarCom);    
 
     $scope.funciondesplegar = function(capa_id){
-     $scope.capacitacion.collapse= false
+     
+      var total = $scope.capacitacion.length;
+      for (var i = 0; i <= total; i++) {
 
-     $scope.capacitacion.$promise.then(function(res){ 
-        // console.log('res', res);
-        var total = res.length;
-        for (var i = 0; i <= total; i++) { 
-          if(res[i].id == capa_id){
-             res[i].collapse = true; 
-          } 
-        }
-     });
-
+         
+          if($scope.capacitacion[i].id === capa_id){
+            $scope.capacitacion[i].collapse = !$scope.capacitacion[i].collapse;
+          }
+          else
+          {
+             $scope.capacitacion[i].collapse = false;//!$scope.capacitacion[i].collapse;
+          }
+      }
     }
 
-// arreblo capacitacion.collapse= false 
-// o
-// $scope.capacitacion.collapse= false
 
-// recorro arreglo capacitacion
-//     busco dentro del arreglo capacitaciones la capacitacion igual 
-//     cambiar el valor de collapse en true
 
 
     }

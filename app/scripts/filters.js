@@ -5,8 +5,8 @@
   /* @ngInject */
 function dateToISO() {
   return function(input) {
-    // input = new Date(input).toISOString();
-    input = input.replace(/(.+) (.+)/, "$1T$2Z");
+    //input = new Date(input).toISOString();
+    input = input.replace(/(.+) (.+)/, '$1T$2Z');
     input = new Date(input).getTime();
     return input;
   };

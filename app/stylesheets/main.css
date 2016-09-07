@@ -564,6 +564,12 @@ a:hover {
   margin-bottom: 5px;
   font-family: 'Cabin Condensed';
   border: 1px solid #ddd;
+  cursor: pointer;
+}
+.detalle_capas {
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
 }
 .content_capa {
   background-color: #fafafa;
@@ -576,6 +582,9 @@ a:hover {
 }
 .content_capa a {
   color: #444;
+}
+.content_capa h4 {
+  border-bottom: 1px solid #f1f1f1;
 }
 .descripcion {
   padding-top: 15px;

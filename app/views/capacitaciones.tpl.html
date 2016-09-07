@@ -11,8 +11,8 @@
 				<p class="desc-seccion">Desde el <strong>Ministerio de Educación</strong>, a través de su <strong>Coordinación de Educación Digital</strong>, buscamos generar un espacio de formación destinado a docentes de todos los niveles, modalidades, cargos y áreas del sistema educativo, donde las tecnologías de la información y la comunicación no solo estén presentes como un aspecto ilustrativo.
 Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual se fundamenta en propuestas de espacios e instancias de aprendizaje, cuya finalidad es que los destinatarios mencionados puedan acceder a  través de diferentes herramientas tecnológicas, a nuevos conocimientos y saberes para fortalecer sus prácticas docentes.</p>	
 				<div class="col-md-offset-2">
-					<a href="http://docentes.innovacioneducativa.gob.ar/pautas.php" class="btn btn-info btn-raised btn-sm" style="margin-right:10px">Protocolo Reglamentario</a>		
-					<a href="http://docentes.innovacioneducativa.gob.ar/login.php" class="btn btn-info btn-raised btn-sm" style="margin-right:10px">Panel Docente</a>		
+					<a href="http://docentes.innovacioneducativa.gob.ar/pautas.php" class="btn btn-info btn-raised btn-sm" style="margin-right:10px" target="_blank">Protocolo Reglamentario</a>		
+					<a href="http://docentes.innovacioneducativa.gob.ar/login.php" class="btn btn-info btn-raised btn-sm" style="margin-right:10px" target="_blank">Panel Docente</a>		
 				</div>	
 			</div>
 
@@ -27,10 +27,17 @@ Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual 
 			</div>
 			<div uib-collapse="!capa.collapse">
 				<div class="content_capa">
-					<button type="button" class="close" ng-click="funcioncerrarTodas()"><span aria-hidden="true">&times;</span></button>
-					<div ng-repeat="com in capa.datos">
-						<a href="/capacitacion/{{com.idComision}}">
-						COM{{com.idComision}} | Fecha Inicio: {{com.Fec_inicio}} | Sede: {{com.Lugar}} 
+					<button type="button" class="close" ng-click="funciondesplegar(0)"><span aria-hidden="true">&times;</span></button>
+					<h4>Comisiones Disponibles</h4>
+					<div ng-repeat="com in capa.datos" class="detalle_capas">
+					<ul class="list-unstyled">
+						<li><strong>Comisión: </strong>COM{{com.idComision}}</li>
+						<li><strong>Fecha Inicio: </strong>{{com.Fec_inicio | date:'dd/MM/yyyy'}} </li>
+						<li><strong>Sede: </strong>{{com.Lugar}} </li>
+					</ul>
+						<a href="/capacitacion/{{com.idComision}}" class="btn btn-xs btn-primary">
+
+						Seleccionar comisión
 						</a>
 					</div>
 				</div>

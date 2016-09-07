@@ -15,7 +15,16 @@
 				  
           <p class="descripcion margin-left-40"><strong>Descripción:</strong><br>{{mostrarCom[0].Descripcion}}</p>
           <p class="descripcion margin-left-40"><strong>Objetivos:</strong><br>{{mostrarCom[0].Objetivo}}</p>
-          <p class="descripcion margin-left-40"><strong>Destinatarios:</strong> 
+          <p class="descripcion margin-left-40"><strong>Destinatarios:
+          <ul class="list-unstyled">
+            <li><strong>Áreas: </strong>  {{mostrarCom[0].destinatarios[0].area}}</li>
+            <li><strong>Niveles: </strong>  {{mostrarCom[0].destinatarios[0].nivel}}</li>
+            <li><strong>Modalidades: </strong>  {{mostrarCom[0].destinatarios[0].modalidad}}</li>
+            <li><strong>Cargo: </strong>  {{mostrarCom[0].destinatarios[0].cargo}}</li>
+          </ul>
+           
+
+          </strong> 
           <!-- <div ng-include="funcionDestinatarios(mostrarCom[0].idCapacitacion)" >
             
           </div>   -->
@@ -39,8 +48,8 @@
               <ul style="background: #f1f1f1; margin-right: 20px">
 	                	<hr>
 	                  	<li><strong>Sede: </strong>{{mostrarCom[0].Lugar}}</li>
-	                    <li><strong>Fecha de Inicio: </strong>{{mostrarCom[0].Fec_inicio}}</li>
-						          <li><strong>Fecha de Fin: </strong>{{mostrarCom[0].Fec_fin}}</li>	
+	                    <li><strong>Fecha de Inicio: </strong>{{mostrarCom[0].Fec_inicio | date:'dd/MM/yyyy'}}</li>
+						          <li><strong>Fecha de Fin: </strong>{{mostrarCom[0].Fec_fin | date:'dd/MM/yyyy'}}</li>	
 						          <li><strong>Horario: </strong>{{mostrarCom[0].Horario}}</li>
 	                	<hr>
               </ul>
