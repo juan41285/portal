@@ -5,26 +5,34 @@
 	<div class="well">
 		<div class="row">
 			<div class="col-md-5">
-				<img src="images/secciondesarrollo.png" class="img-responsive">
+				<div style="padding-top: 18px"><img src="images/secciondesarrollo.png" class="img-responsive"></div>
 			</div>
 			<div class="col-md-7">
-				<div>Listado de Capacitaciones 2016</div>			
+				<p class="desc-seccion">Desde el <strong>Ministerio de Educación</strong>, a través de su <strong>Coordinación de Educación Digital</strong>, buscamos generar un espacio de formación destinado a docentes de todos los niveles, modalidades, cargos y áreas del sistema educativo, donde las tecnologías de la información y la comunicación no solo estén presentes como un aspecto ilustrativo.
+Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual se fundamenta en propuestas de espacios e instancias de aprendizaje, cuya finalidad es que los destinatarios mencionados puedan acceder a  través de diferentes herramientas tecnológicas, a nuevos conocimientos y saberes para fortalecer sus prácticas docentes.</p>	
+				<div class="col-md-offset-2">
+					<a href="http://docentes.innovacioneducativa.gob.ar/pautas.php" class="btn btn-info btn-raised btn-sm" style="margin-right:10px">Protocolo Reglamentario</a>		
+					<a href="http://docentes.innovacioneducativa.gob.ar/login.php" class="btn btn-info btn-raised btn-sm" style="margin-right:10px">Panel Docente</a>		
+				</div>	
 			</div>
+
 		</div>
+		<hr>
+		<p class="titulo-listado-seccion">Oferta de Capacitaciones 2016 - Segundo Semestre</p>
+
 	  	<div class="" ng-repeat="capa in mostrarCapa " >
-		
 			<div class="listar_capas" ng-click="funcionMostrarCom(capa.id)">
-			{{capa.nombre}} | Inscripciones<span>{{capa.comision}}</span>
+			{{capa.nombre}} | <span>{{capa.comision}}</span>
 
 			</div>
 			<div uib-collapse="!capaVar{{capa.id}}">
 				<div class="content_capa">
-				<button type="button" class="close" ng-click="funcionMostrarCom(capa.id)"><span aria-hidden="true">&times;</span></button>
+					<button type="button" class="close" ng-click="funcionMostrarCom(capa.id)"><span aria-hidden="true">&times;</span></button>
 					<div ng-repeat="com in listarCom">
-					<a href="/capacitacion/{{com.idComision}}">
-					COM{{com.idComision}} | Fecha Inicio: {{com.Fec_inicio}} | Sede: {{com.Lugar}} 
-					</a>
-				</div>
+						<a href="/capacitacion/{{com.idComision}}">
+						COM{{com.idComision}} | Fecha Inicio: {{com.Fec_inicio}} | Sede: {{com.Lugar}} 
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
