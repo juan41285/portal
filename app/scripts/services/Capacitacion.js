@@ -7,6 +7,7 @@
     .factory('Capacitaciones',Capacitaciones)
     .factory('ComisionesCapa',ComisionesCapa)
     .factory('SDetalleCom',SDetalleCom)
+    .factory('SDestinatarios',SDestinatarios)
     .factory('Capacitacion',Capacitacion)
     .factory('Comision',Comision)
     .factory('Publicar',Publicar);
@@ -29,7 +30,12 @@ function SDetalleCom($resource, BaseUrl){
       { pg_id: '@_id' }
     );
 }
-
+//servicio que muestra los destinatarios de una capacitacion
+function SDestinatarios($resource, BaseUrl){
+    return $resource(BaseUrl + '/ins/destinatarios/:id',
+      { pg_id: '@_id' }
+    );
+}
 
 function Capacitacion ($resource, BaseUrl) {
     return $resource(BaseUrl + '/ins/capa/:id',

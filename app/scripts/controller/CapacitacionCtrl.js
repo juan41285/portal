@@ -6,7 +6,7 @@
     .module('portal.controllers')
     .controller('CapacitacionCtrl', CapacitacionCtrl);
 
-    function CapacitacionCtrl($scope,$rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom){
+    function CapacitacionCtrl($scope,$rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios){
 
     	$scope.sData = {};
   		$scope.mostrar = false;
@@ -30,7 +30,7 @@
         }
  
       }); 
-
+      //scope.capacitacion controla que no se abra si no hay comisiones  
       console.log('nuevo array', $scope.capacitacion);
 
       // DetalleCom es un servicio que ejecuta una api /detalleCom que devuelve 
@@ -41,17 +41,47 @@
       $scope.mostrarCom = SDetalleCom.query({id: $routeParams.idComision});
       console.log($scope.mostrarCom);  
 
+    //******CONTROLAR 
+    // $scope.funcionDestinatarios = function(pg_id){
+    //   //servicio para mostrar destinatarios de una capacitacion
+    //   $scope.mostrarDestinatarios = {};
+    //   $scope.mostrarDestinatarios = SDestinatarios.query({id: pg_id});
+    //   console.log($scope.mostrarDestinatarios);  
+    // }
+    /////////////////////////////
+    
      $scope.capaVar = true;
-		$scope.funcionMostrarCom = function(pg_id){
-			$scope.mostrar = true;
-			$scope['capaVar'+pg_id] = !$scope['capaVar'+pg_id];
-			$scope.listarCom = {};
-			$scope.listarCom = ComisionesCapa.query({id: pg_id});
-			console.log(pg_id);
+		// $scope.funcionMostrarCom = function(pg_id){
+		// 	$scope.mostrar = true;
+		// 	$scope['capaVar'+pg_id] = !$scope['capaVar'+pg_id];
+		// 	$scope.listarCom = {};
+		// 	$scope.listarCom = ComisionesCapa.query({id: pg_id});
+		// 	console.log(pg_id);
 
+		// }
 
+    $scope.funciondesplegar = function(capa_id){
+     $scope.capacitacion.collapse= false
 
-		}
+     $scope.capacitacion.$promise.then(function(res){ 
+        // console.log('res', res);
+        var total = res.length;
+        for (var i = 0; i <= total; i++) { 
+          if(res[i].id == capa_id){
+             res[i].collapse = true; 
+          } 
+        }
+     });
+
+    }
+
+// arreblo capacitacion.collapse= false 
+// o
+// $scope.capacitacion.collapse= false
+
+// recorro arreglo capacitacion
+//     busco dentro del arreglo capacitaciones la capacitacion igual 
+//     cambiar el valor de collapse en true
 
 
     }

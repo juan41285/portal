@@ -20,15 +20,15 @@ Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual 
 		<hr>
 		<p class="titulo-listado-seccion">Oferta de Capacitaciones 2016 - Segundo Semestre</p>
 
-	  	<div class="" ng-repeat="capa in mostrarCapa " >
-			<div class="listar_capas" ng-click="funcionMostrarCom(capa.id)">
-			{{capa.nombre}} | <span>{{capa.comision}}</span>
+	  	<div class="" ng-repeat="capa in capacitacion " >
+			<div class="listar_capas" ng-click="funciondesplegar(capa.id)">
+			{{capa.capa.nombre}} | <span>{{capa.capa.comision}}</span>
 
 			</div>
-			<div uib-collapse="!capaVar{{capa.id}}">
+			<div uib-collapse="!capa.collapse">
 				<div class="content_capa">
-					<button type="button" class="close" ng-click="funcionMostrarCom(capa.id)"><span aria-hidden="true">&times;</span></button>
-					<div ng-repeat="com in listarCom">
+					<button type="button" class="close" ng-click="funcioncerrarTodas()"><span aria-hidden="true">&times;</span></button>
+					<div ng-repeat="com in capa.datos">
 						<a href="/capacitacion/{{com.idComision}}">
 						COM{{com.idComision}} | Fecha Inicio: {{com.Fec_inicio}} | Sede: {{com.Lugar}} 
 						</a>

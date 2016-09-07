@@ -12,17 +12,28 @@
 				  <p class="margin-left-40" >	
 					   <img src="{{mostrarCom[0].imagenGrande}}" class="img-responsive">
 				  </p>
-				  <p class="descripcion margin-left-40">{{mostrarCom[0].Descripcion}}</p>
+				  
+          <p class="descripcion margin-left-40"><strong>Descripción:</strong><br>{{mostrarCom[0].Descripcion}}</p>
+          <p class="descripcion margin-left-40"><strong>Objetivos:</strong><br>{{mostrarCom[0].Objetivo}}</p>
+          <p class="descripcion margin-left-40"><strong>Destinatarios:</strong> 
+          <!-- <div ng-include="funcionDestinatarios(mostrarCom[0].idCapacitacion)" >
+            
+          </div>   -->
+           </p>
 
+          
+
+          
 				  <div class="col-md-6" >
-	            <ul style="margin-left: 10px">
-	                	<hr>
-	                  	<li><strong>Área: </strong>{{mostrarCom[0].Area}}</li>
-	                    <li><strong>Disciplina: </strong>{{mostrarCom[0].Disciplina}}</li>
-	                	<li><strong>Encuentros presenciales: </strong>{{mostrarCom[0].Duracion}}</li>
-	                    <li><strong>Horas cátedra: </strong>{{mostrarCom[0].Hs_catedra}}</li>	
-	                	<hr>
-	            </ul>	
+              <hr>
+              <p style="margin-left: 20px">
+                <strong>Modalidad:</strong> {{mostrarCom[0].Modalidad}} <br>
+                <strong>Evaluación:</strong> Con Evaluación <br>
+                <strong>Encuentros presenciales: </strong> {{mostrarCom[0].Duracion}} <br>
+                <strong>Horas cátedra:</strong> {{mostrarCom[0].Hs_catedra}} <br>
+              </p>
+              <hr>
+            
           </div>
           <div class="col-md-6">
               <ul style="background: #f1f1f1; margin-right: 20px">
