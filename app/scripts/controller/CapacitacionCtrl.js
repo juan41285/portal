@@ -34,7 +34,7 @@
 
       $scope.mostrarCom = {};
       $scope.mostrarCom = SDetalleCom.query({id: $routeParams.idComision});
-      // console.log('comision',$scope.mostrarCom);    
+      console.log('comision',$scope.mostrarCom);    
 
     $scope.funciondesplegar = function(capa_id){
      

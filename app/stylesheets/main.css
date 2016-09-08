@@ -616,6 +616,16 @@ a:hover {
   padding: 10px;
   font-size: 1.1em;
 }
+.btn-abiertas {
+  background-color: #8170c1 !important;
+  color: rgba(255,255,255,0.84) !important;
+  border-radius: 12px;
+}
+.btn-regresar {
+  background-color: #8170c1 !important;
+  color: rgba(255,255,255,0.84) !important;
+  border-radius: 20px;
+}
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
   list-style: none;

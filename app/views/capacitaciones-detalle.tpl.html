@@ -15,20 +15,24 @@
 				  
           <p class="descripcion margin-left-40"><strong>Descripción:</strong><br>{{mostrarCom[0].Descripcion}}</p>
           <p class="descripcion margin-left-40"><strong>Objetivos:</strong><br>{{mostrarCom[0].Objetivo}}</p>
-          <p class="descripcion margin-left-40"><strong>Destinatarios:
-          <ul class="list-unstyled">
-            <li><strong>Áreas: </strong>  {{mostrarCom[0].destinatarios[0].area}}</li>
+          <!-- <p class="descripcion margin-left-40"><strong>Destinatarios:
+          <ul class="list-unstyled margin-left-40">
+            <div ng-repeat="cargo in mostrarCom[0].destinatarios">
+              <li><strong>Cargo: </strong>  {{cargo.cargo}}</li> -->
+              <!-- <li><strong>Cargo: </strong>  {{mostrarCom[0].destinatarios[0].cargo}}</li> -->
+           <!--  </div>
             <li><strong>Niveles: </strong>  {{mostrarCom[0].destinatarios[0].nivel}}</li>
             <li><strong>Modalidades: </strong>  {{mostrarCom[0].destinatarios[0].modalidad}}</li>
-            <li><strong>Cargo: </strong>  {{mostrarCom[0].destinatarios[0].cargo}}</li>
+            <li><strong>Áreas: </strong>  {{mostrarCom[0].destinatarios[0].area}}</li>
+
           </ul>
            
 
-          </strong> 
+          </strong>  -->
           <!-- <div ng-include="funcionDestinatarios(mostrarCom[0].idCapacitacion)" >
             
           </div>   -->
-           </p>
+          <!--  </p> -->
 
           
 
@@ -53,6 +57,9 @@
 						          <li><strong>Horario: </strong>{{mostrarCom[0].Horario}}</li>
 	                	<hr>
               </ul>
+          </div>
+          <div class="col-md-12">
+            <a href="/capacitaciones" class="btn btn-regresar btn-raised btn-sm">Regresar al Listado</a>
           </div>
 			</div>
       
@@ -165,7 +172,7 @@
           <br>
       </div>
                       
-      <span class="help-block">Al Inscribirse confirma haber leido y estar de acuerdo con el Protocolo Reglamentario. <a href="">Leer Protocolo</a></span>                     
+      <span class="help-block">Al Inscribirse confirma haber leido y estar de acuerdo con el Protocolo Reglamentario. <a href="http://docentes.innovacioneducativa.gob.ar/pautas.php">Leer Protocolo</a></span>                     
       <div class="form-group">
           <button type="submit" class="btn btn-block btn-info ">Inscribirse</button>
       </div>
