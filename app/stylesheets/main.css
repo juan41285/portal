@@ -626,6 +626,16 @@ a:hover {
   color: rgba(255,255,255,0.84) !important;
   border-radius: 20px;
 }
+.destinatarios {
+  font-size: 0.85em;
+  padding: 5px 10px;
+  border: 1px dashed #607d8b;
+  margin-left: 5px;
+}
+.help-block {
+  font-size: 16px !important;
+  line-height: 1.1 !important;
+}
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
   list-style: none;
