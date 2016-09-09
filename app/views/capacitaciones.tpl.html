@@ -4,10 +4,10 @@
 	<div class="col-md-12">
 	<div class="well">
 		<div class="row">
-			<div class="col-md-5">
+			<div class="col-md-4">
 				<div style="padding-top: 18px"><img src="images/secciondesarrollo.png" class="img-responsive"></div>
 			</div>
-			<div class="col-md-7">
+			<div class="col-md-8">
 				<p class="desc-seccion">Desde el <strong>Ministerio de Educación</strong>, a través de su <strong>Coordinación de Educación Digital</strong>, buscamos generar un espacio de formación destinado a docentes de todos los niveles, modalidades, cargos y áreas del sistema educativo, donde las tecnologías de la información y la comunicación no solo estén presentes como un aspecto ilustrativo.
 Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual se fundamenta en propuestas de espacios e instancias de aprendizaje, cuya finalidad es que los destinatarios mencionados puedan acceder a  través de diferentes herramientas tecnológicas, a nuevos conocimientos y saberes para fortalecer sus prácticas docentes.</p>	
 				<div class="col-md-offset-2">
@@ -18,9 +18,32 @@ Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual 
 
 		</div>
 		<hr>
-		<p class="titulo-listado-seccion">Oferta de Capacitaciones 2016 - Segundo Semestre</p>
+		
+  <div class="row">
 
-	  	<div class="" ng-repeat="capa in capacitacion " >
+  <div class="col-md-12">
+  	<div class="titulo-listado-seccion">
+  	<div class="row">
+  		<div class="col-md-4">
+  			<h1>Oferta de Capacitaciones 2016 <br> Segundo Semestre</h1>
+  		</div>
+  		<div class="col-md-1">
+  			<i class="fa fa-laptop fa-4x" aria-hidden="true"></i>
+  		</div>
+  		<div class="col-md-7">
+
+  				<p>
+					<strong>A tener en cuenta: </strong>	
+  				Para realizar las capacitaciones es requisito imprescindible asistir con netbook o notebook a los encuentros presenciales  y para las actividades virtuales debe contar con conexión a internet e ingresar por lo menos dos veces a la semana a la Plataforma para realizar las actividades solicitadas.
+  		</p>
+  		</div>
+  	</div>
+  	
+  	
+  	</div>
+  </div>
+  	<div class="col-md-12">
+  			  	<div class="" ng-repeat="capa in capacitacion " >
 			<div class="listar_capas" ng-click="funciondesplegar(capa.id)">
 			{{capa.capa.nombre}}<span ng-show="capa.capa.comision != 0"><a href="" class="btn btn-abiertas btn-xs "> Inscripciones Abiertas</a></span>
 
@@ -43,6 +66,9 @@ Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual 
 				</div>
 			</div>
 		</div>
+  	</div>
+  </div>
+
 	  	
 	</div>
 	</div>	
