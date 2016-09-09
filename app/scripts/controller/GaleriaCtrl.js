@@ -23,10 +23,10 @@ function GaleriaCtrl($scope, $rootScope, $routeParams, $http, HGaleria, $documen
 	
 	$scope.select=function(index){
 		$scope.selectedPhoto=index;
-	}
+	};
 	
 	$rootScope.images.$promise.then(function(res){
-		var tam= res.length
+		var tam= res.length;
 
 		var countUp = function() {
 	        if ($scope.selectedPhoto == tam-1){
@@ -37,7 +37,7 @@ function GaleriaCtrl($scope, $rootScope, $routeParams, $http, HGaleria, $documen
 
 	        $scope.selectedPhoto+= 1;
 	        $timeout(countUp, 5000);
-	    }
+	    };
 	    
 	    $timeout(countUp, 5000);
 

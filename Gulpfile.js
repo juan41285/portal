@@ -130,8 +130,8 @@ gulp.task('templates', function() {
 gulp.task('compress', function() {
   gulp.src('./app/index.html')
     .pipe(useref.assets())
-    .pipe(gulpif('*.js', uglify({mangle: false })))
-    .pipe(gulpif('*.css', minifyCss()))
+    // .pipe(gulpif('*.js', uglify({mangle: false })))
+    // .pipe(gulpif('*.css', minifyCss()))
     .pipe(gulp.dest('./dist'));
 });
 

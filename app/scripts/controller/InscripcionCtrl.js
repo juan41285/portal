@@ -113,7 +113,7 @@
       $scope.sinEnviar = false;
       $scope.resultado = 20;
 
-    }
+    };
 
  } 
 
