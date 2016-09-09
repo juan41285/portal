@@ -81,8 +81,6 @@
 	                      //cupo completo
 	                      $scope.resultado = data.resultado;
 	                      
-	                     
-
 	                  }
 	                  if (data.resultado == 5) {
 	                      //ya registra inscripcion para el mismo curso
