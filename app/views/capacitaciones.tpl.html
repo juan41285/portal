@@ -22,7 +22,7 @@ Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual 
 
 	  	<div class="" ng-repeat="capa in capacitacion " >
 			<div class="listar_capas" ng-click="funciondesplegar(capa.id)">
-			{{capa.capa.nombre}} <span ng-show="capa.capa.comision != 0">|<a href="" class="btn btn-abiertas btn-xs"> Inscripciones Abiertas</a></span>
+			{{capa.capa.nombre}}<span ng-show="capa.capa.comision != 0"><a href="" class="btn btn-abiertas btn-xs "> Inscripciones Abiertas</a></span>
 
 			</div>
 			<div uib-collapse="!capa.collapse">

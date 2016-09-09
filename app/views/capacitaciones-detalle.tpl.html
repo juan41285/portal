@@ -209,26 +209,29 @@
     </form>  
 
     <div ng-show="PassEnviado == 120">
-      <p>
-      Su contraseña fue enviada la siguiente dirección: <br>
-      <strong>{{CorreoEnviado}}</strong>
+      <div class="mensaje-recuperar-ok">
+      <p ><span class="fa fa-check color-verde" aria-hidden="true"></span><br>
+        Su contraseña fue enviada a la siguiente dirección: <br>
+        <strong>{{CorreoEnviado}}</strong>
       </p>
       <hr>
-      <p>
+      <p >
         Si no tiene acceso a la cuenta de correo electronico mencionada. Por favor envienos un mensaje a: <br>
-        <strong>pablo.andres.aguero@gmail.com</strong>
+        <strong>coordinacioninnovacionedu@gmail.com</strong>
 
       </p>
+      </div>
     </div>
 
-        <div ng-show="PassEnviado == 130">
-      <p>
-      En DNI ingresado no corresponde a ningún docente registrado <br>
-      <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" class="btn btn-primary" target="_blank">Registrarse</a>
+    <div ng-show="PassEnviado == 130">
+      <div class="mensaje-recuperar-ok"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span><br><p>
+        En DNI ingresado no corresponde a un docente registrado <br>
+        <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" class="btn btn-primary" target="_blank">Registrarse</a>
       </p>
+      </div>
     </div>
   </div>
-
+  <!-- Fin de formulario recuperar contraseña -->
 			</div> <!-- Cierro segundo col-md-4 -->
   </div> <!-- cierro row -->
 </div>
