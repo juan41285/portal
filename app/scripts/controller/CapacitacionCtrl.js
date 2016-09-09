@@ -6,8 +6,8 @@
     .module('portal.controllers')
     .controller('CapacitacionCtrl', CapacitacionCtrl);
 
-    function CapacitacionCtrl($scope,$rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios,$http){
-      $("html, body").animate({ scrollTop: 0 }, 1500);
+    function CapacitacionCtrl($scope, $rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios, $http) {
+      // $("html, body").animate({ scrollTop: 0 }, 1500);
     	$scope.sData = {};
   		$scope.mostrar = false;
       $scope.capacitacion = [];
@@ -36,13 +36,13 @@
       $scope.mostrarCom = SDetalleCom.query({id: $routeParams.idComision});
       console.log('comision',$scope.mostrarCom);    
 
-    $scope.funciondesplegar = function(capa_id){
+    $scope.funciondesplegar = function(capaId){
      
       var total = $scope.capacitacion.length;
       for (var i = 0; i <= total; i++) {
 
          
-          if($scope.capacitacion[i].id === capa_id){
+          if($scope.capacitacion[i].id === capaId){
             $scope.capacitacion[i].collapse = !$scope.capacitacion[i].collapse;
           }
           else
@@ -50,7 +50,7 @@
              $scope.capacitacion[i].collapse = false;//!$scope.capacitacion[i].collapse;
           }
       }
-    }
+    };
      
     /****************BLOQUE DE RECUPERAR PASS********************/ 
     $scope.sendPass = false;
@@ -58,7 +58,7 @@
       $scope.sendPass = !$scope.sendPass ;
        $scope.PassEnviado = 100;
       
-    }
+    };
 
 
   $scope.datos= {inpDNI: undefined };
@@ -86,7 +86,7 @@
       }
 
       console.log($scope.PassEnviado );
-    }
+    };
 
 
 
