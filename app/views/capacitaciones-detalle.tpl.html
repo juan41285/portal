@@ -71,7 +71,7 @@
       
       <div class="col-md-offset-1 col-md-4">
 				  
-          <div class="noticia-sidebar" ng-controller="InscripcionCtrl" >
+          <div class="noticia-sidebar animate-show" ng-controller="InscripcionCtrl" ng-hide="sendPass">
     <!-- noticia-sidebar envuelve todo el codigo, hasta el final  -->
 <div class="titulo-inscripcion linea-separador-inscripcion">Formulario de Inscripción</div>
 
@@ -191,20 +191,42 @@
 </div> <!-- Cierro div para ocultar formulario -->
 </div> <!-- cierro noticia-sidebar -->
 
-  <!-- Formulario para recuperar contraseña -->
+  <!-- Formulario para recuperar contraseña --> 
   
-  <div class="frm-recuperarPass">
-    <div class="titulo-recuperarPass linea-separador-neutro">Formulario Recuperar Contraseña</div>
-    <form>
+  <div class="frm-recuperarPass animate-show" ng-show="sendPass">
+  <button type="button" class="close" ng-click="recuperarPass()"><span aria-hidden="true">&times;</span></button>
+    <div class="titulo-recuperarPass linea-separador-neutro">Recuperar Contraseña</div>
+    <form ng-submit="ResetPass()" enctype="multipart/form-data" ng-show="PassEnviado == 100">
       <div class="padding-top-15">
         <p>Estimada/o Docente: Para recuperar la contraseña ingrese a continuación su DNI.</p>  <div class="form-group " >
-              <input type="text" class="form-control" id="DNI" name="DNI" ng-model="InsData.DNI" placeholder=""  required >
+              <input type="number" class="form-control" id="inpDNI" name="inpDNI" ng-model="datos.inpDNI" ng-maxlength="8" min="0000001" max="99999999">
               <span class="help-block">Ingrese el DNI sin puntos</span>
-      </div>
+      </div> 
       <div class="form-group">
-            <button type="submit" class="btn btn-block btn-info ">Recuperar Contraseña</button>
+            <button type="submit" class="btn btn-block btn-info " >Recuperar Contraseña</button>
+        </div>
         </div>
     </form>  
+
+    <div ng-show="PassEnviado == 120">
+      <p>
+      Su contraseña fue enviada la siguiente dirección: <br>
+      <strong>{{CorreoEnviado}}</strong>
+      </p>
+      <hr>
+      <p>
+        Si no tiene acceso a la cuenta de correo electronico mencionada. Por favor envienos un mensaje a: <br>
+        <strong>pablo.andres.aguero@gmail.com</strong>
+
+      </p>
+    </div>
+
+        <div ng-show="PassEnviado == 130">
+      <p>
+      En DNI ingresado no corresponde a ningún docente registrado <br>
+      <a href="http://docentes.innovacioneducativa.gob.ar/registro.php" class="btn btn-primary" target="_blank">Registrarse</a>
+      </p>
+    </div>
   </div>
 
 			</div> <!-- Cierro segundo col-md-4 -->

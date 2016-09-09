@@ -6,7 +6,7 @@
     .module('portal.controllers')
     .controller('CapacitacionCtrl', CapacitacionCtrl);
 
-    function CapacitacionCtrl($scope,$rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios){
+    function CapacitacionCtrl($scope,$rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios,$http){
       $("html, body").animate({ scrollTop: 0 }, 1500);
     	$scope.sData = {};
   		$scope.mostrar = false;
@@ -50,6 +50,42 @@
              $scope.capacitacion[i].collapse = false;//!$scope.capacitacion[i].collapse;
           }
       }
+    }
+     
+    /****************BLOQUE DE RECUPERAR PASS********************/ 
+    $scope.sendPass = false;
+    $scope.recuperarPass = function(){
+      $scope.sendPass = !$scope.sendPass ;
+       $scope.PassEnviado = 100;
+      
+    }
+
+
+  $scope.datos= {inpDNI: undefined };
+  $scope.PassEnviado = 100;
+  $scope.CorreoEnviado = undefined;
+    $scope.ResetPass = function(){
+      // console.log($scope.dniSinPass); 
+      if($scope.datos.inpDNI !== undefined){
+
+        $http({
+        method  : 'POST',
+        url     : 'http://rest.innovacioneducativa.gob.ar/docentes/pass_recuperar.php',
+        data    : $.param($scope.datos), 
+        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  
+      })              
+      .success(function(data) 
+      {   
+
+        
+        $scope.PassEnviado = data.resultado;
+        $scope.CorreoEnviado = data.correo;
+      
+      });
+
+      }
+
+      console.log($scope.PassEnviado );
     }
 
 

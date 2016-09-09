@@ -1856,7 +1856,7 @@ label.custom-option.toggle {
 
     
 .animate-show.ng-hide-add, .animate-show.ng-hide-remove {
-    transition: all linear 0.5s;
+    transition: all linear 0.1s;
     display: block !important;
 }
 
@@ -1867,4 +1867,19 @@ label.custom-option.toggle {
 .animate-show.ng-hide-add, .animate-show.ng-hide-remove.ng-hide-remove-active {
     opacity: 1;
 }
+
+.animate-show.ng-show-add, .animate-show.ng-show-remove {
+    transition: all linear 0.1s;
+    display: block !important;
+}
+
+.animate-show.ng-show-add.ng-show-add-active, .animate-show.ng-show-remove {
+    opacity: 0;
+}
+
+.animate-show.ng-show-add, .animate-show.ng-show-remove.ng-show-remove-active {
+    opacity: 1;
+}
+
+
 

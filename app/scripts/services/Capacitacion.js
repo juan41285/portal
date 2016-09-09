@@ -11,6 +11,7 @@
     .factory('Capacitacion',Capacitacion)
     .factory('Comision',Comision)
     .factory('Publicar',Publicar);
+    
 
 //servicio que muestra capacitaciones 2016 en portal
 function Capacitaciones ($resource, BaseUrl){
@@ -54,6 +55,8 @@ function Publicar ($resource, BaseUrl) {
       { pg_id: '@_id' }
     );
 }
+
+
 
  //muestra mezcaldas noticias y capacitaciones
 })();
