@@ -16,6 +16,14 @@
           <p class="descripcion margin-left-40"><strong>Descripción:</strong><br>{{mostrarCom[0].Descripcion}}</p>
           <p class="descripcion margin-left-40"><strong>Objetivos:</strong><br>{{mostrarCom[0].Objetivo}}</p>
           
+          
+          <p class="descripcion margin-left-40"><strong>Contenidos:</strong> 
+          <ul class="list-unstyled margin-left-40">
+            <!-- <li><strong>Cargo: </strong></li> -->
+            <li class="modulo" ng-repeat="modulo in mostrarCom[0].Modulo" >{{modulo.modulo}}</li>
+          </ul>
+          </p>
+
           <p class="descripcion margin-left-40"><strong>Destinatarios:</strong> 
           <ul class="list-inline list-unstyled margin-left-40">
             <li><strong>Cargo: </strong></li>
