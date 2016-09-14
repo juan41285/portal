@@ -9,7 +9,7 @@
 
 function SuscripcionCtrl ($scope, $http)
 {
-  // $scope.template = {'suscribir':'views/suscribir.tpl.html'};
+  $scope.template = {'suscribir':'views/suscribir.tpl.html'};
   $scope.mensaje = {};
   // $scope.suscribir = false;
       

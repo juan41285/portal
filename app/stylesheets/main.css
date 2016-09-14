@@ -61,11 +61,8 @@ a:hover {
 }
 .bg-central {
   margin: 80px auto;
-  background: #fff;
+  background: #f1f1f1;
   padding: 20px;
-}
-.bg-central .col-md-3 {
-  border-left: 1px dashed #ddd;
 }
 .barra-social {
   margin-top: 20px;
@@ -420,13 +417,25 @@ a:hover {
   color: #008000 !important;
   font-size: 3em;
 }
+.color-verde-sus {
+  color: #008000 !important;
+  font-size: 1.5em;
+}
 .color-rojo {
   color: #f00 !important;
   font-size: 3em;
 }
+.color-rojo-sus {
+  color: #f00 !important;
+  font-size: 1.5em;
+}
 .color-naranja {
   color: #ffa500 !important;
   font-size: 3em;
+}
+.color-naranja-sus {
+  color: #ffa500 !important;
+  font-size: 1.5em;
 }
 .color-blanco {
   color: #ffa500 !important;
@@ -482,8 +491,12 @@ a:hover {
   font-weight: bold;
   color: rgba(18,18,19,0.54);
   text-transform: uppercase;
-  padding-top: 25px;
-  margin-bottom: 15px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.titulo-redes-footer {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .sus-ok {
   color: #008000 !important;
@@ -695,6 +708,12 @@ a:hover {
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 20px;
+}
+.fondito {
+  border-radius: 5px;
+  border: 1px dashed rgba(18,18,19,0.54);
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 /*************CALENDARIOS******************************/
 ul.calendar-dias {

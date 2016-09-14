@@ -1,1 +1,45 @@
-<h1>{{hola}}</h1>
+			
+			<div class="frm-suscripcion" >
+				<form class=""  ng-submit="Suscribir()" ng-show="alta_nuevo" >
+        				<div class="titulo-suscripcion">Suscripción</div>
+						
+       					<!-- <span class="help-block">Reciba en su casilla novedades, ofertas de capacitación y noticias de la Coordinación de Educación Digital.</span> -->
+				        <div class="form-group">
+				            <input type="text" class="form-control" id="nombre" name="nombre" ng-model="sData.nombre" placeholder="Nombre y Apellido " required>
+				        </div>
+				       <!--  <div class="form-group">
+				            <input type="text" class="form-control" id="dni" name="dni" ng-model="sData.dni" placeholder="Número de documento sin puntos">
+				        </div> -->
+		               	<div class="form-group">
+				            <input type="email" class="form-control" id="correo" name="correo" ng-model="sData.correo" placeholder="E-mail" required>
+		        		</div>
+      
+				        <button type="submit" class="btn btn-info btn-xs" >Suscribirse</button>
+				
+				</form> <!-- Fin de formulario de suscripción -->
+
+				<!--******* Mensajes de suscripcion	************* -->
+				<!--  -->
+				<div ng-show="alta_ok">
+					<div class="sus-ok fondito">
+						<button type="button" ng-click="limpiar()" class="close"><span aria-hidden="true" style="color:#000">&times;</span></button>
+						<span class="fa fa-check color-verde-sus" aria-hidden="true"></span><p>La suscripción se realizó correctamente!</p>
+					</div>
+				</div>
+				<!--  -->
+				<div ng-show="alta_mal">
+					<div class="sus-error fondito">
+						<button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+						<span class="fa fa-times-circle color-rojo-sus" aria-hidden="true"></span><p>La suscripción no pudo realizarse. Reinicie su navegador e intente nuevamente</p>
+					</div>
+				</div>
+				<!--  -->
+				<div ng-show="alta_repe">
+					<div class="sus-repe fondito">
+						<button type="button" ng-click="limpiar()" class="close" ><span aria-hidden="true" style="color:#000">&times;</span></button>
+						<span class="fa fa-exclamation-triangle color-naranja-sus" aria-hidden="true"></span><p>Usted ya se encuentra suscripto!. <br><span class="help-block">Si no esta recibiendo mensajes verifique su carpeta de correo no deseado y agregue la dirección <a>novedades@innovacioneducativa.gob.ar</a> a su lista de contactos.</span></p>
+					</div>
+				</div>	
+				
+			</div>	<!-- Cierro frm suscripcion -->	    
+				
