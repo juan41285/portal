@@ -60,7 +60,7 @@ a:hover {
   color: #c2c2c2;
 }
 .bg-central {
-  margin: 80px auto;
+  margin: 30px auto;
   background: #f1f1f1;
   padding: 20px;
 }
@@ -255,7 +255,29 @@ a:hover {
   left: 50%;
   overflow: hidden;
 }
+.home-slide {
+  height: 230px;
+  padding: 20px;
+}
 @media screen and (max-width: 992px) {
+  .barra-social {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .btn-abiertas {
+    float: none !important;
+    margin: 10px auto !important;
+    display: block;
+  }
+  .btn-cerradas {
+    float: none !important;
+    margin: 10px auto !important;
+    display: block;
+  }
+  .home-slide {
+    height: auto;
+    padding: 20px;
+  }
   #container2 {
     clear: left;
     float: left;
@@ -578,6 +600,7 @@ a:hover {
   font-family: 'Cabin Condensed';
   border: 1px solid #ddd;
   cursor: pointer;
+  position: relative;
 }
 .detalle_capas {
   display: inline-block;
