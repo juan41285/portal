@@ -42,6 +42,12 @@
         controllerAs: 'cap',
         activeMenu: 'capacitacion'
       })
+      .when('/certificacion', {
+        templateUrl: 'views/certificacion.tpl.html',
+        controller: 'CertificacionCTRL',
+        controllerAs: 'cer',
+        activeMenu: 'certificacion'
+      })
       .when('/agenda', {
         templateUrl: 'views/agenda.tpl.html',
         controller: 'AgendaCrtl',

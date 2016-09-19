@@ -8,9 +8,11 @@
     .factory('ComisionesCapa',ComisionesCapa)
     .factory('SDetalleCom',SDetalleCom)
     .factory('SDestinatarios',SDestinatarios)
+    .factory('SCertificacion',SCertificacion)
     .factory('Capacitacion',Capacitacion)
     .factory('Comision',Comision)
     .factory('Publicar',Publicar);
+    
     
 
 //servicio que muestra capacitaciones 2016 en portal
@@ -36,6 +38,10 @@ function SDestinatarios($resource, BaseUrl){
     return $resource(BaseUrl + '/ins/destinatarios/:id',
       { id: '@_id' }
     );
+}
+//servicio que muestra datos de certificacion 
+function SCertificacion ($resource, BaseUrl){
+    return $resource(BaseUrl + '/ins/certificacion', {});
 }
 
 function Capacitacion ($resource, BaseUrl) {

@@ -29,7 +29,7 @@
         }
  
       }); 
-   $scope.destinatarios = SDestinatarios.query({id: 248});
+      $scope.destinatarios = SDestinatarios.query({id: 248});
       // console.log('destinatarios', $scope.destinatarios);
 
       $scope.mostrarCom = {};
