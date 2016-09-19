@@ -37,9 +37,7 @@ gulp.task('server-dist', function() {
     hostname: '0.0.0.0',
     port: 666,
     livereload: true,
-    middleware: function(connect, opt) {
-      return [ historyApiFallback ];
-    }
+   middleware: function (connect, opt) { return [ historyApiFallback({}) ]; }
   });
 });
 
