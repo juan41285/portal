@@ -116,7 +116,7 @@ gulp.task('wiredep', function () {
 gulp.task('templates', function() {
   gulp.src('./app/views/**/*.tpl.html')
     .pipe(templateCache({
-      root: 'templates/',
+      root: 'views/',
       module: 'portal.templates',
       standalone: true
     }))
@@ -128,8 +128,8 @@ gulp.task('templates', function() {
 gulp.task('compress', function() {
   gulp.src('./app/index.html')
     .pipe(useref.assets())
-    // .pipe(gulpif('*.js', uglify({mangle: false })))
-    // .pipe(gulpif('*.css', minifyCss()))
+    .pipe(gulpif('*.js', uglify({mangle: false })))
+    .pipe(gulpif('*.css', minifyCss()))
     .pipe(gulp.dest('./dist'));
 });
 
@@ -144,9 +144,9 @@ gulp.task('uncss', function() {
 
 
 gulp.task('imagenes', function () {
-    return gulp.src(['./app/img/*.*'])
+    return gulp.src(['./app/images/*.*'])
         .pipe(imagemin())
-        .pipe(gulp.dest('./dist/img/'));
+        .pipe(gulp.dest('./dist/images/'));
 });
 
 // Vigila cambios que se produzcan en el código
