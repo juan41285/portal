@@ -6,7 +6,7 @@
     .module('portal.controllers')
     .controller('CapacitacionCtrl', CapacitacionCtrl);
 
-    function CapacitacionCtrl($scope, $rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios, $http) {
+    function CapacitacionCtrl($scope, $rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios, $http, $location) {
       // $("html, body").animate({ scrollTop: 0 }, 1500);
     	$scope.sData = {};
   		$scope.mostrar = false;
@@ -36,22 +36,26 @@
       $scope.mostrarCom = SDetalleCom.query({id: $routeParams.idComision});
       console.log('comision',$scope.mostrarCom);    
 
-    $scope.funciondesplegar = function(capaId){
-     
-      var total = $scope.capacitacion.length;
-      for (var i = 0; i <= total; i++) {
+    $scope.funciondesplegar = function(capaId,habilitado, comision){
+      console.log('habilitado',habilitado);
+      if(habilitado === '0'){
+          $location.path('/capacitacion/763');
+          // alert(comision);
+      }else{
+        var total = $scope.capacitacion.length;
+        for (var i = 0; i <= total; i++) {
 
-         
-          if($scope.capacitacion[i].id === capaId){
-            $scope.capacitacion[i].collapse = !$scope.capacitacion[i].collapse;
-          }
-          else
-          {
-             $scope.capacitacion[i].collapse = false;//!$scope.capacitacion[i].collapse;
-          }
+            if($scope.capacitacion[i].id === capaId){
+              $scope.capacitacion[i].collapse = !$scope.capacitacion[i].collapse;
+            }
+            else
+            {
+               $scope.capacitacion[i].collapse = false;//!$scope.capacitacion[i].collapse;
+            }
+        }
       }
-    };
-     
+    }; 
+
     /****************BLOQUE DE RECUPERAR PASS********************/ 
     $scope.sendPass = false;
     $scope.recuperarPass = function(){
