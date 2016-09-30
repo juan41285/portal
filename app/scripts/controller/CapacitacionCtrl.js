@@ -6,9 +6,10 @@
     .module('portal.controllers')
     .controller('CapacitacionCtrl', CapacitacionCtrl);
 
-    function CapacitacionCtrl($scope, $rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios, $http, $location) {
+    function CapacitacionCtrl($scope, $rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios, GetCom,$http, $location) {
       // $("html, body").animate({ scrollTop: 0 }, 1500);
-    	$scope.sData = {};
+    	$scope.sincupo = true;
+      $scope.sData = {};
   		$scope.mostrar = false;
       $scope.capacitacion = [];
     	$scope.mostrarCapa = {};
@@ -22,9 +23,10 @@
           var idc = res[i].id;
    
           $scope.listarCom = ComisionesCapa.query({id: idc});
+          //console.log($scope.listarCom);
           $scope.destinatarios = SDestinatarios.query({id: idc});
           $scope.capacitacion.push({capa:res[i], datos:$scope.listarCom, activo: true, collapse: false, id: res[i].id, destinatarios:$scope.destinatarios});
-        // console.log('nuevo array', $scope.capacitacion);
+          //console.log('nuevo array', $scope.capacitacion);
 
         }
  
@@ -36,12 +38,25 @@
       $scope.mostrarCom = SDetalleCom.query({id: $routeParams.idComision});
       console.log('comision',$scope.mostrarCom);    
 
-    $scope.funciondesplegar = function(capaId,habilitado, comision){
-      console.log('habilitado',habilitado);
+    $scope.funciondesplegar = function(capaId,habilitado){
+      
       if(habilitado === '0'){
-          $location.path('/capacitacion/763');
-          // alert(comision);
+          //entro porque no hay comisiones disponibles para insripcion
+          $scope.sincupo = false;
+          console.log($scope.sincupo);  
+
+          //busco comisiones de la capa para poder mostrar datos
+          $scope.comision99= {};
+          $scope.comision99 = GetCom.query({id: capaId});
+          $scope.comision99.$promise.then(function(res){
+             var comision = res[0].idComision;
+             console.log('comision', comision);
+             $location.path('/capacitacion/'+comision);
+          });         
+
+
       }else{
+        $scope.sincupo = true;
         var total = $scope.capacitacion.length;
         for (var i = 0; i <= total; i++) {
 
@@ -53,6 +68,7 @@
                $scope.capacitacion[i].collapse = false;//!$scope.capacitacion[i].collapse;
             }
         }
+
       }
     }; 
 

@@ -6,6 +6,7 @@
     .module('portal.services')    
     .factory('Capacitaciones',Capacitaciones)
     .factory('ComisionesCapa',ComisionesCapa)
+    .factory('GetCom',GetCom)
     .factory('SDetalleCom',SDetalleCom)
     .factory('SDestinatarios',SDestinatarios)
     .factory('SCertificacion',SCertificacion)
@@ -23,6 +24,11 @@ function Capacitaciones ($resource, BaseUrl){
 //con inscripcion abierta de una capacitacion   
 function ComisionesCapa($resource, BaseUrl){
     return $resource(BaseUrl + '/ins/comCapa/:id',
+      { pg_id: '@_id' }
+    );
+}
+function GetCom($resource, BaseUrl){
+    return $resource(BaseUrl + '/ins/getCom/:id',
       { pg_id: '@_id' }
     );
 }

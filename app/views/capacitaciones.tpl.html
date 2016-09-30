@@ -31,6 +31,7 @@ Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual 
   		<div class="col-md-1">
   			<i class="fa fa-laptop fa-4x" aria-hidden="true"></i>
   		</div>
+  		Variable sin cupo -> {{sincupo}}
   		<div class="col-md-7">
 
   				<p>
@@ -45,13 +46,13 @@ Así es como nace el <strong>Área de Innovación Pedagógica</strong>, la cual 
   </div>
   	<div class="col-md-12">
   			  	<div class="" ng-repeat="capa in capacitacion " >
-			<div class="listar_capas" ng-click="funciondesplegar(capa.id, capa.capa.comision, capa.datos[0])">
-			{{capa.capa.nombre}}<a href="" ng-show="capa.capa.comision != 0" class="btn btn-abiertas btn-xs "> Inscripciones Abiertas</a><a href="" ng-show="capa.capa.comision == 0" class="btn btn-cerradas btn-xs "> Inscripciones Cerradas</a><a href="/info/{{capa.capa.idComision}}" class="btn-abiertas" style="text-decoration: underline"> +Info</a>
+			<div class="listar_capas" ng-click="funciondesplegar(capa.id, capa.capa.comision)">
+			{{capa.capa.nombre}}<a href="" ng-show="capa.capa.comision != 0" class="btn btn-abiertas btn-xs "> Inscripciones Abiertas</a><a href="" ng-show="capa.capa.comision == 0" class="btn btn-cerradas btn-xs "> Inscripciones Cerradas</a>
 
 			</div>
 			<div uib-collapse="!capa.collapse">
 				<div class="content_capa">
-					<button type="button" class="close" ng-click="funciondesplegar(0, capa.capa.comision, capa.datos[0])"><span aria-hidden="true">&times;</span></button>
+					<button type="button" class="close" ng-click="funciondesplegar(0, capa.capa.comision)"><span aria-hidden="true">&times;</span></button>
 					<h4>Comisiones Disponibles</h4>
 					<div ng-repeat="com in capa.datos" class="detalle_capas">
 					<ul class="list-unstyled">

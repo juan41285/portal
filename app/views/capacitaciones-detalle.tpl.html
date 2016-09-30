@@ -11,7 +11,10 @@
 			</div>
 			
 			<div class="col-md-7 ">
-          <p class="codigos">CAPA{{mostrarCom[0].idCapacitacion}} - COM{{mostrarCom[0].idComision}}</p>
+         <div ng-show="sincupo != 0"> 
+         {{sincupo}} == true
+         <p class="codigos">CAPA{{mostrarCom[0].idCapacitacion}} - COM{{mostrarCom[0].idComision}}</p>
+         </div> 
                 
 				  <p class="margin-left-40" >	
 					   <img src="{{mostrarCom[0].imagenGrande}}" class="img-responsive">
@@ -206,6 +209,14 @@
 
 </div> <!-- Cierro div para ocultar formulario -->
 </div> <!-- cierro noticia-sidebar -->
+
+<!-- Muestro Mensaje de Inscripciones cerrradas -->
+<div>
+<div class="msj-sincupo">
+    <span style="font-size: 30px; padding-bottom: 10px;"class="fa fa-info" aria-hidden="true"></span>
+    <br> Inscripciones no disponibles para esta capacitación  
+</div>  
+</div>
 
   <!-- Formulario para recuperar contraseña --> 
   

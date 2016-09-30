@@ -738,6 +738,13 @@ a:hover {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.msj-sincupo {
+  text-align: center;
+  font-size: 18px !important;
+  padding: 25px;
+  background: #03a9f4;
+  color: #fff;
+}
 /*************CALENDARIOS******************************/
 ul.calendar-dias {
   list-style: none;
