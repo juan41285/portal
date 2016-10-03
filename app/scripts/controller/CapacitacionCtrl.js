@@ -6,11 +6,11 @@
     .module('portal.controllers')
     .controller('CapacitacionCtrl', CapacitacionCtrl);
 
-    function CapacitacionCtrl($scope, $rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios, GetCom,$http, $location) {
-      // $("html, body").animate({ scrollTop: 0 }, 1500);
-    	$scope.sincupo = true;
+    function CapacitacionCtrl($scope, $rootScope, $routeParams, Capacitaciones, ComisionesCapa, SDetalleCom, SDestinatarios, GetCom,$http, $window, $location) {
+      $("html, body").animate({ scrollTop: 0 }, 1500);
       $scope.sData = {};
   		$scope.mostrar = false;
+      $scope.sinCupo=$window.localStorage.getItem('sinCupo');
       $scope.capacitacion = [];
     	$scope.mostrarCapa = {};
       $scope.listarCom = {};
@@ -23,7 +23,17 @@
           var idc = res[i].id;
    
           $scope.listarCom = ComisionesCapa.query({id: idc});
-          //console.log($scope.listarCom);
+          // $scope.sinCupo= true;
+          // if ($scope.listarCom.length === 0){
+          //     $scope.sinCupo= false;
+          //     console.log('sin cupo false');
+          // }else{
+          //   $scope.sinCupo= true;
+          //   console.log('sin cupo TRUE');
+
+          // }
+          // console.log($scope.listarCom);
+
           $scope.destinatarios = SDestinatarios.query({id: idc});
           $scope.capacitacion.push({capa:res[i], datos:$scope.listarCom, activo: true, collapse: false, id: res[i].id, destinatarios:$scope.destinatarios});
           //console.log('nuevo array', $scope.capacitacion);
@@ -40,11 +50,23 @@
 
     $scope.funciondesplegar = function(capaId,habilitado){
       
+      $scope.listarCom1 = ComisionesCapa.query({id: capaId});
+
+      $scope.listarCom1.$promise.then(function(res){
+          console.log();
+
+          if (res[0].comision !== 0){
+              $window.localStorage.setItem('sinCupo',1);
+          }else{
+            $window.localStorage.setItem('sinCupo',0);
+          }
+          console.log(res);
+
+      });
+          
       if(habilitado === '0'){
           //entro porque no hay comisiones disponibles para insripcion
-          $scope.sincupo = false;
-          console.log($scope.sincupo);  
-
+          
           //busco comisiones de la capa para poder mostrar datos
           $scope.comision99= {};
           $scope.comision99 = GetCom.query({id: capaId});
@@ -54,9 +76,7 @@
              $location.path('/capacitacion/'+comision);
           });         
 
-
       }else{
-        $scope.sincupo = true;
         var total = $scope.capacitacion.length;
         for (var i = 0; i <= total; i++) {
 

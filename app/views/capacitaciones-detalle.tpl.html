@@ -6,13 +6,13 @@
   <div class="well">
 <div class="row">
 			<div class="col-md-12">
-				<h3 class="text-center">{{mostrarCom[0].Nombre}}</h3>
+				<h3 class="text-center">{{mostrarCom[0].Nombre}} - {{sinCupo}} </h3>
 				<hr>
 			</div>
 			
 			<div class="col-md-7 ">
-         <div ng-show="sincupo != 0"> 
-         {{sincupo}} == true
+         <div ng-show="sinCupo == 1"> 
+         
          <p class="codigos">CAPA{{mostrarCom[0].idCapacitacion}} - COM{{mostrarCom[0].idComision}}</p>
          </div> 
                 
