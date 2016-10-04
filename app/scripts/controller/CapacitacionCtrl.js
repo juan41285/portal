@@ -10,7 +10,7 @@
       $("html, body").animate({ scrollTop: 0 }, 1500);
       $scope.sData = {};
   		$scope.mostrar = false;
-      $scope.sinCupo=$window.localStorage.getItem('sinCupo');
+      $scope.sinCupo = $window.localStorage.getItem('sinCupo');
       $scope.capacitacion = [];
     	$scope.mostrarCapa = {};
       $scope.listarCom = {};
@@ -42,7 +42,6 @@
  
       }); 
       $scope.destinatarios = SDestinatarios.query({id: 248});
-      // console.log('destinatarios', $scope.destinatarios);
 
       $scope.mostrarCom = {};
       $scope.mostrarCom = SDetalleCom.query({id: $routeParams.idComision});
@@ -50,6 +49,7 @@
 
     $scope.funciondesplegar = function(capaId,habilitado){
       
+      /*Este bloque setea la variable para mostrar o no datos en la vista*/
       $scope.listarCom1 = ComisionesCapa.query({id: capaId});
 
       $scope.listarCom1.$promise.then(function(res){
@@ -63,11 +63,12 @@
           console.log(res);
 
       });
-          
+      /***********/
+
       if(habilitado === '0'){
           //entro porque no hay comisiones disponibles para insripcion
           
-          //busco comisiones de la capa para poder mostrar datos
+          //busco comisiones de la capa para poder mostrar datos, con una basta
           $scope.comision99= {};
           $scope.comision99 = GetCom.query({id: capaId});
           $scope.comision99.$promise.then(function(res){

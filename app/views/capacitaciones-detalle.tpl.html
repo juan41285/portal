@@ -6,7 +6,7 @@
   <div class="well">
 <div class="row">
 			<div class="col-md-12">
-				<h3 class="text-center">{{mostrarCom[0].Nombre}} - {{sinCupo}} </h3>
+				<h3 class="text-center">{{mostrarCom[0].Nombre}}</h3>
 				<hr>
 			</div>
 			
@@ -69,15 +69,17 @@
               <hr>
             
           </div>
-          <div class="col-md-6">
-              <ul style="background: #f1f1f1; margin-right: 20px">
-	                	<hr>
-	                  	<li><strong>Sede: </strong>{{mostrarCom[0].Lugar}}</li>
-	                    <li><strong>Fecha de Inicio: </strong>{{mostrarCom[0].Fec_inicio | date:'dd/MM/yyyy'}}</li>
-						          <li><strong>Fecha de Fin: </strong>{{mostrarCom[0].Fec_fin | date:'dd/MM/yyyy'}}</li>	
-						          <li><strong>Horario: </strong>{{mostrarCom[0].Horario}}</li>
-	                	<hr>
-              </ul>
+          <div ng-show="sinCupo == 1">
+            <div class="col-md-6">
+                <ul style="background: #E2DEE8; margin-right: 20px">
+  	                	<hr>
+  	                  	<li><strong>Sede: </strong>{{mostrarCom[0].Lugar}}</li>
+  	                    <li><strong>Fecha de Inicio: </strong>{{mostrarCom[0].Fec_inicio | date:'dd/MM/yyyy'}}</li>
+  						          <li><strong>Fecha de Fin: </strong>{{mostrarCom[0].Fec_fin | date:'dd/MM/yyyy'}}</li>	
+  						          <li><strong>Horario: </strong>{{mostrarCom[0].Horario}}</li>
+                        <hr>
+                </ul>
+            </div>
           </div>
           <div class="col-md-12">
             <a href="/capacitaciones" class="btn btn-regresar btn-raised btn-sm">Regresar al Listado</a>
@@ -90,6 +92,8 @@
            <i class="fa fa-laptop fa-4x  fa-border pull-left" aria-hidden="true"></i>
            <p class="text-justify">Para realizar las capacitaciones es requisito imprescindible asistir con netbook o notebook a los encuentros presenciales  y para las actividades virtuales debe contar con conexión a internet e ingresar por lo menos dos veces a la semana a la Plataforma para realizar las actividades solicitadas.</p>    
            </div>
+
+           <div ng-show="sinCupo == 1">
           <div class="noticia-sidebar animate-show" ng-controller="InscripcionCtrl" ng-hide="sendPass">
     <!-- noticia-sidebar envuelve todo el codigo, hasta el final  -->
 <div class="titulo-inscripcion linea-separador-inscripcion">Formulario de Inscripción</div>
@@ -204,14 +208,12 @@
       </div>
   </fieldset>
 </form>
-
-
-
 </div> <!-- Cierro div para ocultar formulario -->
 </div> <!-- cierro noticia-sidebar -->
+</div>
 
 <!-- Muestro Mensaje de Inscripciones cerrradas -->
-<div>
+<div ng-show="sinCupo == 0">
 <div class="msj-sincupo">
     <span style="font-size: 30px; padding-bottom: 10px;"class="fa fa-info" aria-hidden="true"></span>
     <br> Inscripciones no disponibles para esta capacitación  
