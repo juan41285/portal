@@ -3,7 +3,7 @@
 
   // /* @ngInject */
   angular
-    .module('portal', ['ngRoute','portal.controllers', 'portal.services','portal.templates', 'portal.filters','ngSanitize','ui.bootstrap','ngScrollable','angularUtils.directives.dirPagination','720kb.socialshare','angularVideoBg','ngAnimate'])
+    .module('portal', ['ngRoute','portal.controllers', 'portal.services','portal.templates', 'portal.filters','ngSanitize','ui.bootstrap','ngScrollable','angularUtils.directives.dirPagination','720kb.socialshare','angularVideoBg','ngAnimate','angularMoment'])
     .config(config);
 
 
