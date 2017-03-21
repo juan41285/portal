@@ -1,0 +1,27 @@
+#publicacion h1{
+	font-weight: 300;
+	text-align: center;
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+#publicacion h1 > small{
+
+	text-align: left;
+	
+}
+
+#publicacion .contenido{
+	text-align: justify;
+	font-size: 16px;
+}
+
+#publicacion .datos{
+	padding: 5px;
+	margin: 8px auto;
+	border-top: 1px solid #f1f1f1;
+	border-bottom: 1px solid #f1f1f1;
+	text-align: center;
+	font-size: 12px;
+	background: #0288D1;
+}

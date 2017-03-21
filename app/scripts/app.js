@@ -3,7 +3,9 @@
 
   // /* @ngInject */
   angular
-    .module('portal', ['ngRoute','portal.controllers', 'portal.services','portal.templates', 'portal.filters','ngSanitize','ui.bootstrap','ngScrollable','angularUtils.directives.dirPagination','720kb.socialshare','angularVideoBg','ngAnimate','angularMoment'])
+    .module('portal', ['ngRoute','portal.controllers', 'portal.services','portal.templates', 'portal.filters',
+                        'ngSanitize','ui.bootstrap','slickCarousel', 'angularGrid','slugifier',
+                        'angularVideoBg','ngAnimate','angularMoment','mwl.calendar'])
     .config(config);
 
 
@@ -18,48 +20,36 @@
         controllerAs: 'home',
         activeMenu: '/'
       })
-       .when('/articulos', {
+       .when('/publicaciones', {
         templateUrl: 'views/publicaciones.tpl.html',
         controller: 'PublicacionesCtrl',
         controllerAs: 'pub',
-        activeMenu: 'articulos'
+        activeMenu: 'publicaciones'
       })
-      .when('/articulo/:pg_id', {
-        templateUrl: 'views/articulo-detalle.tpl.html',
-        controller: 'ArticuloCtrl',
-        controllerAs: 'art',
-        activeMenu: 'articulos'
+      .when('/publicaciones/:title', {
+        templateUrl: 'views/publicacion.tpl.html',
+        controller: 'PublicacionesCtrl',
+        controllerAs: 'pub',
+        activeMenu: 'publicaciones'
       })
-      .when('/capacitaciones', {
-        templateUrl: 'views/capacitaciones.tpl.html',
-        controller: 'CapacitacionCtrl',
-        controllerAs: 'cap',
-        activeMenu: 'capacitacion'
+       .when('/agendas', {
+        templateUrl: 'views/agendas.tpl.html',
+        controller: 'AgendasCtrl',
+        controllerAs: 'agenda',
+        activeMenu: 'agendas'
       })
-      .when('/capacitacion/:idComision', {
-        templateUrl: 'views/capacitaciones-detalle.tpl.html',
-        controller: 'CapacitacionCtrl',
-        controllerAs: 'cap',
-        activeMenu: 'capacitacion'
-      })
-      .when('/certificacion', {
-        templateUrl: 'views/certificacion.tpl.html',
-        controller: 'CertificacionCTRL',
-        controllerAs: 'cer',
-        activeMenu: 'certificacion'
-      })
-      
-      .when('/agenda', {
-        templateUrl: 'views/agenda.tpl.html',
-        controller: 'AgendaCrtl',
-        activeMenu: 'agenda'
-      })
+      .when('/recursos', {
+        templateUrl: 'views/recursos.tpl.html',
+        controller: 'RecursosCtrl',
+        controllerAs: 'recurso',
+        activeMenu: 'recursos'
+      }) 
     .when('/contacto', {
         templateUrl: 'views/contacto.tpl.html',
         controller: 'ContactoCtrl',
         controllerAs: 'contacto',
         activeMenu: 'contacto'
-      })
+      }) 
       .otherwise({ reditrectTo : "/" });
   }
 

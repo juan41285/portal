@@ -1,0 +1,150 @@
+<div class="container" >
+
+
+  <div class="row">
+  <div class="col-md-12">
+     <h1 style="
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 2px solid #03A9F4;
+    padding-bottom: 10px;
+">Agendas de eventos para el día: {{::hoy[0].ag_fecha | dateToISO | date:'EEEE' }} {{::hoy[0].ag_fecha | dateToISO | date:'d' }} de {{::hoy[0].ag_fecha | dateToISO | date:'MMMM' }} de {{::hoy[0].ag_fecha | dateToISO | date:'y' }}</h1>
+  </div>
+  
+       <div class="col-md-12 col-xs-12">
+       <div class="agenda-left pull-left">
+       <button class="btn btn-primary btn-round">
+                 <i class="glyphicon glyphicon-chevron-left" aria-hidden="true"></i> Anterior
+              <div class="ripple-container"></div></button>
+              </div>
+               <div class="agenda-right" >
+  <button class="btn btn-primary btn-round">
+            Siguiente      <i class="glyphicon glyphicon-chevron-right" aria-hidden="true"></i>
+              <div class="ripple-container"></div></button>
+
+    
+            </div>
+            <slick class="" settings="fakaSlider" prev-arrow=".agenda-left" next-arrow=".agenda-right" ng-if="slickConfig3Loaded" init-onload=true>
+             
+             <div class="agenda-evento" ng-repeat="evento in hoy " ng-click="eventClicked(evento)">
+          
+              <img class="img-responsive" src="{{::setImageEvent(evento.ag_tipo_visita)}}">
+    
+    
+              <h3 >{{::evento.esc_Nombre}}</h3>
+              <p>
+                {{::evento.ag_objetivo | limitTo:200}}...
+              </p>
+  
+   
+              </div>
+                 
+  
+             
+
+     </slick>
+        </div>
+
+
+          <h2 class="text-center">Agenda del mes de: {{ calendarTitle }}</h2>
+    <div class="col-md-6 text-center">
+      <div class="btn-group">
+<!-- 
+        <button
+          class="btn btn-primary"
+          mwl-date-modifier
+          date="viewDate"
+          decrement="calendarView"
+          ng-click="cellIsOpen = false">
+          Anterior
+        </button>
+        <button
+          class="btn btn-default"
+          mwl-date-modifier
+          date="viewDate"
+          set-to-today
+          ng-click="cellIsOpen = false">
+          Hoy
+        </button>
+        <button
+          class="btn btn-primary"
+          mwl-date-modifier
+          date="viewDate"
+          increment="calendarView"
+          ng-click="cellIsOpen = false">
+          Siguiente
+        </button> -->
+      </div>
+    </div>
+
+    <br class="visible-xs visible-sm">
+
+    <div class="col-md-6 text-center">
+      <div class="btn-group">
+        <!-- <label class="btn btn-primary" ng-model="calendarView" uib-btn-radio="'year'" ng-click="cellIsOpen = false">Year</label> -->
+       <!--  <label class="btn btn-primary" ng-model="calendarView" uib-btn-radio="'month'" >Ver mes</label>
+        <label class="btn btn-default" ng-model="calendarView" uib-btn-radio="'week'" >Ver semana</label> -->
+        <!-- <label class="btn btn-default" ng-model="calendarView" uib-btn-radio="'day'" >Ver día</label> -->
+
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+<script id="groupedMonthEvents.html" type="text/ng-template">
+
+  <div class="cal-month-day">
+
+    <span
+      class="pull-right"
+      data-cal-date
+      ng-click="vm.calendarCtrl.dateClicked(day.date)"
+      ng-bind="day.label">
+    </span>
+
+    <!--
+      *** Please note ***
+
+      The contents of the template have been stripped down for brevity.
+      You will need to adapt the original template from here for all functionality to work:
+      https://github.com/mattlewis92/angular-bootstrap-calendar/blob/master/src/templates/calendarMonthCell.html
+
+      Insert the div below into the full month view template
+    -->
+
+    <div style="position: relative; top: 35px; left: 5px">
+      <span ng-repeat="(type, events) in day.groups track by type">
+        <span class="label {{ type }}">
+          {{ events.length }}
+        </span>&nbsp;
+      </span>
+    </div>
+
+    <div class="cal-day-tick" ng-show="dayIndex === vm.openDayIndex && vm.view[vm.openDayIndex].events.length > 0 && !vm.slideBoxDisabled">
+      <i class="glyphicon glyphicon-chevron-up"></i>
+      <i class="fa fa-chevron-up"></i>
+    </div>
+
+  </div>
+</script>
+  <mwl-calendar
+    events="events"
+    view="calendarView"
+    view-title="calendarTitle"
+    view-date="viewDate"
+    on-event-click="eventClicked(calendarEvent)"
+    on-event-times-changed="eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+    cell-is-open="cellIsOpen"
+    day-view-start="06:00"
+    day-view-end="22:59"
+    day-view-split="30"
+    cell-modifier="groupEvents(calendarCell)"
+    cell-auto-open-disabled="true"
+    on-timespan-click="timespanClicked(calendarDate, calendarCell)">
+
+  </mwl-calendar>
+
+
+  
+</div>

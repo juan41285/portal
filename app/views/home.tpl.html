@@ -1,237 +1,177 @@
+<div class="home-header">
 
 <div class="container">
- 
+  <div class="row">
 
-  <div id="main_area">
-      <!-- Slider -->
-      <div class="row">
-          <div class="col-md-12">
-            <a href="/capacitaciones" target="_blank">
-            <img src="images/secciondesarrolloBanner.png" alt="" class="img-responsive shadow-z-1" style="margin-bottom:20px"></a>
-          </div>
-
-          <div class="container" >
-          <div class="row">
-          <div class="col-md-12">
-              <div class="well home-slide"   >
-                <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                  <div uib-slide ng-repeat="slide in home.slides track by slide.pg_id" index="$index">
-                   <div class="row">
-                     <div class="col-md-3">
-                       <img ng-src="{{slide.capa}}" style="margin:auto; width:250px; height:150px; " class="img-responsive">
-                     </div>
-                     <div class="col-md-9">
-                        <h3>{{slide.pg_title}}</h3>     
-                        <div class="bg-blue">
-                          <div ng-bind-html="slide.pg_des | limitTo:400"></div>
-                          <div class="clearfix">
-                          <a href="/articulo/{{slide.pg_id}}" class="btn btn-info btn-raised pull-right" style="margin-right:10px; z-index:999;">Leer más</a>
-                          </div>
-                        </div>
-                     </div>   
-                      
-                    </div>
+    <div class="col-md-10 col-md-offset-1 col-xs-12">
+           <slick class="slider" settings="fakaSlider" prev-arrow=".component-slider-left" next-arrow=".component-slider-right" ng-if="slickConfig3Loaded" init-onload=true>
+              <div class="row" ng-repeat="s in slide ">
+                  <div class="col-md-5"  style="padding-right: 0;">
+                   <!-- <img class="img-responsive" ng-src="{{s.thumbnail}}"> -->
+                   <!-- {{s.thumbnail}} -->
+                   <div class="img" style="background-image: url({{s.thumbnail}}); "></div>
                   </div>
-                </div>
-              </div>
-              </div>
-              </div>
-          </div>
-          <!-- //////////////// -->
-          
-      </div>
-</div>
-</div>  
-
-
-<!-- accesos directos -->
-<div class="" >
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="well">
-              <div class="row">
-                    <div class="col-md-3">
-                <a href="http://docentes.innovacioneducativa.gob.ar/login.php" target="_blank">
-                    <img src="images/Panel-Docente.png" alt="" class="img-responsive">
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://plataforma.innovacioneducativa.gob.ar/moodle/" target="_blank">
-                    <img src="images/plataforma.png" alt="" class="img-responsive">
-                </a>
-            </div>
-             <div class="col-md-3">
-                <a href="http://innovacioneducativa.gob.ar/robotica" target="_blank">
-                    <img src="images/robotica.png" alt="" class="img-responsive">
-                </a>
-            </div>
-               <div class="col-md-3">
-                <a href="http://mapa.innovacioneducativa.gob.ar/" target="_blank">
-                    <img src="images/mapa.png" alt="" class="img-responsive">
-                </a>
-            </div>
-           
-        </div>
-        <div class="col-md-12">
-          <hr>
-        </div>
-        <div class="row">
-           <div class="col-md-3">
-                <a href="http://innovacioneducativa.gob.ar/EAD/" target="_blank">
-                    <img src="images/adistancia.png" alt="" class="img-responsive" >
-                </a>
-            </div>    
-            <div class="col-md-3">
-                <a href="http://experiencias.innovacioneducativa.gob.ar/" target="_blank">
-                    <img src="images/experiencias.png" alt="" class="img-responsive" >
-                </a>
-            </div>
-            <div class="col-md-3">
-                <a href="http://bicentenario.innovacioneducativa.gob.ar/" target="_blank">
-                    <!-- images/experiencias.png -->
-                    <img src="images/acceso_bicentenario.png" alt="" class="img-responsive" >
-                </a>
-            </div>
-        </div>    
-              </div>
-            </div>
-            
-             <div class="col-md-12">
-                  <a href="http://cine.innovacioneducativa.gob.ar" target="_blank"><img src="images/Aviso-festival.png" alt="" class="img-responsive shadow-z-1"></a>
-             </div>
-
-          </div>
-
-          <div class="col-md-12 well hidden-xs" style="margin-top: 20px">
-            <div class="video-200">
-            <!-- <a href="http://bicentenario.innovacioneducativa.gob.ar/bicentenario_argentino/index.php" target="_blank" class="btn btn-raised btn-default">Ingresar al sitio</a><br>
-            <a href="http://bicentenario.innovacioneducativa.gob.ar/juegos/index.php" target="_blank" class="btn btn-raised btn-warning">Juegos del Bicentenario</a><br>
-            <a href="http://bicentenario.innovacioneducativa.gob.ar/independencia/index.php" target="_blank" class="btn btn-raised btn-info">Sitio: independencia interactivo</a><br>
-            <a href="http://cine.innovacioneducativa.gob.ar/festival/index.php" target="_blank" class="btn btn-raised btn-primary">Bicentenario en Cortos</a> -->
-
-             <a href="http://cine.innovacioneducativa.gob.ar/festival/index.php" target="_blank" class="btn btn-raised btn-info">Sitio: Festival Juvenil de Cine</a><br>
-            <video-bg video-id="'nG4fmKnFcf4'" class="video-responsive"></video-bg>
-            </div>
-              
-            </div>   
-    </div>
-    </div>
-
-
-    <!-- agendas -->
-        <div class="container">
-    <div id="container2">
-    <div id="container1">
-        <div id="col1">
-                          <div class=" border-left">
-
-                <div class="shadow-z-1 bg-calendar-home">
-                <div class="ch-hoy">
-              <h1>Agenda para el día {{home.hoy[0].ag_fecha | amDateFormat:'DD/MM/YYYY'}} </h1>
-              
-                </div>
-                   <div ng-scrollable="{scrollX:'none',scrollY:'right'}"  spy-x="home.posX" spy-y="home.posY" style="width: 100%; height: 650px">
+                  <div class="col-md-7" style="padding-left: 0; ">
+                  <div class="home-text-slider clearfix">
+                      <h2>{{::s.titulo}}</h2>
+                  <h3>{{::s.subtitulo}}</h3>
+                   <div ng-bind-html="s.descripcion">
+                     
+                   </div>
+                   <a ng-click="linkOpen(s.id,s.titulo)" class="btn btn-default btn-round  ">Leer publicación</a>
+                  </div>
                 
-                        <div class="calendar-home-event" ng-repeat="dia in home.hoy">
-                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
-                            <span class="ch-entrada"> {{dia.ag_entrada}}</span>
-                            <div class="ch-linea "> {{dia.ag_linea_accion }} <br>{{dia.esc_Nombre }} </div>
-                            <div class="ch-tipo pull-right">{{dia.ag_tipo_visita }} <a href="#" class="btn btn-default btn-xs" ng-click="home.open(lg,dia.ag_id)">Detalles</a></div>
-                            <div class="ch-border"></div>
-                        </div>
-                           
-
-   
+                  </div>
+              </div>
+                 
   
-</div>
+             
 
-                    
-                </div>
-                <a href="#" class="btn btn-info btn-fab ch-btn-up" ng-click="home.moveY(-120)"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-                <a href="#" class="btn btn-info btn-fab ch-btn-down" ng-click="home.moveY(120)"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-<div class="calendar-home-footer shadow-z-1" style="border-right:1px dashed #412A9B">
-    
-    <h3>Cantidad de actividades agendadas para la fecha <span>{{home.hoy.length}}</span></h3>
-</div>
-                </div>
-        </div>
-        <div id="col2">
-            <!-- Column two start -->
-       <div class="" style="">
-                    <div class="fondo-blanco shadow-z-1">
-                    <h1 class="h1-mapa">Mapa de subdivisión de circuitos</h1>
-                    <div class="clearfix">
-                        <img src="images/mapa_circuitos.png" alt="" class="img-responsive" style="margin:0 auto;">
-                        </div>
-
-                    <hr>
-                    <div class="row ">
-                        
-                  
-                    <div class="detalle-c1 col-md-4">
-                      <strong>Circuito 1</strong>
-                      <ul>                 
-                          <li>Burruyacú</li>
-                          <li>Cruz Alta</li>
-                          <li>Leales</li>
-                      </ul>
-                    </div>
-                    <div class="detalle-c1 col-md-4">
-                      <strong>Circuito 2</strong>
-                      <ul>                 
-                          <li>Capital</li>
-                       
-                      </ul>
-                    </div>
-                    <div class="detalle-c1 col-md-4">
-                      <strong>Circuito 3</strong>
-                      <ul>                 
-                          <li>Trancas</li>
-                          <li>Tafí Viejo</li>
-                          <li>Yerba Buena</li>
-                          <li>Lules</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-12"><hr></div>
-                    <div class="detalle-c1 col-md-4">
-                      <strong>Circuito 4</strong>
-                      <ul>                 
-                          <li>Tafí del Valle</li>
-                          <li>Famaillá</li>
-                          <li>Simoca</li>
-                          <li>Monteros</li>
-                      </ul>
-                    </div>
-                    <div class="detalle-c1 col-md-4">
-                      <strong>Circuito 5</strong>
-                      <ul>                 
-                          <li>Chicligasta</li>
-                          <li>Río Chico</li>
-                          <li>J.B. Alberdi</li>
-                        
-                      </ul>
-                    </div>
-                         <div class="detalle-c1 col-md-4">
-                      <strong>Circuito 6</strong>
-                      <ul>                 
-                          <li>La Cocha</li>
-                          <li>Graneros</li>
-                          
-                        
-                      </ul>
-                    </div>
-                      </div>
-                    </div>
-                </div>
-            <!-- Column two end -->
-        </div>
+     </slick>
     </div>
-</div>
-</div>
-
- 
-    <!-- end agendas -->
-
   </div>
+<div class="home-parallax col-md-4" >
+    
+<ul id="scene" class="scene border fill" >
+   <li class="layer " data-depth="5.90"><img src="images/h1.png" class="img-responsive"></li>
+   <!-- <li class="layer " data-depth="0.30"><img src="images/h3.png" class="img-responsive"></li> -->
+   <!-- <li class="layer " data-depth="1.90"><img src="images/h7.png"  class="img-responsive"></li> -->
   
+    </ul>
+  </div>
+
+</div>
+
+
+
+</div>
+<div class="container">
+  <div class="row">
+<div class="col-md-12">
+   <h1 style="
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 2px solid #03A9F4;
+    padding-bottom: 10px;
+">Accesos directos</h1>
+</div>
+  <div class="col-md-4">
+  <div class="home-link-image">
+     <a href="http://docentes.educaciondigitaltuc.gob.ar/login.php" target="_blank">
+      <img class="img-responsive" src="images/panel-docente.png">
+     <!--  <h4>El Panel Docente es una herramienta de autogestión desde donde los docentes podrán administrar las capacitaciones que realizan a través de la Coordinación de Educación Digital</h4>
+ -->
+    </a>
+  </div>
+   
+  </div>
+
+    <div class="col-md-4">
+    <div class="home-link-image">
+      <h3>Plataforma Virtual Educativa</h3>
+
+    <a href="http://plataforma.educaciondigitaltuc.gob.ar/moodle/" target="_blank">
+      <img class="img-responsive" src="images/plataforma.png">
+     <!--  <h4>La Plataforma Virtual Educativa es un espacio para docentes, alumnos y publico general que desee complementar sus capacitaciones. </h4> -->
+    </a>
+  </div>
+  </div>
+
+      <div class="col-md-4">
+      <div class="home-link-image">
+         <h3>Revista institucional 2016</h3>
+    <a href="http://educaciondigitaltuc.gob.ar/revista/2016/" target="_blank">
+      <img class="img-responsive" src="images/revista.jpg">
+   
+
+    </a>
+  </div>
+  </div>
+  <div class="col-md-12">
+    <img src="images/descarga.jpeg" alt="" class="img-responsive">
+    <h1 style="
+    position: absolute;
+    text-align: center;
+    margin-top: -200px;
+    margin-left: auto;
+    left: 30%;
+    background: rgba(96, 125, 139, 0.17);
+    padding: 15px;
+">Sitio en construcción</h1>
+    <hr>
+    <h1 style="
+    font-size: 28px;
+    text-align: center;
+    border-bottom: 2px solid #03A9F4;
+    padding-bottom: 10px;
+">Publicaciones</h1>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="container">
+  <div class="row">
+  <md-content id="content-scroller">
+       <div
+             class="dynamic-grid"
+             angular-grid="publicaciones"
+             ag-grid-width="280"
+             ag-gutter-size="25"
+             ag-refresh-on-img-load="false"
+          >
+          <div class="card third-effect " data-ng-repeat="p in publicaciones" ng-click="linkOpen(p.id,p.titulo)">
+            <div class="img " style="background-image: url({{::p.thumbnail}});"></div> 
+
+            <div class="inside ">
+              <h3 >{{::p.titulo}}</h3>
+              <div change-url class="description" ng-bind-html="p.descripcion" ></div>
+              <!-- <a href="/blog/{{post.id}}"><small>Primivo</small></a> -->
+              <!-- <hr> -->
+              <!-- <button class="btn btn-info btn-sm">Round</button> -->
+             
+            </div>
+          </div>
+        </div>
+</md-content>
+   
+  </div>
+  <div class="col-md-12">
+    <button class="btn btn-block" ng-click="cargarMas()">Cargar más publicaciones</button>
+  </div>
+</div>
+<script>
+
+  // Nothing new here...it's all in the CSS!
+ var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene, {
+    calibrateX: false,
+    calibrateY: true,
+    invertX: false,
+    invertY: true,
+    limitX: 60,
+    limitY: 60,
+    scalarX: 2,
+    scalarY: 2,
+    frictionX: 0.2,
+    frictionY: 0.8,
+    originX: 0.0,
+    originY: 0.0
+  });
+ // var scene = document.getElementById('scene1');
+ //  var parallax = new Parallax(scene, {
+ //    calibrateX: false,
+ //    calibrateY: true,
+ //    invertX: false,
+ //    invertY: true,
+ //    limitX: 60,
+ //    limitY: 60,
+ //    scalarX: 2,
+ //    scalarY: 2,
+ //    frictionX: 0.2,
+ //    frictionY: 0.8,
+ //    originX: 0.0,
+ //    originY: 0.0
+ //  });
+  </script>
+

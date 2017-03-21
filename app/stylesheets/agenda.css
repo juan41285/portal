@@ -1,0 +1,190 @@
+.agenda-evento{
+    margin: 10px;
+    background: #FFF;
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 350px;
+   
+}
+.agenda-evento p, .agenda-evento h3{
+    padding:10px;
+    word-wrap: break-word;
+}
+.agenda-evento:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.agenda-evento h3{
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+.component-slider-left{
+    width: 7%;
+    /* float: left; */
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    /* margin-top: 70px; */
+    /* float: right; */
+    /*margin-left: 70px;*/
+
+}
+
+.component-slider-left a, .component-slider-left a:hover{
+    color:#808080;
+    text-decoration: none;
+}
+.component-slider-right{
+    width: 3%;
+margin-right: 50px;
+}
+.component-slider-right a, .component-slider-right a:hover{
+    color:#808080;
+    text-decoration: none;
+}
+.tecpedagogica{
+	background: #009688 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.tecnica{
+	background: #3F51B5 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.integral{
+	background: #2196F3 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.pnide{
+	background: #795548 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.otros{
+	background: #00BCD4 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.trabajo{
+	background:#C2185B !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.pedagogica{
+	background: #03A9F4 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.ciae{
+	background: #607D8B !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.capas{
+	background: #00BCD4 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.entrega{
+	background: #FFA000 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+.perfeccion{
+	background: #FF5722 !important;
+	    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100% !important;
+    /* padding: 8px !important; */
+    /* margin-bottom: 10px; */
+    padding-top: 8px !important;
+    padding-left: 7px !important;
+    text-align: center;
+}
+
+.day-highlight a {
+    color: #fff !important;
+}
+mwl-calendar .cal-slide-content {
+    padding: 20px;
+    color: #ffffff;
+    background-color: #607D8B;
+    -webkit-box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}

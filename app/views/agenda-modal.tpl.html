@@ -1,0 +1,38 @@
+  <div ng-show="!event.ag_fk_esc">
+     <div class="modal-header">
+        <h3 class="modal-title">{{vm.event.tipo}} <br> <small>{{vm.event.escuela}}</small> </h3>
+      </div>
+      <div class="modal-body">
+        <div>Objetivos:
+        <div class="well">{{ vm.event.objetivo }}</div>
+        </div>
+        <div>
+         <strong>Fecha: </strong> <span class="mdi-action-today"></span>    {{::vm.event.fecha | dateToISO | date:'EEEE' }} {{::vm.event.fecha | dateToISO | date:'d' }} de {{::vm.event.fecha | dateToISO | date:'MMMM' }} de {{::vm.event.fecha | dateToISO | date:'y' }} 
+         <br>
+
+      
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="$close()">OK</button>
+      </div>
+  </div>
+  <div ng-show="event.ag_fk_esc">
+     <div class="modal-header">
+        <h3 class="modal-title">{{vm.event.ag_tipo_visita}} <br> <small>{{vm.event.esc_Nombre}}</small> </h3>
+      </div>
+      <div class="modal-body">
+        <div>Objetivos:
+        <div class="well">{{ vm.event.ag_objetivo }}</div>
+        </div>
+        <div>
+         <strong>Fecha: </strong> <span class="mdi-action-today"></span>    {{::vm.event.ag_fecha | dateToISO | date:'EEEE' }} {{::vm.event.ag_fecha | dateToISO | date:'d' }} de {{::vm.event.ag_fecha | dateToISO | date:'MMMM' }} de {{::vm.event.ag_fecha | dateToISO | date:'y' }} 
+         <br>
+
+      
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="$close()">OK</button>
+      </div>
+  </div>

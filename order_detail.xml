@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<GetOrderResponse xmlns="https://mws.amazonservices.com/Orders/2013-09-01">
+  <GetOrderResult>
+    <Orders>
+      <Order>
+        <LatestShipDate>2017-02-01T07:22:21Z</LatestShipDate>
+        <OrderType>StandardOrder</OrderType>
+        <PurchaseDate>2017-01-01T03:00:57Z</PurchaseDate>
+        <BuyerEmail>7pzpk5nvsylj5hj@marketplace.amazon.com</BuyerEmail>
+        <AmazonOrderId>105-5312931-5783404</AmazonOrderId>
+        <LastUpdateDate>2017-02-01T07:24:07Z</LastUpdateDate>
+        <IsReplacementOrder>false</IsReplacementOrder>
+        <ShipServiceLevel>Standard</ShipServiceLevel>
+        <NumberOfItemsShipped>1</NumberOfItemsShipped>
+        <OrderStatus>Shipped</OrderStatus>
+        <SalesChannel>Amazon.com</SalesChannel>
+        <IsBusinessOrder>false</IsBusinessOrder>
+        <NumberOfItemsUnshipped>0</NumberOfItemsUnshipped>
+        <BuyerName>James Cohen</BuyerName>
+        <OrderTotal>
+          <CurrencyCode>USD</CurrencyCode>
+          <Amount>7.41</Amount>
+        </OrderTotal>
+        <IsPremiumOrder>false</IsPremiumOrder>
+        <EarliestShipDate>2017-02-01T07:22:21Z</EarliestShipDate>
+        <MarketplaceId>ATVPDKIKX0DER</MarketplaceId>
+        <FulfillmentChannel>AFN</FulfillmentChannel>
+        <PaymentMethod>Other</PaymentMethod>
+        <ShippingAddress>
+          <StateOrRegion>CA</StateOrRegion>
+          <City>CAMPBELL</City>
+          <CountryCode>US</CountryCode>
+          <PostalCode>95008-6720</PostalCode>
+          <Name>James Cohen</Name>
+          <AddressLine1>1436 SHARP AVE</AddressLine1>
+        </ShippingAddress>
+        <IsPrime>false</IsPrime>
+        <ShipmentServiceLevelCategory>Standard</ShipmentServiceLevelCategory>
+        <SellerOrderId>105-5312931-5783404</SellerOrderId>
+      </Order>
+    </Orders>
+  </GetOrderResult>
+  <ResponseMetadata>
+    <RequestId>8d3fa3b3-d246-426a-9bf7-7dfa807dac45</RequestId>
+  </ResponseMetadata>
+</GetOrderResponse>

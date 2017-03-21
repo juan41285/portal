@@ -1,0 +1,230 @@
+.home-header {
+  position: relative;
+  height: 550px;
+  background-image: linear-gradient(#0288D1, #AEDAFF);
+  border-bottom-left-radius: 50% 5%;
+  border-bottom-right-radius: 50% 5%;
+  margin-bottom: 80px;
+}
+.home-parallax {
+   margin:0 auto;
+  /*width: 90%;*/
+  position: absolute;
+  top: 90px;
+  left: 180px;
+}
+
+
+.slider{
+	margin-top: 50px;
+	
+}
+
+.slider .home-text-slider{
+    background: rgba(255,255,255,0.4);
+    padding: 40px;
+     /*-webkit-border-top-left-radius: 80px; */
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 80px;
+    /*-webkit-border-bottom-left-radius: 2px;*/
+    /*-moz-border-radius-topleft: 80px;*/
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 80px;
+    /*-moz-border-radius-bottomleft: 2px;*/
+     /*border-top-left-radius: 80px; */
+     border-top-right-radius: 8px; 
+     border-bottom-right-radius: 80px; 
+    /*border-bottom-left-radius: 2px;*/
+    height: 400px;
+}
+
+}
+
+.slider .home-text-slider a{
+	margin-left: 40%;
+
+}
+.slider .img {
+  width: 100%;
+  height: 0;
+  padding-top: 75%;
+  background-size: cover;
+   background-color: rgba(255,255,255,0.4);
+
+  height: 400px;
+
+    -webkit-border-top-left-radius: 80px; 
+ /*   -webkit-border-top-right-radius: 2px;*/
+    /*-webkit-border-bottom-right-radius: 2px;*/
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-topleft: 80px;
+    /*-moz-border-radius-topright: 80px;*/
+    /*-moz-border-radius-bottomright: 2px;*/
+    -moz-border-radius-bottomleft: 8px;
+     border-top-left-radius: 80px; 
+     /*border-top-right-radius: 2px; */
+     /*border-bottom-right-radius: 200px; */
+    /*border-bottom-right-radius: 2px;*/
+}
+.slider h2 {
+	/*text-align: center;*/
+	font-size: 22px;
+}
+.slider h3{
+	font-size:18px;
+}
+
+
+.card {
+  background: white;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 400px;
+  margin: 8px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+  -webkit-transform: scale(0.75) translate3d(0, 200px, 0);
+  transform: scale(0.75) translate3d(0, 200px, 0);
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  cursor: pointer;
+  
+}
+
+.card.angular-grid-item {
+  opacity: 1;
+  -webkit-transform: scale(1) translate3d(0, 0, 0);
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+.card .img {
+  width: 100%;
+  height: 0;
+  padding-top: 75%;
+  background-size: cover;
+  background-color: #ccc;
+}
+
+.card .inside {
+  padding: 16px;
+  word-wrap: break-word;
+}
+
+.card .inside h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.card .inside a {
+  color: #E91E63;
+  text-decoration: none;
+}
+
+.card .inside a:hover {
+  text-decoration: underline;
+}
+.card:hover {
+    -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card .inside .description {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #555;
+}
+
+.cards-wrap {
+  margin: 0 5%;
+  padding-bottom: 64px;
+  position: relative;
+}
+
+.loading-more-indicator {
+  text-align: center;
+}
+
+.loading-more-indicator md-progress-circular {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  display: inline-block;
+}
+
+.grid {
+  border: 1px solid #cccccc;
+  list-style: none;
+  background: #ffffff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.grid-img {
+  width: 100%;
+  vertical-align: middle;
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+  background-color: #fff;
+ 
+}
+
+.grid-img.img-loaded {
+  visibility: visible;
+  opacity: 1;
+}
+.load-more {
+    background: #F2F2F2; 
+    height: 48px; 
+    margin: 10px auto; 
+    padding-top: 5px;
+}
+.load-more h4{
+    font-weight: bold;
+    color: #808080;
+}
+
+
+.home-link-image{
+    padding: 10px;
+    background: #fff;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: 350px;
+    margin-bottom: 60px;
+}
+.home-link-image a{
+    text-decoration: none;
+    color: #333;
+}
+
+.home-link-image a h1{
+
+  font-size: 24px;
+  text-align: center;
+}
+
+.home-link-image h3{
+     text-align: center;
+    position: absolute;
+    top: 60%;
+    background: #9C27B0;
+    padding: 10px;
+    color: white;
+  
+}
+.home-link-image img{
+text-align: center;
+margin:0 auto;
+  z-index: 1;
+
+}

@@ -1,122 +1,23 @@
-<nav class="fondo-menu-top shadow-z-1 " >
-     <!-- <a href="#" class="btn btn-default btn-xs">Entrar</a> -->
-   </nav>
- <nav class="fondo-blanco shadow-z-1 " >
-  <div class="container">
-   
-<div class="row">
-     <div class="col-md-6 col-xs-12">
-        <a href="/"><img src="images/banner-ced.png" alt="" class="img-responsive"></a>
-     </div>
-     <div class="col-md-6 hidden-xs">
-     
-     <div class="clearfix barra-social">
-         <a href="https://www.youtube.com/channel/UCpbI-q03K3u3fP0jB5pIVjA?sub_confirmation=1" class="pull-right color-ut" target="_blank">
-         <span class="flaticon-youtube-logotype"></span>
-       </a>
-       <a href="https://www.facebook.com/edudigtuc" class="pull-right color-fb" target="_blank">
-         <span class="flaticon-facebook-logo-button"></span>
-       </a>
-        <a href="https://twitter.com/edudigtuc?ref_src=twsrc%5Etfw" class="pull-right color-tw" target="_blank">
-         <span class="flaticon-twitter-logo-button"></span>
-       </a>
-    </div>
-     </div>
-    </div>
-        
-  </div>
-</nav >
-<div class="navbar navbar-info">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-warning-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- <a class="navbar-brand" href="javascript:void(0)">Brand</a> -->
-    </div>
-    <div class="navbar-collapse collapse navbar-warning-collapse">
-      <ul class="nav navbar-nav">
-        <li ng-class="{active: $route.current.activeMenu == '/'}"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        <li ng-class="{active: $route.current.activeMenu == 'articulos'}"><a href="/articulos">Noticias</a></li>
-         <li ng-class="{active: $route.current.activeMenu == 'capacitacion'}"><a href="/capacitaciones">Capacitaciones</a></li>
-        <li ng-class="{active: $route.current.activeMenu == 'agenda'}"><a href="/agenda">Agenda</a></li>
-        <li ng-class="{active: $route.current.activeMenu == 'contacto'}"><a href="/contacto">Contacto</a></li>
-  <!--       <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Action</a></li>
-            <li><a href="javascript:void(0)">Another action</a></li>
-            <li><a href="javascript:void(0)">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Dropdown header</li>
-            <li><a href="javascript:void(0)">Separated link</a></li>
-            <li><a href="javascript:void(0)">One more separated link</a></li>
-          </ul>
-        </li> -->
-      </ul>
-  <!--     <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="text" class="form-control col-md-12" placeholder="Buscar en el sitio">
-        </div>
-      </form> -->
-<!--       <ul class="nav navbar-nav navbar-right">
-        <li><a href="javascript:void(0)">Link</a></li>
-        <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Action</a></li>
-            <li><a href="javascript:void(0)">Another action</a></li>
-            <li><a href="javascript:void(0)">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="javascript:void(0)">Separated link</a></li>
-          </ul>
-        </li>
-      </ul> -->
-    </div>
-  </div>
+<div class="navbar-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-xs-12">
+
+				<img class="img-responsive" src="images/logo_white.png">
+			</div>
+		   <div class=" visible-xs">
+		   	
+		   </div>
+			<div class="col-md-6 hidden-xs">
+				<div class="btn-group pull-right navbar-menu" role="group" aria-label="...">
+				  <a href="/" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == '/'}"><span class="glyphicon glyphicon-home"></span>			</a>
+			<!-- 	  <a href="/publicaciones" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'publicaciones'}">Publicaciones</a> -->
+				  <a href="/agendas" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'agendas'}">Agendas</a>
+				  <a href="/recursos" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'recursos'}">Recursos</a>
+				  <a href="/contacto" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'contacto'}">Contacto</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-<!-- <header class="azul-pnide altura-2">
-  <div class="container" id="top"> 
-    <div class="row">
-      <div class="col-md-12 col-xs-12" ng-controller="banner">
-        <img src="images/fondo-material.png" alt="Logo coordinación Provincial TIC" class="img-responsive rwdimgmap" usemap="#Map" />
-<map name="Map">
-  <area shape="rect" coords="-2,0,229,133" href="http://tictucuman.net/">
-  <area shape="rect" coords="1070,14,1176,127" href="http://www.tucuman.gov.ar/" target="_blank">
-</map>
-      </div>
-     
-    </div>
-    <div class="col-md-12">
-      <ul class="list-inline menu-propio" ng-controller="activarMenuCtrl">
-  <li ng-class="{active: $route.current.activeMenu == '/'}"><a href="/">Inicio</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'desarrollo-profesional-tic'}"><a href="/desarrollo-profesional-tic">Desarrollo Profesional</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'noticias'}"><a href="/noticias">Noticias</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'agendas'}"><a href="/agendas">Agenda</a></li>
-  <li ng-class="{active: $route.current.activeMenu == 'lineas-de-accion'}"><a href="/lineas-de-accion">Líneas de Acción</a></li>
-</ul>
-
-<ul class="list-inline pull-right menu-propio-der">
-  <li><a href="https://www.facebook.com/coordinaciontictucuman" target="_blank" tooltip-placement="bottom" uib-tooltip="Facebook"><span class="fa fa-facebook white"></span></a></li>
-  <li><a href="https://twitter.com/tictucuman" target="_blank" tooltip-placement="bottom"uib-tooltip="Twitter"><span class="fa fa-twitter white"></span></a></li>
-  <li>
-  <a href="https://www.youtube.com/channel/UCpbI-q03K3u3fP0jB5pIVjA?sub_confirmation=1" target="_blank"  
-  tooltip-placement="bottom"  uib-tooltip="YouTube">
-  <span class="fa fa-youtube-play rojo-yt"></span></a>
-  </li>
-  <li> <a href="http://tictucuman.net/personal/login.php"  target="_blank" 
-   tooltip-placement="bottom" uib-tooltip="Directorio personal" ><span class="fa fa-user rojo-yt"></span></a></li>
-
-</ul>
-    </div>
-  </div>
-
-</header> -->
-
-<!-- <div ng-controller="BuscadorCtrl" ng-include="template.buscador" ></div>  -->
 

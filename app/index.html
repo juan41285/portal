@@ -4,29 +4,41 @@
     <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta content='http://innovacioneducativa.gob.ar/images/fondo-contacto.png' property='og:image'>
-        <meta property="og:url" content="http://innovacioneducativa.gob.ar" />
+    <meta content='http://educaciondigitaltuc.gob.ar/images/fondo-contacto.png' property='og:image'>
+        <meta property="og:url" content="http://educaciondigitaltuc.gob.ar" />
 
    <meta name="description" content="Sitio web de la Coordinación de Educación Digital de Tucumán - Ministerio de Educación. Encontra toda la información relacionada con los trayectos formativos orientados a la educación con la nuevas tecnologías">
    <META name="keywords" content="Tucumán,Educación,TIC, Innovación, Innovacion, Tucuman Innovacion, Cursos de Tics, Capacitaciones Tucumán, Ministerio de Educación de Tucuman, Ciidept, Cursos, Certificados, Docentes, Panel Docente, Robotica, Conectar Igualdad Tucuman, Netbooks, Plataforma Virtual Educativa, Mapa Georeferencial, Festival de Cine, Bicentenario">
     <title >Coordinación de Educación Digital - Ministerio de Educación de Tucumán</title>
     <meta view-head name="viewport" content="width=device-width, initial-scale=1">
     <!-- Coloca favicon.ico y apple-touch-icon(s) en el directorio raíz -->
-<link rel="shortcut icon" type="image/png" href="http://www.tictucuman.net/favicon.png"/>
-<link href="https://fonts.googleapis.com/css?family=Cabin+Condensed:600,700|Roboto+Condensed:400,700" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,500i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     
     <!-- build:css css/style.min.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/material.css" />
-    <link rel="stylesheet" href="lib/bootstrap-material-design/dist/css/ripples.css" />
     <link rel="stylesheet" href="lib/ngScrollable/min/ng-scrollable.min.css" />
+    <link rel="stylesheet" href="lib/sweetalert/dist/sweetalert.css" />
+    <link rel="stylesheet" href="lib/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="lib/angular-notification-icons/dist/angular-notification-icons.css" />
+    <link rel="stylesheet" href="lib/angular-aside/dist/css/angular-aside.css" />
+    <link rel="stylesheet" href="lib/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="lib/ladda/dist/ladda.min.css" />
+    <link rel="stylesheet" href="lib/angular-backtop/dist/angular-backtop.css" />
+    <link rel="stylesheet" href="lib/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" />
     <!-- endbower -->
     <!-- inject:css -->
+    <link rel="stylesheet" href="/stylesheets/agenda.css">
+    <link rel="stylesheet" href="/stylesheets/amaterial.css">
     <link rel="stylesheet" href="/stylesheets/animate.css">
     <link rel="stylesheet" href="/stylesheets/flaticon.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <link rel="stylesheet" href="/stylesheets/publicacion.css">
     <!-- endinject -->
    
     <!-- endbuild -->    
@@ -46,14 +58,13 @@ III. Anatomía de una aplicación AngularJS.
 u sitio -->
   </head>
   <body > 
-<div ng-controller="NavbarCtrl" ng-include="template.navbar" ></div> 
+<div ng-controller="NavbarCtrl" ng-include="template" ></div> 
 <div ng-view="">
   
 </div>
-<div ng-controller="RedesCtrl" ng-include="template.redes" class="hidden-xs" ></div> 
-<div ng-controller="FooterCtrl" ng-include="template.footer" ></div> 
-
-
+<div ng-controller="RedesCtrl" ng-include="template" class="hidden-xs" ></div> 
+<div ng-controller="FooterCtrl" ng-include="template" ></div> 
+             
 <div id="fb-root"></div>
     <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -71,9 +82,6 @@ u sitio -->
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="lib/angular-route/angular-route.js"></script>
     <script src="lib/angular-resource/angular-resource.js"></script>
-    <script src="lib/bootstrap-material-design/dist/js/material.js"></script>
-    <script src="lib/bootstrap-material-design/dist/js/ripples.js"></script>
-    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
     <script src="lib/angular-utils-pagination/dirPagination.js"></script>
     <script src="lib/angular-scroll/angular-scroll.js"></script>
     <script src="lib/angular-animate/angular-animate.js"></script>
@@ -85,31 +93,44 @@ u sitio -->
     <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="lib/moment/moment.js"></script>
     <script src="lib/angular-moment/angular-moment.js"></script>
+    <script src="lib/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="lib/ngSweetAlert/SweetAlert.js"></script>
+    <script src="lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script src="lib/ngMask/dist/ngMask.js"></script>
+    <script src="lib/angulargrid/angulargrid.js"></script>
+    <script src="lib/angular-notification-icons/dist/angular-notification-icons.js"></script>
+    <script src="lib/angular-touch/angular-touch.js"></script>
+    <script src="lib/angular-aside/dist/js/angular-aside.js"></script>
+    <script src="lib/angular-recaptcha/release/angular-recaptcha.js"></script>
+    <script src="lib/slick-carousel/slick/slick.js"></script>
+    <script src="lib/angular-slick-carousel/dist/angular-slick.js"></script>
+    <script src="lib/spin.js/spin.js"></script>
+    <script src="lib/ladda/dist/ladda.min.js"></script>
+    <script src="lib/ladda-angular/dist/ladda-angular.js"></script>
+    <script src="lib/angular-backtop/dist/angular-backtop.js"></script>
+    <script src="lib/gsap/src/uncompressed/TweenMax.js"></script>
+    <script src="lib/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+    <script src="lib/angular-slugify/angular-slugify.js"></script>
+    <script src="lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:js js/app.min.js -->
+    <!-- build:js js/app.min.js --> 
     <!-- inject:js -->
     <script src="/scripts/services.js"></script>
-    <script src="/scripts/services/Home.js"></script>
-    <script src="/scripts/services/HGaleria.js"></script>
-    <script src="/scripts/services/Capacitacion.js"></script>
-    <script src="/scripts/services/Articulos.js"></script>
-    <script src="/scripts/services/Agenda.js"></script>
-    <script src="/scripts/controller/cambiarCtrl.js"></script>
+    <script src="/scripts/services/publicaciones.svc.js"></script>
+    <script src="/scripts/services/home.svc.js"></script>
+    <script src="/scripts/services/agenda.svc.js"></script>
     <script src="/scripts/controllers.js"></script>
-    <script src="/scripts/controller/SuscripcionCtrl.js"></script>
-    <script src="/scripts/controller/RedesCtrl.js"></script>
-    <script src="/scripts/controller/NavbarCtrl.js"></script>
-    <script src="/scripts/controller/InscripcionCtrl.js"></script>
-    <script src="/scripts/controller/HomeCtrl.js"></script>
-    <script src="/scripts/controller/GaleriaCtrl.js"></script>
-    <script src="/scripts/controller/FooterCtrl.js"></script>
-    <script src="/scripts/controller/ContactoCtrl.js"></script>
-    <script src="/scripts/controller/CertificacionCTRL.js"></script>
-    <script src="/scripts/controller/CapacitacionCtrl.js"></script>
-    <script src="/scripts/controller/ArticulosCtrl.js"></script>
-    <script src="/scripts/controller/AgendaCtrl.js"></script>
+    <script src="/scripts/controllers/redes.ctrl.js"></script>
+    <script src="/scripts/controllers/recursos.ctrl.js"></script>
+    <script src="/scripts/controllers/publicaciones.ctrl.js"></script>
+    <script src="/scripts/controllers/navbar.ctrl.js"></script>
+    <script src="/scripts/controllers/home.ctrl.js"></script>
+    <script src="/scripts/controllers/footer.ctrl.js"></script>
+    <script src="/scripts/controllers/agenda.ctrl.js"></script>
     <script src="/scripts/templates.js"></script>
+    <script src="/scripts/parallax.min.js"></script>
     <script src="/scripts/jquery.mousewheel-3.1.3.js"></script>
     <script src="/scripts/functions.js"></script>
     <script src="/scripts/filters.js"></script>
@@ -127,8 +148,50 @@ u sitio -->
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-50795426-1','auto');ga('send','pageview');
     </script>
+  <script>
 
+  // Nothing new here...it's all in the CSS!
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
 
+  </script>
+
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1007793882601953',
+      xfbml      : true,
+      version    : 'v2.6'
+    }); 
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+  function loadjscssfile(filename, filetype) {
+    if (filetype == "js") {
+        // if filename is a external JavaScript file
+        var fileref = document.createElement('script');
+        fileref.setAttribute("type","text/javascript");
+        fileref.setAttribute("src", filename);
+    }
+    else if (filetype == "css") {
+        //if filename is an external CSS file
+        var fileref = document.createElement("link");
+        fileref.setAttribute("rel", "stylesheet");
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref != "undefined") {
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+    }
+}
+</script>
     
   </body>
 </html>
