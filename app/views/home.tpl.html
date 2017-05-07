@@ -1,20 +1,41 @@
-<div class="home-header">
+<div class="home-header1 " style="margin-top: 10px;" >
 
 <div class="container">
-  <div class="row">
+<div class="row">
+  <div class="col-lg-12">
+    
 
-    <div class="col-md-10 col-md-offset-1 col-xs-12">
-           <slick class="slider" settings="fakaSlider" prev-arrow=".component-slider-left" next-arrow=".component-slider-right" ng-if="slickConfig3Loaded" init-onload=true>
-              <div class="row" ng-repeat="s in slide ">
-                  <div class="col-md-5"  style="padding-right: 0;">
-                   <!-- <img class="img-responsive" ng-src="{{s.thumbnail}}"> -->
-                   <!-- {{s.thumbnail}} -->
-                   <div class="img" style="background-image: url({{s.thumbnail}}); "></div>
+ <div class="home-slider-left hidden-xs">
+              <a href="#" ><span class="glyphicon glyphicon-chevron-left"></span></a>
+            </div>
+             <slick class="slider" settings="fakaSlider" prev-arrow=".home-slider-left" next-arrow=".home-slider-right" ng-if="slickConfig3Loaded" init-onload=true>
+<div class="drop-shadow lifted" ng-repeat="s in slide ">
+             <div   style="background-image: url({{s.thumbnail}}); height: 50vh; background-size: cover; cursor: pointer; "  uib-tooltip="Clic para leer esta noticia"  tooltip-trigger  tooltip-placement="bottom" ng-click="linkOpen(s.id,s.titulo)">
+             
+               <div class="slider-content-title">
+                  <h2>{{::s.subtitulo}}</h2>
+              </div>
+
+        <div class="slider-content-desc">
+                 <h3>{{::s.titulo}}</h3>
+
+                 
+                                 </div>
+                  
+             </div>  
+     
+             </div>
+             <!--  <div class="row">
+                  <div class="col-lg-12"  style="padding-right: 0;">
+                   <img class="img-responsive" ng-src="{{s.thumbnail}}">
+                   
+                   <div class=""></div>
                   </div>
                   <div class="col-md-7" style="padding-left: 0; ">
                   <div class="home-text-slider clearfix">
                       <h2>{{::s.titulo}}</h2>
                   <h3>{{::s.subtitulo}}</h3>
+                  {{s.thumbnail}}
                    <div ng-bind-html="s.descripcion">
                      
                    </div>
@@ -22,96 +43,51 @@
                   </div>
                 
                   </div>
-              </div>
+              </div> -->
                  
   
              
 
      </slick>
+
+<div class="home-slider-right hidden-xs">
+  <a href="#""><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+</div>
+
+
+
+
+  </div>
+</div>
+
+  </div>
+
+</div>
+ <div class="container">
+  <div class="row">
+   <div class="col-md-12 ">
+    <h1 class="home-title-blue ">
+   <a href="/capacitaciones">Nuevo Programa Provincial</a></h1>
+   <div class="home-title-blue ">
+        <a href="/capacitaciones">
+   <img class="img-responsive" src="images/gifcapa.gif">
+     
+   </a>
+   </div>
+
+   </div>
+   </div>
+   </div>
+ <div class="container">
+  <div class="row">
+   <div class="col-md-8 ">
+   <h1 class="home-title-blue ">
+   <a href="/recursos">Accesos directos</a></h1>
     </div>
-  </div>
-<div class="home-parallax col-md-4" >
-    
-<ul id="scene" class="scene border fill" >
-   <li class="layer " data-depth="5.90"><img src="images/h1.png" class="img-responsive"></li>
-   <!-- <li class="layer " data-depth="0.30"><img src="images/h3.png" class="img-responsive"></li> -->
-   <!-- <li class="layer " data-depth="1.90"><img src="images/h7.png"  class="img-responsive"></li> -->
-  
-    </ul>
-  </div>
+  <div class="col-lg-12">
 
-</div>
-
-
-
-</div>
-<div class="container">
-  <div class="row">
-<div class="col-md-12">
-   <h1 style="
-    font-size: 28px;
-    text-align: center;
-    border-bottom: 2px solid #03A9F4;
-    padding-bottom: 10px;
-">Accesos directos</h1>
-</div>
-  <div class="col-md-4">
-  <div class="home-link-image">
-     <a href="http://docentes.educaciondigitaltuc.gob.ar/login.php" target="_blank">
-      <img class="img-responsive" src="images/panel-docente.png">
-     <!--  <h4>El Panel Docente es una herramienta de autogestión desde donde los docentes podrán administrar las capacitaciones que realizan a través de la Coordinación de Educación Digital</h4>
- -->
-    </a>
-  </div>
-   
-  </div>
-
-    <div class="col-md-4">
-    <div class="home-link-image">
-      <h3>Plataforma Virtual Educativa</h3>
-
-    <a href="http://plataforma.educaciondigitaltuc.gob.ar/moodle/" target="_blank">
-      <img class="img-responsive" src="images/plataforma.png">
-     <!--  <h4>La Plataforma Virtual Educativa es un espacio para docentes, alumnos y publico general que desee complementar sus capacitaciones. </h4> -->
-    </a>
-  </div>
-  </div>
-
-      <div class="col-md-4">
-      <div class="home-link-image">
-         <h3>Revista institucional 2016</h3>
-    <a href="http://educaciondigitaltuc.gob.ar/revista/2016/" target="_blank">
-      <img class="img-responsive" src="images/revista.jpg">
-   
-
-    </a>
-  </div>
-  </div>
-  <div class="col-md-12">
-    <img src="images/descarga.jpeg" alt="" class="img-responsive">
-    <h1 style="
-    position: absolute;
-    text-align: center;
-    margin-top: -200px;
-    margin-left: auto;
-    left: 30%;
-    background: rgba(96, 125, 139, 0.17);
-    padding: 15px;
-">Sitio en construcción</h1>
-    <hr>
-    <h1 style="
-    font-size: 28px;
-    text-align: center;
-    border-bottom: 2px solid #03A9F4;
-    padding-bottom: 10px;
-">Publicaciones</h1>
-  </div>
-  </div>
-  </div>
-
-
-  <div class="container">
-  <div class="row">
+ 
   <md-content id="content-scroller">
        <div
              class="dynamic-grid"
@@ -120,10 +96,92 @@
              ag-gutter-size="25"
              ag-refresh-on-img-load="false"
           >
-          <div class="card third-effect " data-ng-repeat="p in publicaciones" ng-click="linkOpen(p.id,p.titulo)">
-            <div class="img " style="background-image: url({{::p.thumbnail}});"></div> 
+          <div class="card third-effect ">
+           <a href="/capacitaciones" >
+            <div class="img " style="background-image: url(images/secciondesarrollo.png);"></div> 
+        </a>
+        <!--     <div class="inside ">
+              <h3 >{{::p.titulo}}</h3>
+              <div change-url class="description" ng-bind-html="p.descripcion" ></div>
+           
+             
+            </div> -->
+          </div>
+               <div class="card third-effect ">
+               <a href="https://ludus.educaciondigitaltuc.gob.ar/" target="_blank">
+            <div class="img " style="background-image: url(images/bannerbarabot.png);"></div> 
+</a>
+        <!--     <div class="inside ">
+              <h3 >{{::p.titulo}}</h3>
+              <div change-url class="description" ng-bind-html="p.descripcion" ></div>
+           
+             
+            </div> -->
+          </div>
+               <div class="card third-effect ">
+               <a href="https://docentes.educaciondigitaltuc.gob.ar/login.php" target="_blank">
+            <div class="img " style="background-image: url(images/panel-docente.png);"></div> 
+</a>
+        <!--     <div class="inside ">
+              <h3 >{{::p.titulo}}</h3>
+              <div change-url class="description" ng-bind-html="p.descripcion" ></div>
+           
+             
+            </div> -->
+          </div>
+                    <div class="card third-effect ">
+                     <a href="https://plataforma.educaciondigitaltuc.gob.ar/moodle/" target="_blank">
+            <div class="img " style="background-image: url(images/plataforma.png);"></div> 
+</a>
+        <!--     <div class="inside ">
+              <h3 >{{::p.titulo}}</h3>
+              <div change-url class="description" ng-bind-html="p.descripcion" ></div>
+           
+             
+            </div> -->
+          </div>
+          <div class="card third-effect ">
+              <a href="https://educaciondigitaltuc.gob.ar/revista/2016/" target="_blank">
+            <div class="img " style="background-image: url(images/revista.jpg);"></div> 
+</a>
+        <!--     <div class="inside ">
+              <h3 >{{::p.titulo}}</h3>
+              <div change-url class="description" ng-bind-html="p.descripcion" ></div>
+           
+             
+            </div> -->
+          </div>
+        </div>
+</md-content>
+    </div>
+  </div>
 
-            <div class="inside ">
+</div>
+<div class="container">
+  <div class="row">
+<div class="col-md-7 col-xs-12">
+   <h1 class="home-title-pink ">
+   <a href="/publicaciones">
+       Publicaciones
+   </a>
+ 
+   </h1>
+   </div>
+<div class="col-md-3 hidden-xs">
+
+   <div class="btn-group pull-right " role="group" aria-label="..." style="margin-top: 12px;">
+  <button type="button" class="btn btn-primary PubSlider-left" style="border-right: 1px solid #fff"><span class="glyphicon glyphicon-chevron-left"></span></button>
+  <button type="button" class="btn btn-primary PubSlider-right"><span class="glyphicon glyphicon-chevron-right"></span></button>
+
+</div>
+</div>
+  <div class="col-md-12 col-xs-12 col-sm-12">
+  <slick class="" settings="PubSlider" prev-arrow=".PubSlider-left" next-arrow=".PubSlider-right" ng-if="PubSliderActive" init-onload=true>
+
+     <div class="sliderPub" data-ng-repeat="p in publicaciones" ng-click="linkOpen(p.id,p.titulo)">
+            <div class="sliderPub-image" style="background-image: url({{::p.thumbnail}});"></div> 
+
+            <div class="sliderPub-desc ">
               <h3 >{{::p.titulo}}</h3>
               <div change-url class="description" ng-bind-html="p.descripcion" ></div>
               <!-- <a href="/blog/{{post.id}}"><small>Primivo</small></a> -->
@@ -132,46 +190,13 @@
              
             </div>
           </div>
-        </div>
-</md-content>
    
-  </div>
-  <div class="col-md-12">
-    <button class="btn btn-block" ng-click="cargarMas()">Cargar más publicaciones</button>
-  </div>
-</div>
-<script>
 
-  // Nothing new here...it's all in the CSS!
- var scene = document.getElementById('scene');
-  var parallax = new Parallax(scene, {
-    calibrateX: false,
-    calibrateY: true,
-    invertX: false,
-    invertY: true,
-    limitX: 60,
-    limitY: 60,
-    scalarX: 2,
-    scalarY: 2,
-    frictionX: 0.2,
-    frictionY: 0.8,
-    originX: 0.0,
-    originY: 0.0
-  });
- // var scene = document.getElementById('scene1');
- //  var parallax = new Parallax(scene, {
- //    calibrateX: false,
- //    calibrateY: true,
- //    invertX: false,
- //    invertY: true,
- //    limitX: 60,
- //    limitY: 60,
- //    scalarX: 2,
- //    scalarY: 2,
- //    frictionX: 0.2,
- //    frictionY: 0.8,
- //    originX: 0.0,
- //    originY: 0.0
- //  });
-  </script>
+
+
+</slick>
+  </div>
+  </div>
+  </div>
+
 

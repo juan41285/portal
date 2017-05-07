@@ -14,6 +14,7 @@ var gulp      = require('gulp'),
     useref    = require('gulp-useref'),
     uglify    = require('gulp-uglify'),
     uncss     = require('gulp-uncss'),
+    manifest     = require('gulp-manifest'),
     pump = require('pump'),
     cleanCSS = require('gulp-clean-css'),
      ngAnnotate = require('gulp-ng-annotate'),
@@ -86,6 +87,8 @@ gulp.task('copy',['wiredep'], function() {
     .pipe(gulp.dest('./dist/fonts'));  
      gulp.src('./app/lib/bootstrap-material-design/fonts/**')
     .pipe(gulp.dest('./dist/fonts'));  
+     gulp.src('./app/views/**')
+    .pipe(gulp.dest('./dist/views'));  
 });
 
 
@@ -183,7 +186,17 @@ gulp.task('clean', function() {
 // });
 
 
-
+gulp.task('manifest', function(){
+  gulp.src(['dist/*/**'], { base: 'dist/' })
+    .pipe(manifest({
+      hash: true,
+      preferOnline: true,
+      network: ['*'],
+      filename: 'portal.manifest',
+      exclude: 'portal.manifest'
+     }))
+    .pipe(gulp.dest('dist/'));
+});
 
 gulp.task('uncss', function() {
   gulp.src('./dist/css/style.min.css')
@@ -221,4 +234,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['server', 'templates', 'inject', 'wiredep', 'watch','jshint','css']);
 gulp.task('build', ['copy','imagenes']);
-gulp.task('compress', ['compressJS','imagenes','cacheBuster','minify-css']);
+gulp.task('compress', ['compressJS','imagenes','minify-css']);

@@ -4,6 +4,6 @@
 /*********************/
   angular
     .module('portal.services', ['ngResource'])
-    .constant('BaseUrl', 'http://api.educaciondigitaltuc.gob.ar/api-portal/public');
+    .constant('BaseUrl', 'https://api.educaciondigitaltuc.gob.ar/api-portal/public');
 
 })();

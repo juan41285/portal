@@ -1,0 +1,24 @@
+<div style="max-width: 320px">
+<div class="modal-header " >
+    <!-- <h3 class="modal-title">ngAside</h3> -->
+
+        
+				  <button type="button" class="btn btn-simple  menu-movil-btn " ng-click="cancel($event)">
+                 <span class="glyphicon glyphicon-remove-circle"></span>
+            </button>
+			
+</div>
+<div class="modal-body">
+  	<div class="btn-group" role="group" aria-label="...">
+				  <a href="/" class="btn btn-info btn-block" ng-class="{'navbar-active': $route.current.activeMenu == '/'}" ng-click="cancel($event)"><span class="glyphicon glyphicon-home"></span>			</a>
+				  <a href="/capacitaciones" class="btn btn-primary btn-block" ng-class="{'navbar-active': $route.current.activeMenu == 'capacitaciones'}" ng-click="cancel($event)">Capacitaciones</a>
+				  <a href="/agendas" class="btn btn-info btn-block" ng-class="{'navbar-active': $route.current.activeMenu == 'agendas'}" ng-click="cancel($event)">Agendas</a>
+				  <a href="/recursos" class="btn btn-info btn-block" ng-class="{'navbar-active': $route.current.activeMenu == 'recursos'}" ng-click="cancel($event)">Recursos</a>
+				  <a href="/contacto" class="btn btn-info btn-block" ng-class="{'navbar-active': $route.current.activeMenu == 'contacto'}" ng-click="cancel($event)">Contacto</a>
+				</div>
+</div>
+<div class="modal-footer">
+   
+   
+</div>
+</div>

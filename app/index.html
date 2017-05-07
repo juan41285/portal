@@ -4,6 +4,7 @@
     <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="theme-color" content="#27A6CF">
     <meta content='http://educaciondigitaltuc.gob.ar/images/fondo-contacto.png' property='og:image'>
         <meta property="og:url" content="http://educaciondigitaltuc.gob.ar" />
 
@@ -28,11 +29,14 @@
     <link rel="stylesheet" href="lib/ladda/dist/ladda.min.css" />
     <link rel="stylesheet" href="lib/angular-backtop/dist/angular-backtop.css" />
     <link rel="stylesheet" href="lib/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css" />
+    <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/stylesheets/agenda.css">
     <link rel="stylesheet" href="/stylesheets/amaterial.css">
     <link rel="stylesheet" href="/stylesheets/animate.css">
+    <link rel="stylesheet" href="/stylesheets/capacitacion.css">
+    <link rel="stylesheet" href="/stylesheets/flat-form.css">
     <link rel="stylesheet" href="/stylesheets/flaticon.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/home.css">
@@ -76,6 +80,7 @@ u sitio -->
  
     <!-- build:js js/vendor.min.js -->
     <!-- bower:js -->
+    <script src="lib/es5-shim/es5-shim.js"></script>
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/arrive/src/arrive.js"></script>
@@ -113,6 +118,9 @@ u sitio -->
     <script src="lib/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
     <script src="lib/angular-slugify/angular-slugify.js"></script>
     <script src="lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
+    <script src="lib/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <script src="lib/ng-file-upload/ng-file-upload.js"></script>
+    <script src="lib/angular-ladda/dist/angular-ladda.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js --> 
@@ -120,15 +128,20 @@ u sitio -->
     <script src="/scripts/services.js"></script>
     <script src="/scripts/services/publicaciones.svc.js"></script>
     <script src="/scripts/services/home.svc.js"></script>
+    <script src="/scripts/services/capacitaciones.scv.js"></script>
     <script src="/scripts/services/agenda.svc.js"></script>
     <script src="/scripts/controllers.js"></script>
     <script src="/scripts/controllers/redes.ctrl.js"></script>
     <script src="/scripts/controllers/recursos.ctrl.js"></script>
     <script src="/scripts/controllers/publicaciones.ctrl.js"></script>
     <script src="/scripts/controllers/navbar.ctrl.js"></script>
+    <script src="/scripts/controllers/inscripcion.ctrl.js"></script>
     <script src="/scripts/controllers/home.ctrl.js"></script>
     <script src="/scripts/controllers/footer.ctrl.js"></script>
+    <script src="/scripts/controllers/contacto.ctrl.js"></script>
+    <script src="/scripts/controllers/capacitaciones.ctrl.js"></script>
     <script src="/scripts/controllers/agenda.ctrl.js"></script>
+    <script src="/scripts/controllers/admin.ctrl.js"></script>
     <script src="/scripts/templates.js"></script>
     <script src="/scripts/parallax.min.js"></script>
     <script src="/scripts/jquery.mousewheel-3.1.3.js"></script>
@@ -151,8 +164,8 @@ u sitio -->
   <script>
 
   // Nothing new here...it's all in the CSS!
-  var scene = document.getElementById('scene');
-  var parallax = new Parallax(scene);
+  // var scene = document.getElementById('scene');
+  // var parallax = new Parallax(scene);
 
   </script>
 

@@ -1,26 +1,102 @@
 .navbar-content {
   min-height: 80px;
-  background: #0288D1;
+  background: #fff;
+box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
 }
 
+.navbar-logo{
+  padding-top: 8px;
+}
 .navbar-menu a, .navbar-menu .btn-simple , .navbar-menu .btn-simple:active, .navbar-menu .btn-simple:visited{
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  color: white;
+  color: #333;
   margin-top: 30px;
-  font-weight: lighter;
+  font-weight: normal;
   text-transform: uppercase;
   padding: 2px 10px;
 }
 
 .navbar-menu a:hover, .navbar-menu .btn-simple:hover, .navbar-menu .btn-simple a.navbar-active{
-  color: #FFFDE7;
+  color: #333;
   border-bottom: 4px solid #E91E63;
   text-decoration: none;
 }
 
 a.navbar-active{
-  color: #FFFDE7;
+  color: #333;
   border-bottom: 4px solid #CDDC39;
   text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
+
+  .navbar-logo{
+  padding-top: 12px;
+}
+
+
+}
+
+
+@media screen and (max-width:992px) {
+
+  .navbar-logo{
+  padding-top: 20px;
+}
+
+
+}
+
+
+@media screen and (max-width:764px) {
+
+  .navbar-logo{
+  padding-top: 0px;
+  text-align: center;
+}
+
+.modal-sm{
+  margin-top: 0px !important;
+  width: 400px !important;
+}
+
+.menu-movil-btn{
+ padding: 0;
+ width: 100%;
+}
+.menu-movil-btn >span:before{
+  font-size: 5.5vw;
+}
+.navbar-content {
+    min-height: 30px;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+}
+}
+
+@media screen and (max-width:470px) {
+
+.modal-sm{
+  margin-top: 0px !important;
+  width: 100% !important;
+}
+
+.menu-movil-btn{
+ padding: 0;
+ width: 100%;
+ margin-top: 0px;
+ padding-top: 4px;
+}
+.menu-movil-btn >span:before{
+  font-size: 5.5vw;
+}
+.navbar-content {
+    min-height: 20px;
+    padding-top: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);
+}
+
 }

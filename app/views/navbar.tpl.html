@@ -1,17 +1,25 @@
 <div class="navbar-content">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-xs-12">
-
-				<img class="img-responsive" src="images/logo_white.png">
+			<div class="col-md-6 col-sm-6 col-xs-10">
+                <a href="/">
+				<img class="img-responsive navbar-logo" src="images/logo_black.png">
+				</a>
+			
+				
 			</div>
-		   <div class=" visible-xs">
-		   	
-		   </div>
-			<div class="col-md-6 hidden-xs">
+	        <div class="visible-xs col-xs-2">
+				  <button type="button" class="btn btn-simple  menu-movil-btn " ng-click="openAside('right', false)">
+                 <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+			</div>
+
+			<div class="col-md-6 col-sm-6 hidden-xs">
+
 				<div class="btn-group pull-right navbar-menu" role="group" aria-label="...">
 				  <a href="/" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == '/'}"><span class="glyphicon glyphicon-home"></span>			</a>
 			<!-- 	  <a href="/publicaciones" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'publicaciones'}">Publicaciones</a> -->
+				  <a href="/capacitaciones" class="btn btn-simple navbar-active-capa" ng-class="{'navbar-active': $route.current.activeMenu == 'capacitaciones'}">Capacitaciones</a>
 				  <a href="/agendas" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'agendas'}">Agendas</a>
 				  <a href="/recursos" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'recursos'}">Recursos</a>
 				  <a href="/contacto" class="btn btn-simple" ng-class="{'navbar-active': $route.current.activeMenu == 'contacto'}">Contacto</a>

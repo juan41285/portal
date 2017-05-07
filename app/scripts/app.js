@@ -4,8 +4,8 @@
   // /* @ngInject */
   angular
     .module('portal', ['ngRoute','portal.controllers', 'portal.services','portal.templates', 'portal.filters',
-                        'ngSanitize','ui.bootstrap','slickCarousel', 'angularGrid','slugifier',
-                        'angularVideoBg','ngAnimate','angularMoment','mwl.calendar'])
+                        'ngSanitize','ui.bootstrap','slickCarousel', 'angularGrid','slugifier','ngAside','angular-ladda',
+                        'angularVideoBg','ngAnimate','angularMoment','mwl.calendar','angularFileUpload','ngFileUpload'])
     .config(config);
 
 
@@ -19,6 +19,18 @@
         controller: 'HomeCtrl',
         controllerAs: 'home',
         activeMenu: '/'
+      })
+       .when('/capacitaciones', {
+        templateUrl: 'views/capacitaciones.tpl.html',
+        controller: 'CapacitacionesCtrl',
+        controllerAs: 'pub',
+        activeMenu: 'capacitaciones'
+      })
+       .when('/capacitacion/:idComision', {
+        templateUrl: 'views/capacitacion-detalle.tpl.html',
+        controller: 'CapacitacionesCtrl',
+        controllerAs: 'cap',
+        activeMenu: 'capacitaciones'
       })
        .when('/publicaciones', {
         templateUrl: 'views/publicaciones.tpl.html',
@@ -49,6 +61,18 @@
         controller: 'ContactoCtrl',
         controllerAs: 'contacto',
         activeMenu: 'contacto'
+      }) 
+      .when('/protocolo-para-trayectos-formativos-2017', {
+        templateUrl: 'views/protocolo.tpl.html',
+         controller: 'CapacitacionesCtrl',
+        controllerAs: 'cap',
+        activeMenu: 'capacitaciones'
+      }) 
+      .when('/admin/capas', {
+        templateUrl: 'views/admin-capas.tpl.html',
+         controller: 'AdminCtrl',
+        controllerAs: 'admin',
+        activeMenu: 'capacitacionesaaaaa'
       }) 
       .otherwise({ reditrectTo : "/" });
   }

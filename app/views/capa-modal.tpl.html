@@ -1,0 +1,48 @@
+  <div >
+<style type="text/css" media="screen">
+  .modal .modal-header .close {
+    color: #4A148C;
+    font-size: 4vh;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+</style>
+      <div class="content_capa" >
+     
+     <div class="modal-header">
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close" ng-click="$close()"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" style="line-height: 1.2">{{vm.capa.capa.nombre}} <br> <small >{{vm.capa.capa.linea}}</small> </h3>
+      </div>
+      <div class="modal-body">
+        <div>Comisiones Disponibles:
+        <div class="well " ng-repeat="com in vm.capa.datos">
+          
+             <div  class="detalle_capas" ng-show="com.idComision">
+          <ul class="list-unstyled" >
+            <li><strong>Comisión: </strong>COM{{com.idComision}}</li>
+            <li><strong>Fecha Inicio: </strong>{{com.Fec_inicio | date:'dd/MM/yyyy'}} </li>
+            <li><strong>Sede: </strong>{{com.Lugar}} </li>
+          </ul>
+
+            <a href="/capacitacion/{{com.idComision}}" class="btn btn-xs btn-primary" ng-click="$close()">
+
+            Inscribirse en esta comisión
+            </a>
+          </div>
+          <div  class="detalle_capas" ng-show="!com.idComision">
+          <h4>Esta capacitación no tiene comisiones disponibles</h4>
+          </div>
+        </div>
+        </div>
+       
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" ng-click="$close()">Regresar</button>
+      </div>
+  </div>
+  <div >
+     
+  </div>
+
+  

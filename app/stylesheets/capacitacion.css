@@ -1,0 +1,258 @@
+.linea-separador-inscripcion {
+border-bottom: 3px solid #CDDC39;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.help-block {
+    font-size: 12px;
+    margin: 2px 0 0;
+    color: #999;
+    line-height: 1.5;
+}
+.capa-close{
+      font-size: 4vh;
+    margin: 0;
+    margin-top: -20px;
+}
+.capa-close span {
+color: rgba(158, 158, 158, 0.43) !important;
+}
+.help-block a{
+  font-weight: bold;
+}
+.inscripcion-form {
+  background: #fff;
+}
+.inscripcion-form p {
+  color: #000 !important;
+  font-weight: 300 !important;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 14px !important;
+}
+.inscripcion-form ul {
+  padding-top: 10px;
+  font-size: 14px !important;
+  text-align: left;
+  color: #03a9f4;
+   font-weight: 300 !important;
+}
+.inscripcion-titulo-error {
+  color: #f00;
+  font-weight: bold;
+  text-align: center;
+}
+.inscripcion-titulo-suspension {
+  font-weight: bold;
+  color: #ffa500;
+  text-align: center;
+}
+.inscripcion-titulo-suspension a {
+  color: #03a9f4;
+}
+.inscripcion-titulo-1capa {
+  font-weight: bold;
+  color: #ffa500;
+  text-align: center;
+}
+.inscripcion-titulo-1capa a {
+  color: #03a9f4;
+}
+.inscripcion-titulo-ok {
+  font-weight: bold;
+  color: #008000;
+  text-align: center;
+}
+.inscripcion-titulo-ok a {
+  color: #03a9f4;
+}
+.inscripcion-titulo-2capa {
+  font-weight: bold;
+  color: #ffa500;
+  text-align: center;
+}
+.color-verde {
+  color: #008000 !important;
+  font-size: 3em;
+}
+.color-verde-sus {
+  color: #008000 !important;
+  font-size: 1.5em;
+}
+.color-rojo {
+  color: #f00 !important;
+  font-size: 3em;
+}
+.color-rojo-sus {
+  color: #f00 !important;
+  font-size: 1.5em;
+}
+.color-naranja {
+  color: #ffa500 !important;
+  font-size: 3em;
+}
+.color-naranja-sus {
+  color: #ffa500 !important;
+  font-size: 1.5em;
+}
+.color-blanco {
+  color: #ffa500 !important;
+  font-size: 3em;
+}
+.color-relacionado {
+  background: #fff;
+}
+.titulo-relacionado p {
+  color: #03a9f4;
+}
+.titulo-relacionado label {
+  font-size: 1em;
+}
+.noticia-relacionado {
+  padding: 30px;
+  border-left: 1px solid #673ab7;
+}
+.copete {
+  background: #673ab7;
+  color: #fff;
+  white: 15px;
+  position: absolute;
+  top: 88%;
+}
+.insc-cerrada {
+  background-color: rgba(207,201,218,0.45);
+  color: #000;
+  position: relative;
+  padding: 15px 30px;
+  border: 0;
+  margin: 0px 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+.linea-separador {
+  border-bottom: 1px dashed rgba(15,16,16,0.42);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.linea-separador-vertical {
+  border-right: 1px dashed rgba(15,16,16,0.42);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.frm-suscripcion .control-label {
+  color: #673ab7;
+  font-weight: bold;
+  margin-left: -5px;
+  margin-top: -10px;
+}
+.titulo-suscripcion {
+  font-weight: bold;
+  color: rgba(18,18,19,0.54);
+  text-transform: uppercase;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+.titulo-redes-footer {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sus-ok {
+  color: #008000 !important;
+  font-size: 1.2em !important;
+  text-align: center;
+}
+.sus-error {
+  color: #f00 !important;
+  font-size: 1.2em !important;
+  text-align: center;
+}
+.sus-repe {
+  color: #ffa500 !important;
+  font-size: 1.2em !important;
+  text-align: center;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}
+.titulo-galeria {
+  background: #6347d1;
+  color: #fff;
+  padding: 10px;
+  margin-top: -10px;
+}
+.titulo-noticia-relacionado p {
+  color: #03a9f4;
+}
+.titulo-noticia-relacionado label {
+  font-size: 0.8em;
+}
+.card .img-capa {
+    width: 100%;
+  height: 0;
+  padding-top: 75%;
+  background-size: cover;
+  background-color: #ccc;
+     background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 0.95;
+
+}
+/* You could use :after - it doesn't really matter */
+.card .img-capa:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.titulo-capa{
+      margin: 0;
+    font-size: 3.5vh;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(3, 169, 244, 0.15);
+    margin-bottom: 10px;
+}
+
+.btn-status-capa{
+  position: absolute;
+  bottom: 0;
+}
+
+.bg-protocolo h1 {
+
+    color: #333;
+    font-size: 2vw;
+    line-height: 1.2;
+    width: 70vw;
+    font-weight: 900;
+    font-style: normal;
+    font-family: "Roboto";
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    /*text-transform: capitalize;*/
+    border-color: transparent;
+    border-style: none;
+    border-width: 0px;
+    border-radius: 0 0 0 0px;
+    transform-origin: 50% 50% 0px;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
