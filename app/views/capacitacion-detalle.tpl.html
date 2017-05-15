@@ -61,7 +61,11 @@
 
           
 
-          
+          <div class="col-md-12"> 
+          <hr>
+<li><strong>Sede: </strong>{{mostrarCom[0].Lugar}}</li>
+<li><strong>Dirección: </strong>{{mostrarCom[0].Direccion}}</li>
+          </div>
 				  <div class="col-md-6" >
               <hr>
               <p style="margin-left: 20px">
@@ -70,14 +74,14 @@
                 <strong>Encuentros presenciales: </strong> {{mostrarCom[0].Duracion}} <br>
                 <strong>Horas cátedra:</strong> {{mostrarCom[0].Hs_catedra}} <br>
               </p>
-              <hr>
+             <!--  <hr> -->
             
           </div>
           <div ng-show="sinCupo == 1">
             <div class="col-md-6">
                 <ul style="background: #E2DEE8; margin-right: 20px">
   	                	<hr>
-  	                  	<li><strong>Sede: </strong>{{mostrarCom[0].Lugar}}</li>
+  	                  	
   	                    <li><strong>Fecha de Inicio: </strong>{{mostrarCom[0].Fec_inicio | date:'dd/MM/yyyy'}}</li>
   						          <li><strong>Fecha de Fin: </strong>{{mostrarCom[0].Fec_fin | date:'dd/MM/yyyy'}}</li>	
   						          <li><strong>Horario: </strong>{{mostrarCom[0].Horario}}</li>
@@ -116,8 +120,8 @@
     <div class="inscripcion-titulo-suspension"><span class="fa fa-exclamation-triangle color-naranja" aria-hidden="true"></span> <br>Usted se encuentra momentáneamente suspendida/o para realizar inscripciones
     <p class="help-block">La suspensión momentanea se debe a la reincidencia de abandonos o inscripciones sin asistir a las capacitaciones</p> 
     <ul>
-        <li><strong>Inicio de suspensión: {{fecha_suspension}} </strong></li>
-        <li><strong>Fin de suspensión: {{fecha_alta}}</strong></li>
+        <li><strong>Inicio de suspensión: {{fechaSuspension }} </strong></li>
+        <li><strong>Fin de suspensión: {{fechaFin }}</strong></li>
     </ul>
     <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.educaciondigitaltuc.gob.ar/login.php" target="_blank">Aquí.</a> </p>
     </div>
@@ -166,7 +170,7 @@
     Ya registra una inscripción para este mismo curso
     <p class="help-block">Capacitaciones en las que se encuentra inscripto:</p>
         <ul>
-            <li><strong>Fecha de inscripción: {{fecha_ins | dateToISO | date: 'd-M-yyyy'}}</strong></li>
+            <li><strong>Fecha de inscripción: {{fecha_ins | amDateFormat:'D-M-Y'}}</strong></li>
             <li><strong>Código de inscripción: </strong> COD{{codigo}}</li>
         </ul>
     <p class="help-block">Para ingresar al panel docente haga clic <a href="http://docentes.educaciondigitaltuc.gob.ar/login.php" target="_blank">Aquí.</a> </p>                               

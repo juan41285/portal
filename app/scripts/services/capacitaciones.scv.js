@@ -5,6 +5,7 @@
   angular
     .module('portal.services')    
     .factory('Capacitaciones',Capacitaciones)
+    .factory('getLineas',getLineas)
     .factory('ComisionesCapa',ComisionesCapa)
     .factory('GetCom',GetCom)
     .factory('SDetalleCom',SDetalleCom)
@@ -23,6 +24,20 @@ function Capacitaciones ($http, BaseUrl){
   return $http({
     method: 'GET',
     url: BaseUrl+'/capacitaciones',
+    headers: {'Content-Type': 'application/json; charset=utf-8'}
+   }).then(function(res){
+     return res.data;
+     console.log('res.data', res.data);
+   });
+
+    // return $resource(BaseUrl + '/capacitaciones', {});
+}
+
+function getLineas ($http, BaseUrl){
+
+  return $http({
+    method: 'GET',
+    url: BaseUrl+'/capacitaciones/lineas',
     headers: {'Content-Type': 'application/json; charset=utf-8'}
    }).then(function(res){
      return res.data;

@@ -3,15 +3,12 @@
   /****************/
 
   /* @ngInject */
-  function dateToISO() {
-  return function(fec) {
-    //fec = new Date(fec).toISOString();
-    var nf = fec;
-     nf.replace(/(.+) (.+)/, '$1T$2Z');
-     var nf = new Date(fec).getTime();
-    return nf;
-  };
-  }
+  // function dateToISO() {
+  //  return function(input) {
+  //   input = new Date(input).toISOString();
+  //   return input;
+  // };
+  // }
 
   function GetYouTubeID($sce) {
     return function(text) {
@@ -56,7 +53,7 @@
 
   angular
     .module('portal.filters', ['portal.services', 'ngLocale'])
-    .filter('dateToISO', dateToISO)
+    // .filter('dateToISO', dateToISO)
     .filter('GetYouTubeID', GetYouTubeID)
     .filter('QuitarTagHTML', QuitarTagHTML)
     .filter('CortarTexto', CortarTexto)

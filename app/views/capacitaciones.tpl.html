@@ -5,10 +5,9 @@
 	<div class="col-md-12" style="margin-top:10px;">
 	<div class="shadow-z-1" >
 		<div class="row">
-			<div class="col-md-4">
-				<div ><img src="images/secciondesarrollo.png" class="img-responsive"></div>
-			</div>
-			<div class="col-md-8">
+			<div class="">
+				<div ><img src="images/mapa-lineas.png" class="img-responsive pull-left hidden-xs"></div>
+		
         <h1 class="titulo-capa">Oferta de Capacitaciones </h1>
 				<p class="desc-seccion">El <strong>Ministerio de Educación de Tucumán</strong> asume y profundiza en éste ciclo lectivo 2017, su función de estado que garantiza la formación docente permanente, universal y gratuita, configurando un programa cuyo eje vertebrador es la mejora de la enseñanza y los aprendizajes. Nos focalizamos en recrear estrategias metodológicas que permitan desarrollar en los alumnos capacidades fundamentales para su desenvolvimiento en el siglo XXI. A través de su <strong>Coordinación de Educación Digital</strong>, genera este espacio de formación destinado a docentes de todos los niveles, modalidades, cargos y áreas del sistema educativo, quienes podrán accerder a las ofertas de capatación mediante la autogestión de sus trayectos e instancias de aprendizaje,  para el fortalecimiento de sus prácticas docentes.</p>	
 				<div class="col-md-offset-2">
@@ -24,7 +23,28 @@
   </div>  
   </div>  
 	</div>	
-  <div class="sombra-inset" style="padding: 20px 0;">
+    <div class="" style="padding: 10px 0; background: #fff;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);">
+  <div class="container"> 
+  <div class="row">
+  <div class="col-md-6" >
+
+<!-- <label style="font-weight: 300"></label> -->
+
+    <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4" ng-click="filtrarAbiertas()">
+    <label for="styled-checkbox-4"  style="margin-top: 15px;font-weight: normal; color:#333;">Mostrar solo capacitaciones con inscripciones abiertas</label>
+  </div>
+  <div class="col-md-6">
+<!-- <label style="font-weight: 300"></label> -->
+   <select id="players" ng-model="orderList" class="form-control" 
+  ng-options="linea for linea in lineas " ng-change="setLinea(orderList)">
+    <option value="">Todas las instituciones</option>    
+</select>
+  </div>
+</div>
+</div>
+</div>
+
+  <div class="" style="padding: 20px 0;">
 	<div class="container">	
   <div class="row">
 
@@ -49,7 +69,11 @@
   	
   	</div>
   </div> -->
+  <treasure-overlay-spinner active='spinner.active' style="height:500">
   	<div class="col-md-12">
+
+
+
 
   	  <md-content id="content-scroller">
        <div
@@ -59,16 +83,20 @@
              ag-gutter-size="30"
              ag-refresh-on-img-load="false"
           >
-          <div class="card  " ng-repeat="capa in capacitacion " ng-if="capa.capa.hay">
+          <div class="card " ng-repeat="capa in capacitacion "  ng-if="soloAbiertas ? capa.capa.comision : 1 " >
      
             <div class="img-capa " 
             style="background-image: url({{capa.capa.imagen || 'images/secciondesarrollo.png'}});" ng-click="funciondesplegar(capa)">
              
-              
+             
             </div> 
-         <a  class="btn btn-abiertas  btn-info  btn-status-capa btn-xs active" style="white-space: normal; bottom: 20%; text-align: left;"> {{capa.capa.linea}}</a>
-         <a href="" ng-show="capa.capa.comision != 0" class="btn btn-abiertas  btn-danger btn-status-capa  active"> Inscripciones Abiertas</a>
-              <a href="" ng-show="capa.capa.comision == 0" class="btn btn-cerradas  btn-default btn-status-capa  active"> Inscripciones Cerradas</a>
+        <div style="height: 20px">
+     
+           <a  class="btn btn-linea-capa  btn-info  btn-status-capa btn-xs active raised" style="white-space: normal; bottom: 15%; text-align: left;"> {{capa.capa.linea}} {{capa.capa.id}}</a>
+         <a href="" ng-show="capa.capa.comision != 0" class="btn btn-abiertas  btn-status-capa  btn-block"> Inscripciones Abiertas</a>
+              <a href="" ng-show="capa.capa.comision == 0" class="btn btn-cerradas   btn-status-capa  btn-block"> Inscripciones Cerradas</a>
+        </div>
+        
 <!--     <div class="content_capa" ng-show="capa.collapse">
           <button type="button" class="close" ng-click="funciondesplegar(0, capa.capa.comision)"><span aria-hidden="true">&times;</span></button>
           <h4>Comisiones Disponibles</h4>
@@ -88,14 +116,16 @@
         </div>
         </div>
 </md-content>
-<div ng-show="!sumCapa">
-<h1 class="text-center">No hay ofertas de capacitación disponibles.</h1>
+
+<div ng-if="!sumCapa">
+<h1 class="text-center">No hay ofertas de capacitación disponibles.{{sumCapa}}</h1>
 <img class="img-responsive text-center" src="images/formame.jpg">
   
 </div>
 
  
   	</div>
+    </treasure-overlay-spinner>
   </div>
 
 	  </div>	

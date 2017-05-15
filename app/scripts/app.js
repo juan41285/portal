@@ -5,9 +5,9 @@
   angular
     .module('portal', ['ngRoute','portal.controllers', 'portal.services','portal.templates', 'portal.filters',
                         'ngSanitize','ui.bootstrap','slickCarousel', 'angularGrid','slugifier','ngAside','angular-ladda',
-                        'angularVideoBg','ngAnimate','angularMoment','mwl.calendar','angularFileUpload','ngFileUpload'])
-    .config(config);
-
+                        'angularVideoBg','ngAnimate','angularMoment','mwl.calendar','angularFileUpload','ngFileUpload','treasure-overlay-spinner'])
+    .config(config)
+ .run(run);  
 
  
   function config ($locationProvider, $routeProvider) {
@@ -77,7 +77,18 @@
       .otherwise({ reditrectTo : "/" });
   }
 
-
+run.$inject = ['$rootScope'];
+    function run ($rootScope) {
+      $rootScope.spinner = {
+        active: false,
+        on: function () {
+          this.active = true;
+        },
+        off: function () {
+          this.active = false;
+        }
+      };
+    }
 
 
    

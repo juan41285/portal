@@ -61,8 +61,8 @@
 						//si el mail esta repetido - Suspensión momentanea
 						$scope.resultado = response.data.resultado;
 
-						$scope.fecha_suspension = response.data.fecha_suspension;
-						$scope.fecha_alta = response.data.fecha_fin;
+						$scope.fechaSuspension = response.data.fecha_suspension;
+						$scope.fechaFin = response.data.fecha_fin;
 
 					}
 					if (response.data.resultado == 2) {
@@ -91,7 +91,7 @@
 					if (response.data.resultado == 5) {
 						//ya registra inscripcion para el mismo curso
 						$scope.resultado = 5;
-						$scope.fecha_ins = response.data.fecha_ins;
+						$scope.fecha_ins = response.data.fechaIns;
 						$scope.codigo = response.data.codigo;
 
 					}

@@ -7,7 +7,7 @@
         <div class="well">{{ vm.event.objetivo }}</div>
         </div>
         <div>
-         <strong>Fecha: </strong> <span class="mdi-action-today"></span>    {{::vm.event.fecha | dateToISO | date:'EEEE' }} {{::vm.event.fecha | dateToISO | date:'d' }} de {{::vm.event.fecha | dateToISO | date:'MMMM' }} de {{::vm.event.fecha | dateToISO | date:'y' }} 
+         <strong>Fecha: </strong> <span class="mdi-action-today"></span>    {{::vm.event.fecha | amDateFormat:'LL' }} 
          <br>
 
       
@@ -26,7 +26,7 @@
         <div class="well">{{ vm.event.ag_objetivo }}</div>
         </div>
         <div>
-         <strong>Fecha: </strong> <span class="mdi-action-today"></span>    {{::vm.event.ag_fecha | dateToISO | date:'EEEE' }} {{::vm.event.ag_fecha | dateToISO | date:'d' }} de {{::vm.event.ag_fecha | dateToISO | date:'MMMM' }} de {{::vm.event.ag_fecha | dateToISO | date:'y' }} 
+         <strong>Fecha: </strong> <span class="mdi-action-today"></span>    {{::vm.event.ag_fecha  | amDateFormat:'LL'}} 
          <br>
 
       

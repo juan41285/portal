@@ -224,18 +224,61 @@ color: rgba(158, 158, 158, 0.43) !important;
     background-size: cover;
 }
 .titulo-capa{
-      margin: 0;
+       margin: 0;
     font-size: 3.5vh;
-    padding-bottom: 8px;
+    padding: 8px;
     border-bottom: 1px solid rgba(3, 169, 244, 0.15);
     margin-bottom: 10px;
+    display: inline-block;
+    text-transform: uppercase;
 }
 
+.desc-seccion{
+  padding: 10px;
+    text-align: justify;
+}
+.btn-linea-capa {
+  border:1px solid white;
+   border-left: none; 
+}
+.btn-abiertas{
+       background-color: #FAFAFA;
+    color: #4CAF50;
+    font-weight: 500;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid rgba(76, 175, 80, 0.32);
+}
+
+.btn-cerradas{
+          background-color: #FAFAFA;
+    color: #E53935;
+    font-weight: 500;
+    border-top: 1px solid rgba(233, 30, 99, 0.07);
+    border-bottom: 1px solid rgba(233, 30, 99, 0.22);
+}
 .btn-status-capa{
-  position: absolute;
-  bottom: 0;
-}
+ position: absolute;
+    bottom: -7px;
+    border-radius: 0;
+    /* border-left: 5px solid #9E9E9E; */
+    margin-left: 0px;
+    /* border-right: 5px solid red; */
 
+  
+}
+.treasure-overlay-spinner-container {
+    position: absolute;
+    min-height: 300px !important;
+    min-width: 50px;
+    z-index: 1;
+    top: -9999999px;
+    left: -9999999px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.85);
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
 .bg-protocolo h1 {
 
     color: #333;
@@ -256,3 +299,4 @@ color: rgba(158, 158, 158, 0.43) !important;
     transform-origin: 50% 50% 0px;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
+

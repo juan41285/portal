@@ -6,6 +6,9 @@ RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|G
 RewriteRule articulo/(\d*)$ http://innovacioneducativa.gob.ar/server/articulo.php?id=$1 [P]
 
 
+
+
+
 # Required to allow direct-linking of pages so they can be processed by Angular
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

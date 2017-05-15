@@ -234,4 +234,4 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['server', 'templates', 'inject', 'wiredep', 'watch','jshint','css']);
 gulp.task('build', ['copy','imagenes']);
-gulp.task('compress', ['compressJS','imagenes','minify-css']);
+gulp.task('compress', ['compressJS','imagenes','minify-css','cacheBuster']);
